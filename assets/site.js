@@ -348,3 +348,21 @@ document.documentElement.classList.add("js");
     window.location.href = href;
   });
 })();
+
+/* Carrousels de photos dans les articles */
+document.querySelectorAll('[data-carousel]').forEach(function (car) {
+  var track = car.querySelector('.car-track'), slides = track.querySelectorAll('figure');
+  var prev = car.querySelector('.car-prev'), next = car.querySelector('.car-next'), num = car.querySelector('.car-count b');
+  function current() {
+    var mid = track.scrollLeft + track.clientWidth / 2, best = 0, d = 1e9;
+    slides.forEach(function (s, i) { var c = s.offsetLeft - track.offsetLeft + s.offsetWidth / 2, x = Math.abs(c - mid); if (x < d) { d = x; best = i; } });
+    return best;
+  }
+  function go(i) { i = Math.max(0, Math.min(slides.length - 1, i)); var s = slides[i]; track.scrollTo({ left: s.offsetLeft - track.offsetLeft - (track.clientWidth - s.offsetWidth) / 2 }); }
+  function update() { var i = current(); num.textContent = i + 1; prev.disabled = track.scrollLeft < 4; next.disabled = track.scrollLeft + track.clientWidth > track.scrollWidth - 4; }
+  prev.addEventListener('click', function () { go(current() - 1); });
+  next.addEventListener('click', function () { go(current() + 1); });
+  track.addEventListener('keydown', function (e) { if (e.key === 'ArrowRight') { e.preventDefault(); go(current() + 1); } if (e.key === 'ArrowLeft') { e.preventDefault(); go(current() - 1); } });
+  track.addEventListener('scroll', function () { window.requestAnimationFrame(update); }, { passive: true });
+  update();
+});
