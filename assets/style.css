@@ -279,7 +279,7 @@ body::before {
 }
 .mobile-nav { display: none; }
 
-@media (max-width: 1060px) {
+@media (max-width: 1180px) {
   .site-header .bar { grid-template-columns: auto 1fr auto; height: 72px; }
   .brand { grid-column: 1; text-align: left; font-size: 20px; letter-spacing: .2em; padding-inline: 0; }
   .brand small { margin-top: 7px; }
