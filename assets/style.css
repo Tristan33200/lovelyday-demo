@@ -589,3 +589,7 @@ html.lb-lock, html.lb-lock body { overflow: hidden; }
 .js .figures > div .label { transition: opacity 1.2s ease 1.2s, letter-spacing 1.6s cubic-bezier(.16, 1, .3, 1) 1s; }
 .js .figures > div:not(.odo-go) .label { opacity: 0; letter-spacing: .5em; }
 .footer-bottom span a { color: var(--ink); border-bottom: 1px solid currentColor; padding-bottom: 1px; }
+.fb-credits { display: flex; flex-wrap: wrap; justify-content: center; column-gap: 48px; row-gap: 6px; }
+.fb-credits > span + span { position: relative; }
+.fb-credits > span + span::before { content: ""; position: absolute; left: -25px; top: 50%; width: 1px; height: 12px; translate: 0 -50%; background: var(--line); }
+@media (max-width: 700px) { .fb-credits { flex-direction: column; align-items: flex-start; } .fb-credits > span + span::before { display: none; } }
