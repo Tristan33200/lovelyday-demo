@@ -1,3 +1,5 @@
+# www -> domaine principal
+https://www.lovelydayevent.fr/*        https://lovelydayevent.fr/:splat          301!
 # Anciennes adresses du site WordPress
 /agence/                                /agence-evenementielle/                   301
 /organisation-de-mariage                /prestations/#organisation                301
