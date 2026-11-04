@@ -10,5 +10,7 @@ https://www.lovelydayevent.fr/*        https://lovelydayevent.fr/:splat         
 /comments/feed                          /les-idees-de-lovely-day-inspirations/    301
 /wp-admin                               /                                         301
 /wp-admin/*                             /                                         301
+/location-de-decoration-de-mariage      /prestations/                             301
+/en/location-de-decoration-de-mariage   /en/prestations/                          301
 # Page introuvable
 /*                                      /index.html                               404
