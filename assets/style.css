@@ -619,3 +619,17 @@ html.lb-lock, html.lb-lock body { overflow: hidden; }
 .rating strong { font-family: var(--display); font-weight: 400; font-size: clamp(28px, 3vw, 36px); line-height: 1; }
 .rating .label a { color: inherit; text-decoration: underline; text-underline-offset: 4px; }
 @media (max-width: 560px) { .rating { padding: 0 14px; } }
+.carousel { --h: clamp(300px, 62vh, 620px); --w: min(1040px, calc(100vw - 2 * var(--gutter))); width: var(--w); margin: 1.6em calc((100% - var(--w)) / 2); }
+.car-track { display: flex; gap: clamp(8px, 1.2vw, 16px); overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none; -webkit-overflow-scrolling: touch; outline: none; }
+.car-track::-webkit-scrollbar { display: none; }
+.car-track figure { flex: 0 0 auto; height: var(--h); width: calc(var(--h) * var(--ar)); max-width: 88%; margin: 0; scroll-snap-align: center; background: var(--stone); }
+.car-track img { width: 100%; height: 100%; object-fit: cover; }
+.car-nav { display: flex; align-items: center; justify-content: center; gap: 22px; margin-top: 16px; }
+.car-btn { width: 42px; height: 42px; border: 1px solid var(--line); border-radius: 50%; background: transparent; color: var(--ink); font-size: 16px; cursor: pointer; transition: background .3s, color .3s; }
+.car-btn:hover { background: var(--ink); color: var(--paper); }
+.car-btn[disabled] { opacity: .3; pointer-events: none; }
+.car-count { font-size: 11px; letter-spacing: .24em; min-width: 5em; text-align: center; }
+.car-count b { font-weight: 400; }
+@media (max-width: 700px) { .carousel { --h: 58vh; } .article .carousel .car-track figure[style] { max-width: 86vw; } }
+.article .carousel .car-track figure[style] { display: block; margin: 0; width: calc(var(--h) * var(--ar)); max-width: 88%; }
+.article .carousel .car-track figure[style] img { width: 100%; height: 100%; max-width: none; object-fit: cover; }
