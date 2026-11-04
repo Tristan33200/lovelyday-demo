@@ -1,0 +1,12 @@
+# Anciennes adresses du site WordPress
+/agence/                                /agence-evenementielle/                   301
+/organisation-de-mariage                /prestations/#organisation                301
+/decoration-de-mariage                  /prestations/#design                      301
+/coordination-le-jour-du-mariage        /prestations/#coordination                301
+/en/agence-organisation-mariage-gironde /en/                                      301
+/feed                                   /les-idees-de-lovely-day-inspirations/    301
+/comments/feed                          /les-idees-de-lovely-day-inspirations/    301
+/wp-admin                               /                                         301
+/wp-admin/*                             /                                         301
+# Page introuvable
+/*                                      /index.html                               404
