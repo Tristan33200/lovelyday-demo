@@ -612,3 +612,10 @@ html.lb-lock, html.lb-lock body { overflow: hidden; }
 .pkg:hover .pkg-img img { transform: scale(1.04); }
 .pkg .badge { z-index: 2; }
 @media (max-width: 900px) { .pkg:has(.pkg-img) { grid-template-rows: none; } }
+.ratings { display: flex; justify-content: center; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 28px 0; margin-top: 8px; }
+.rating { display: grid; justify-items: center; gap: 6px; padding: 0 clamp(24px, 5vw, 64px); text-align: center; }
+.rating + .rating { border-left: 1px solid var(--line); }
+.rating .stars { letter-spacing: .3em; font-size: 15px; color: var(--ink); opacity: .55; }
+.rating strong { font-family: var(--display); font-weight: 400; font-size: clamp(28px, 3vw, 36px); line-height: 1; }
+.rating .label a { color: inherit; text-decoration: underline; text-underline-offset: 4px; }
+@media (max-width: 560px) { .rating { padding: 0 14px; } }
