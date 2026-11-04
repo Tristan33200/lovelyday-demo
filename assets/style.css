@@ -595,3 +595,12 @@ html.lb-lock, html.lb-lock body { overflow: hidden; }
 .fb-credits > span + span { position: relative; }
 .fb-credits > span + span::before { content: ""; position: absolute; left: -25px; top: 50%; width: 1px; height: 12px; translate: 0 -50%; background: var(--line); }
 @media (max-width: 700px) { .fb-credits { flex-direction: column; align-items: flex-start; } .fb-credits > span + span::before { display: none; } }
+
+/* Formules (prestations) */
+.packages { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(16px, 2vw, 28px); align-items: stretch; }
+.pkg { position: relative; display: grid; gap: 18px; align-content: start; grid-template-rows: auto auto auto 1fr auto auto; padding: clamp(28px, 3vw, 44px); border: 1px solid var(--line); background: var(--paper); }
+.pkg--star { border-color: var(--ink); }
+.pkg .badge { position: absolute; top: -11px; left: 50%; transform: translateX(-50%); background: var(--ink); color: var(--paper); font-size: 10px; letter-spacing: .26em; text-transform: uppercase; padding: 5px 14px; white-space: nowrap; }
+.pkg ul { margin: 0; }
+.roles--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 900px) { .packages, .roles--3 { grid-template-columns: minmax(0, 1fr); } .pkg { grid-template-rows: none; } }
