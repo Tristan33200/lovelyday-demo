@@ -484,7 +484,7 @@ form.enquiry .full { grid-column: 1 / -1; }
 
 /* ---------- Récits & journal ---------- */
 a.wedding, a.jcard { color: inherit; text-decoration: none; }
-a.wedding:hover .link, a.jcard:hover h3 { color: var(--champagne); }
+a.wedding:hover .link, a.jcard:hover h2 { color: var(--champagne); }
 .post-cover { max-width: 100%; }
 .article figure:not(.g-row figure), .post-cover { display: flex; justify-content: center; }
 .article figure:not(.g-row figure):has(> img:only-of-type), .post-cover:has(> img:only-of-type) { width: min(100%, calc(88vh * var(--fig-ar, 1.5))); margin-inline: auto; }
@@ -505,7 +505,7 @@ a.wedding:hover .link, a.jcard:hover h3 { color: var(--champagne); }
 .credit-line a { color: var(--ink); }
 .journal { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(40px, 5vw, 72px) clamp(20px, 3vw, 44px); }
 .jcard { display: grid; gap: 14px; align-content: start; min-width: 0; }
-.jcard h3 { margin: 0; font-family: var(--display); font-weight: 400; font-size: 23px; line-height: 1.25; text-wrap: balance; transition: color .3s; }
+.jcard h2 { margin: 0; font-family: var(--display); font-weight: 400; font-size: 23px; line-height: 1.25; text-wrap: balance; transition: color .3s; }
 @media (max-width: 900px) { .journal { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 620px) { .journal { grid-template-columns: minmax(0, 1fr); } .article { font-size: 16px; } }
 
