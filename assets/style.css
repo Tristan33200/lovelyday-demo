@@ -238,7 +238,7 @@ body::before {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  height: 84px;
+  height: 108px;
 }
 .brand {
   grid-column: 2;
@@ -251,17 +251,18 @@ body::before {
   text-transform: uppercase;
   line-height: 1;
   white-space: nowrap;
+  padding-inline: clamp(40px, 5vw, 88px);
 }
 .brand small {
   display: block;
-  margin-top: 7px;
+  margin-top: 11px;
   font-family: var(--body);
   font-size: 9px;
   letter-spacing: .42em;
   color: var(--muted);
 }
-.nav { grid-column: 1; grid-row: 1; display: flex; gap: 30px; }
-.nav-r { grid-column: 3; grid-row: 1; display: flex; gap: 30px; justify-content: flex-end; align-items: center; }
+.nav { grid-column: 1; grid-row: 1; display: flex; gap: 28px; }
+.nav-r { grid-column: 3; grid-row: 1; display: flex; gap: 28px; justify-content: flex-end; align-items: center; }
 .nav a, .nav-r a {
   font-size: 11px; font-weight: 400; letter-spacing: .24em; text-transform: uppercase;
   text-decoration: none; padding-block: 6px; border-bottom: 1px solid transparent;
@@ -280,7 +281,8 @@ body::before {
 
 @media (max-width: 1060px) {
   .site-header .bar { grid-template-columns: auto 1fr auto; height: 72px; }
-  .brand { grid-column: 1; text-align: left; font-size: 20px; letter-spacing: .2em; }
+  .brand { grid-column: 1; text-align: left; font-size: 20px; letter-spacing: .2em; padding-inline: 0; }
+  .brand small { margin-top: 7px; }
   .brand small { letter-spacing: .34em; }
   .nav, .nav-r { display: none; }
   .menu-btn { display: block; }
