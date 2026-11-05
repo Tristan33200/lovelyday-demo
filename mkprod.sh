@@ -34,6 +34,15 @@ https://www.lovelydayevent.fr/*        https://lovelydayevent.fr/:splat         
 R
 cat $S/en_redirects.txt >> $S/prod/_redirects
 cat >> $S/prod/_redirects <<'R'
+# Restes de WordPress (étiquettes, catégories, flux, pagination)
+/tag/*                                  /les-idees-de-lovely-day-inspirations/    301
+/category/*                             /les-idees-de-lovely-day-inspirations/    301
+/page/*                                 /les-idees-de-lovely-day-inspirations/    301
+/author/*                               /agence-evenementielle/                   301
+/en/tag/*                               /en/journal/                              301
+/en/category/*                          /en/journal/                              301
+/:slug/feed/                            /:slug/                                   301
+/:slug/feed                             /:slug/                                   301
 # Page introuvable
 /*                                      /index.html                               404
 R
