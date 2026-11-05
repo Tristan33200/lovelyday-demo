@@ -164,6 +164,7 @@ document.documentElement.classList.add("js");
   }, { rootMargin: "0px 0px 0px 0px" });
   document.querySelectorAll("figure.zoom, .g-row figure, .article figure, figure.post-cover").forEach(function (f) {
     if (f.getBoundingClientRect().top < vh0) return;
+    if (f.closest(".hscroll")) return; // défilement horizontal : photos affichées telles quelles
     var row = f.parentNode.classList.contains("g-row") ? Array.prototype.indexOf.call(f.parentNode.children, f) : 0;
     f.style.setProperty("--uv-delay", row * 100 + "ms");
     f.classList.add("uv", "uv-pre");
