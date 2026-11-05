@@ -366,3 +366,26 @@ document.querySelectorAll('[data-carousel]').forEach(function (car) {
   track.addEventListener('scroll', function () { window.requestAnimationFrame(update); }, { passive: true });
   update();
 });
+
+// Parallaxe des suites de photos : l'image glisse dans son cadre au défilement
+(function () {
+  var figs = Array.prototype.slice.call(document.querySelectorAll("figure.plx"));
+  if (!figs.length || (window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches)) return;
+  var ticking = false;
+  function update() {
+    ticking = false;
+    var vh = window.innerHeight;
+    figs.forEach(function (f) {
+      var r = f.getBoundingClientRect();
+      if (r.bottom < -50 || r.top > vh + 50) return;
+      var p = (r.top + r.height / 2 - vh / 2) / (vh / 2 + r.height / 2); // -1 .. 1
+      p = Math.max(-1, Math.min(1, p));
+      var img = f.querySelector("img");
+      if (img) img.style.transform = "translate3d(0," + (p * 7).toFixed(2) + "%,0)";
+    });
+  }
+  function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll);
+  update();
+})();
