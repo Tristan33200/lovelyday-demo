@@ -235,7 +235,7 @@ document.documentElement.classList.add("js");
 
 // Photos : apparition douce une fois chargées
 (function () {
-  document.querySelectorAll(".g-row img, .article figure img").forEach(function (img) {
+  document.querySelectorAll(".g-row img, .article figure img, .hscroll figure img").forEach(function (img) {
     function show() { img.classList.add("is-in"); }
     if (img.complete) show(); else { img.addEventListener("load", show); img.addEventListener("error", show); }
   });
@@ -243,7 +243,7 @@ document.documentElement.classList.add("js");
 
 // Vue en grand : clic sur une photo de galerie ou d'article
 (function () {
-  var imgs = Array.prototype.slice.call(document.querySelectorAll(".g-row img, .article figure img"));
+  var imgs = Array.prototype.slice.call(document.querySelectorAll(".g-row img, .article figure img, .hscroll figure img"));
   if (!imgs.length) return;
   var en = document.documentElement.lang === "en";
   var arrow = function (d) { return '<svg viewBox="0 0 22 44" aria-hidden="true"><path d="' + d + '"/></svg>'; };
