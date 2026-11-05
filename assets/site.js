@@ -367,25 +367,35 @@ document.querySelectorAll('[data-carousel]').forEach(function (car) {
   update();
 });
 
-// Parallaxe des suites de photos : l'image glisse dans son cadre au défilement
+// Suites de photos : la section reste épinglée et les photos défilent de droite à gauche au scroll
 (function () {
-  var figs = Array.prototype.slice.call(document.querySelectorAll("figure.plx"));
-  if (!figs.length || (window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches)) return;
+  var boxes = Array.prototype.slice.call(document.querySelectorAll(".hscroll"));
+  if (!boxes.length) return;
+  if (window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    boxes.forEach(function (b) { b.classList.add("hs-static"); });
+    return;
+  }
   var ticking = false;
+  function layout() {
+    boxes.forEach(function (b) {
+      var track = b.querySelector(".hs-track");
+      var dist = Math.max(0, track.scrollWidth - window.innerWidth);
+      b._dist = dist;
+      b.style.height = (window.innerHeight + dist) + "px";
+    });
+    update();
+  }
   function update() {
     ticking = false;
-    var vh = window.innerHeight;
-    figs.forEach(function (f) {
-      var r = f.getBoundingClientRect();
-      if (r.bottom < -50 || r.top > vh + 50) return;
-      var p = (r.top + r.height / 2 - vh / 2) / (vh / 2 + r.height / 2); // -1 .. 1
-      p = Math.max(-1, Math.min(1, p));
-      var img = f.querySelector("img");
-      if (img) img.style.transform = "translate3d(0," + (p * 7).toFixed(2) + "%,0)";
+    boxes.forEach(function (b) {
+      var r = b.getBoundingClientRect();
+      var span = b.offsetHeight - window.innerHeight;
+      var p = span > 0 ? Math.max(0, Math.min(1, -r.top / span)) : 0;
+      b.querySelector(".hs-track").style.transform = "translate3d(" + (-p * b._dist).toFixed(1) + "px,0,0)";
     });
   }
-  function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
-  window.addEventListener("scroll", onScroll, { passive: true });
-  window.addEventListener("resize", onScroll);
-  update();
+  window.addEventListener("scroll", function () { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+  window.addEventListener("resize", layout);
+  window.addEventListener("load", layout);
+  layout();
 })();
