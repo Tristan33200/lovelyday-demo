@@ -651,3 +651,4 @@ html.lb-lock, html.lb-lock body { overflow: hidden; }
 .hscroll.hs-static .hs-sticky { position: static; height: auto; overflow-x: auto; scrollbar-width: none; }
 .hscroll.hs-static .hs-track { padding-top: 0; }
 @media (max-width: 700px) { .hs-track { --h: min(56vh, 62vw); } }
+.js .hscroll img { opacity: 1; transition: none; }
