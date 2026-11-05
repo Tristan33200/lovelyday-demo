@@ -4,6 +4,7 @@ set -e
 S=/tmp/claude-0/-home-user/20887b6f-fabe-5ce1-a4a5-fdc0d980e6c3/scratchpad
 P=$S/prodrepo
 rm -rf $S/prod && cp -r $S/site $S/prod && rm -f $S/prod/.htaccess
+python3 -I $S/rename_imgs.py $S/prod
 printf 'google-site-verification: googlefcf2685566146d48.html' > $S/prod/googlefcf2685566146d48.html
 cat > $S/prod/_redirects <<'R'
 # www -> domaine principal
