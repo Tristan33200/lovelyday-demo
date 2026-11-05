@@ -139,6 +139,7 @@ body {
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  overflow-x: clip; /* « clip » ne casse pas position: sticky (Safari) */
 }
 img { display: block; max-width: 100%; height: auto; }
 a { color: inherit; }
