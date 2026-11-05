@@ -41,6 +41,24 @@ for _p in POSTS:
     for _a, _b in (("bordeaux", "Bordeaux"), ("tristan perrier", "Tristan Perrier"), ("bassin d'arcachon", "Bassin d'Arcachon"),
                    ("Cap ferret", "Cap Ferret"), ("eco-responsable", "éco-responsable"), ("mariage: ", "mariage : ")):
         _p["title"] = re.sub(r"\b" + re.escape(_a), _b, _p["title"])
+# Parution programmée (demande de Tristan, 2026-11-05) : un article par mois.
+# La date de l'article devient sa date de parution ; avant cette date il n'est pas généré.
+# PUBLISH_DATE=AAAA-MM-JJ simule la date du jour (mkprod.sh prépare ainsi les versions à venir).
+SCHEDULE = {
+    "menudemariage": "2026-12-01",
+    "rituels-mariage-ceremonie-origines-handfasting": "2027-01-01",
+    "psychologie-couleurs-mariage-palettes": "2027-02-01",
+    "scenarios-secours-plan-b-mariage": "2027-03-01",
+    "personnalites-famille-conflits-conseils": "2027-04-01",
+    "kit-experience-temoins-demoiselles-honneur": "2027-05-01",
+}
+import datetime as _dt
+PUBLISH_DATE = os.environ.get("PUBLISH_DATE") or _dt.date.today().isoformat()
+for _p in POSTS:
+    if _p["slug"] in SCHEDULE:
+        _p["date"] = SCHEDULE[_p["slug"]]
+UNPUBLISHED = {p["slug"] for p in POSTS if p["date"] > PUBLISH_DATE}
+POSTS = [p for p in POSTS if p["slug"] not in UNPUBLISHED]
 POST_BY_SLUG = {p["slug"]: p for p in POSTS}
 IMG_MAP = {}
 for line in open(os.path.join(HERE, "img_map.tsv"), encoding="utf-8").read().splitlines():
@@ -1624,3 +1642,17 @@ if not PREVIEW:
         for a, b in _r:
             _f.write(f"{a.rstrip('/')}  {b}  301\n{a}  {b}  301\n")
     print(len(_r), "redirections EN")
+
+# Articles pas encore parus : on retire leurs pages d'une génération précédente
+import shutil as _sh
+for _s in UNPUBLISHED:
+    _d = [os.path.join(OUT, _s)]
+    _f = os.path.join(EN_DIR, _s + ".txt")
+    if os.path.exists(_f):
+        _t = parse_segs(open(_f, encoding="utf-8").read()).get("T")
+        if _t and _slugify_en(_t):
+            _d.append(os.path.join(OUT, "en", _slugify_en(_t)))
+    for _x in _d:
+        if os.path.isdir(_x):
+            _sh.rmtree(_x)
+print(len(UNPUBLISHED), "article(s) programmé(s) non publiés au", PUBLISH_DATE)

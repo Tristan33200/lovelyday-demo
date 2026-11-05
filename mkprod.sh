@@ -3,6 +3,19 @@
 set -e
 S=/tmp/claude-0/-home-user/20887b6f-fabe-5ce1-a4a5-fdc0d980e6c3/scratchpad
 P=$S/prodrepo
+MSG="$1"
+TODAY=$(date -u +%F)
+# Dates de parution programmées (SCHEDULE dans build.py) encore à venir
+DATES=$(python3 - <<'PY'
+import re,datetime
+s=open("/tmp/claude-0/-home-user/20887b6f-fabe-5ce1-a4a5-fdc0d980e6c3/scratchpad/build.py").read()
+blk=s[s.index("SCHEDULE = {"):s.index("}",s.index("SCHEDULE = {"))]
+t=datetime.date.today().isoformat()
+print(" ".join(sorted({d for d in re.findall(r'"(\d{4}-\d\d-\d\d)"',blk) if d>t})))
+PY
+)
+prep() {
+cd $S && PUBLISH_DATE=$1 python3 build.py site > /dev/null
 rm -rf $S/prod && cp -r $S/site $S/prod && rm -f $S/prod/.htaccess
 python3 -I $S/rename_imgs.py $S/prod
 printf 'google-site-verification: googlefcf2685566146d48.html' > $S/prod/googlefcf2685566146d48.html
@@ -62,9 +75,33 @@ cat > $S/prod/_headers <<'H'
 /assets/*
   Cache-Control: public, max-age=86400
 H
-if [ ! -d $P/.git ]; then git clone -q --no-checkout /home/user/lovelyday-demo $P; cd $P; git remote set-url origin "$(git -C /home/user/lovelyday-demo remote get-url origin)"; git checkout -q --orphan production; fi
+}
+commit() {
 cd $P && find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} + && cp -r $S/prod/. ./
 git add -A && git commit -qm "$1
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
-Claude-Session: https://claude.ai/code/session_013Na2xn24ndN6rfzWREi6KN" && git push -u origin production 2>&1 | tail -1
+Claude-Session: https://claude.ai/code/session_013Na2xn24ndN6rfzWREi6KN" || true
+}
+if [ ! -d $P/.git ]; then git clone -q --no-checkout /home/user/lovelyday-demo $P; cd $P; git remote set-url origin "$(git -C /home/user/lovelyday-demo remote get-url origin)"; git checkout -q --orphan production; fi
+cd $P && git checkout -q production
+# 1) version du jour -> branche production (mise en ligne)
+prep $TODAY && commit "$MSG"
+# 2) versions futures -> branches parution-AAAA-MM-JJ, chacune construite sur la précédente.
+#    Le workflow GitHub « parution » avance production sur la bonne branche le jour venu.
+git -C $P branch -f prochaine production
+for D in $DATES; do
+  cd $P && git checkout -q prochaine
+  prep $D && commit "Parution programmée du $D"
+  git -C $P branch -f parution-$D prochaine
+done
+cd $P && git checkout -q production
+git push -u origin production 2>&1 | tail -1
+for D in $DATES; do git push -fq origin parution-$D; done
+# branches de parution déjà passées : supprimées du dépôt
+for B in $(git ls-remote --heads origin 'parution-*' | sed 's#.*refs/heads/##'); do
+  case " $DATES " in *" ${B#parution-} "*) ;; *) git push -q origin --delete $B;; esac
+done
+# site/ revient à l'état du jour
+cd $S && python3 build.py site > /dev/null
+echo "Parutions programmées : $DATES"

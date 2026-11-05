@@ -6,7 +6,7 @@ rm -rf $S/demo && cp -r $S/site $S/demo
 python3 -I $S/rename_imgs.py $S/demo
 find $S/demo -name "*.html" -exec sed -i 's|<head>|<head><meta name="robots" content="noindex, nofollow">|' {} +
 printf 'User-agent: *\nDisallow: /\n' > $S/demo/robots.txt; rm -f $S/demo/sitemap*.xml
-cd /home/user/lovelyday-demo && find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} + && cp -r $S/demo/. ./
+cd /home/user/lovelyday-demo && find . -mindepth 1 -maxdepth 1 ! -name .git ! -name .github -exec rm -rf {} + && cp -r $S/demo/. ./ && cp -r $S/gh/.github ./
 git add -A && git commit -qm "$1
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
