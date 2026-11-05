@@ -24,10 +24,10 @@ Contact : contact@lovelydayevent.fr · +33 6 89 96 67 31 · https://lovelydayeve
 ## English
 
 - [Home](https://lovelydayevent.fr/en/)
-- [About Alexandra](https://lovelydayevent.fr/en/agence-evenementielle/)
-- [Services and prices](https://lovelydayevent.fr/en/prestations/)
-- [Real weddings](https://lovelydayevent.fr/en/weddingbook-exemples-de-mariages/)
-- [Inspiration journal](https://lovelydayevent.fr/en/les-idees-de-lovely-day-inspirations/)
+- [About Alexandra](https://lovelydayevent.fr/en/about/)
+- [Services and prices](https://lovelydayevent.fr/en/services/)
+- [Real weddings](https://lovelydayevent.fr/en/weddings/)
+- [Inspiration journal](https://lovelydayevent.fr/en/journal/)
 
 ## Optional
 
