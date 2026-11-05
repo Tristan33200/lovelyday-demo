@@ -652,3 +652,7 @@ html.lb-lock, html.lb-lock body { overflow: hidden; }
 .hscroll.hs-static .hs-track { padding-top: 0; }
 @media (max-width: 700px) { .hs-track { --h: min(56vh, 62vw); } }
 .js .hscroll figure img, .js .article .hscroll figure img { opacity: 1; transition: none; }
+.pkg-list { display: grid; align-content: start; gap: 18px; }
+.pkg-opt { margin: 0; padding: 12px 14px; border: 1px dashed var(--line); font-size: 14px; line-height: 1.5; display: grid; gap: 4px; }
+.pkg-opt .label { font-size: 10px; }
+.pkg-opt a { color: inherit; }
