@@ -900,17 +900,11 @@ def p_prestations(c):
         (t("Réalisation", "Production"), t("J'effectue les achats ou la location grâce à mes privilèges professionnels, puis je prends en charge le stockage et la réalisation de tous les éléments décoratifs : cadeaux invités, signalétique, plans de table…", "I purchase or rent through my professional accounts, then store and produce every decorative element: guest favours, signage, seating plans and more.")),
         (t("Installation &amp; Jour J", "Installation &amp; the day"), t("J'installe tous les éléments pour créer une ambiance visuelle et esthétique, puis je coordonne l'événement : prestataires, imprévus, animations. Et surtout, je reste à vos côtés.", "I install every element to create the visual atmosphere, then coordinate the event itself: suppliers, the unexpected, entertainment. Above all, I stay by your side.")),
     ]
-    deco4 = [
-        (t("Briefing déco", "Design briefing"), t("Un large catalogue pour définir l'ambiance et le style de votre mariage : thèmes, couleurs, matières, art de la table, mobilier, papeterie, cortège.", "A wide catalogue to define the mood and style of your wedding: themes, colours, textures, tableware, furniture, stationery, wedding party.")),
-        (t("Book et chiffrage", "Design book &amp; budget"), t("Un book décoration avec plusieurs propositions pour chaque espace, puis une shopping list avec le budget prévisionnel des achats et locations.", "A design book with several proposals for each space, followed by a shopping list with a projected budget for purchases and rentals.")),
-        (t("Achat et confection", "Sourcing &amp; making"), t("Après votre validation, je commence les achats et la création des éléments, car vos envies ne sont pas toujours disponibles sur le marché.", "Once you approve, I start sourcing and making each element, because what you dream of is not always available off the shelf.")),
-        (t("L'installation", "Installation"), t("Le jour J, de l'arche de cérémonie aux marque-places, tout est posé minutieusement pour que vous viviez une journée de rêve.", "On the day, from the ceremony arch to each place card, everything is set with care so you can live a dream day.")),
-    ]
     pk = [
         (True, t("Formule Signature", "Signature package"), t("Organisation, design &amp; Jour J", "Planning, design &amp; the day"),
          t("L'expérience complète : je conçois l'univers de votre mariage et j'en orchestre chaque détail.", "The complete experience: I design the world of your wedding and orchestrate every detail."),
          [t("Organisation complète et gestion des prestataires", "Full planning and supplier management"), t("Design, scénographie et décoration sur mesure", "Bespoke design, scenography and styling"), t("Achats, confection et installation du décor", "Sourcing, making and installing the decor"), t("Coordination la veille et le jour J", "Coordination the day before and on the day")],
-         "6 900 €", "#design", t("Découvrir le design", "Explore the design")),
+         "6 900 €", "#signature", t("Voir le détail", "See the details")),
         (False, t("Organisation + Jour J", "Planning + the day"), t("Organisation de mariage", "Wedding planning"),
          t("Je prends en charge les préparatifs et je coordonne votre journée.", "I take care of the preparations and coordinate your day."),
          [t("Organisation complète et gestion des prestataires", "Full planning and supplier management"), t("Budget, plannings et suivi financier", "Budget, timelines and financial tracking"), t("Coordination la veille et le jour J", "Coordination the day before and on the day"), t("Décoration en option, dès 2 000 €", "Styling as an add-on, from €2,000")],
@@ -940,7 +934,7 @@ def p_prestations(c):
 </section>
 <nav class="subnav wrap" aria-label="{t("Formules", "Packages")}">
   <a href="#formules">{t("Formules", "Packages")}</a>
-  <a href="#design">{t("Design &amp; décoration", "Design &amp; styling")}</a>
+  <a href="#signature">{t("Signature", "Signature")}</a>
   <a href="#organisation">{t("Organisation + Jour J", "Planning + the day")}</a>
   <a href="#coordination">{t("Coordination Jour J", "On-the-day coordination")}</a>
   <a href="#location">Photobooth</a>
@@ -958,13 +952,22 @@ def p_prestations(c):
   </div>
 </section>
 
-<section class="section section--stone" id="design">
+<section class="section section--stone" id="signature">
   <div class="wrap stack-lg">
-    <div class="split split--rev">
+    <div class="stack" style="max-width:760px">
+      <span class="label">{t("Formule Signature", "Signature package")}</span>
+      <h2 class="h2">{t("Organisation, design &amp; Jour J", "Planning, design &amp; the day")}</h2>
+      <p class="it" style="color:var(--muted)">{t("L'expérience complète, en six étapes : je conçois l'univers de votre mariage et j'en orchestre chaque détail.", "The complete experience, in six steps: I design the world of your wedding and orchestrate every detail.")}</p>
+      <div class="price"><span class="label">{t("À partir de", "From")}</span><strong>6 900 €</strong></div>
+    </div>
+    <div class="steps" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))">
+      {"".join(f'<div class="step"><span class="num">{i+1:02d}</span><h3 class="h3">{a}</h3><p>{b}</p></div>' for i,(a,b) in enumerate(steps6))}
+    </div>
+<div class="split split--rev" id="design" style="margin-top:32px">
       <div class="s-img reveal">{c.img("MariageChateauGrattequina_TristanPerrier_NA-325", t("Mur à champagne « Santé ! » fleuri", "Floral champagne wall"), "ratio-tall")}</div>
       <div class="s-txt offer-head">
         <span class="label">{t("Ma signature", "My signature")}</span>
-        <h2 class="h2">{t("Design &amp; décoration", "Design &amp; styling")}</h2>
+        <h3 class="h2">{t("Design &amp; décoration", "Design &amp; styling")}</h3>
         <p class="it" style="color:var(--muted)">{t("Construire un thème, un univers qui vous ressemble.", "Building a theme, a world that is entirely yours.")}</p>
         <div class="prose">
           <p>{t("Un mariage, on s'en souvient pour l'ambiance et la beauté du moment. Vous avez sûrement mille et une idées en tête : mon métier de wedding designer, c'est créer de la magie, une expérience nouvelle, et faire de vos rêves une réalité.", "A wedding is remembered for its atmosphere and the beauty of the moment. You probably have a thousand ideas in mind; my role as a wedding designer is to create magic, a new experience, and turn your dreams into reality.")}</p>
@@ -977,9 +980,6 @@ def p_prestations(c):
     <div class="roles">
       <div><h3 class="role-t">{t("Mon rôle", "My role")}</h3>{ul([t("Élaboration du cahier des charges", "Drawing up the brief"), t("Rendez-vous wedding styling : thème, concept, couleurs, ambiance et budget", "Wedding styling meeting: theme, concept, colours, mood and budget"), t("Devis techniques et scéniques : tentes, sols, son et lumière, fleuriste, graphiste, mobilier, art de la table", "Technical quotes: marquees, flooring, sound and lighting, florist, graphic designer, furniture, tableware"), t("Moodboards, palettes de couleurs et proposition de papeterie", "Moodboards, colour palettes and stationery proposals")])}</div>
       <div><div class="list-title" aria-hidden="true">&nbsp;</div>{ul([t("Shopping list et budget prévisionnel des achats et locations", "Shopping list and projected budget for purchases and rentals"), t("Recherche, achat et location des décorations", "Sourcing, buying and renting decor"), t("Confection des derniers détails : art de la table, espace enfants, cérémonie, signalétique, plan de table, urne, livre d'or…", "Making the final details: tableware, kids' corner, ceremony, signage, seating plan, card box, guest book…"), t("Installation du design de la réception le jour J", "Installing the reception design on the day")])}</div>
-    </div>
-    <div class="steps">
-      {"".join(f'<div class="step"><span class="num">{i+1:02d}</span><h3 class="h3">{a}</h3><p>{b}</p></div>' for i,(a,b) in enumerate(deco4))}
     </div>
     <div class="gallery" style="margin-top:24px">
       {c.img("MariageChateauGrattequina_TristanPerrier_NA-430", t("Art de la table blanc et doré", "White and gold tableware"))}
@@ -1012,15 +1012,6 @@ def p_prestations(c):
       <div><h3 class="role-t">{t("Organisation", "Planning")}</h3>{ul([t("Rendez-vous de découverte : qui êtes-vous, qu'attendez-vous de votre mariage ?", "Discovery meeting: who you are and what you expect from your wedding"), t("Cahier des charges et plannings jusqu'au jour J", "Brief and timelines through to the day"), t("Outils de gestion partagés et conseil continu", "Shared planning tools and ongoing advice"), t("Budget, répartition des dépenses et suivi financier", "Budget, cost allocation and financial tracking"), t("Hébergements et transports : proposition et gestion", "Accommodation and transport: proposals and management")])}</div>
       <div><h3 class="role-t">Production</h3>{ul([t("Choix, essais, négociations, rendez-vous, devis et contrats des prestataires", "Supplier selection, tastings, negotiation, meetings, quotes and contracts"), t("Suivi financier et management des prestataires", "Financial follow-up and supplier management"), t("Visites techniques du lieu de réception", "Technical visits of the venue"), t("Logistique : mise en place et montage des espaces", "Logistics: set-up and installation of each space")])}</div>
       <div><h3 class="role-t">Coordination</h3>{ul([t("Accueil et management des prestataires et des invités", "Welcoming and managing suppliers and guests"), t("Accompagnement des mariés la veille et le jour J", "By your side the day before and on the day"), t("Gestion des animations avec votre entourage", "Coordinating speeches and surprises with your loved ones"), t("Supervision et coordination de votre jour J", "Supervision and coordination of your wedding day")])}</div>
-    </div>
-  </div>
-</section>
-
-<section class="section section--stone">
-  <div class="wrap stack-lg">
-    <div class="stack" style="max-width:760px"><span class="label">{t("Méthode", "Process")}</span><h2 class="h2">{t("La création de votre mariage en six étapes", "Your wedding in six steps")}</h2></div>
-    <div class="steps" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))">
-      {"".join(f'<div class="step"><span class="num">{i+1:02d}</span><h3 class="h3">{a}</h3><p>{b}</p></div>' for i,(a,b) in enumerate(steps6))}
     </div>
     <div class="split" style="margin-top:24px">
       <div class="s-txt stack c-1-6"><span class="label">{t("Mes outils de gestion", "Planning tools")}</span><h3 class="h3">{t("Un dossier de mariage en ligne, accessible 24h/24", "An online wedding file, available 24/7")}</h3></div>
