@@ -1,0 +1,34 @@
+# Lovely Day Event
+
+> LOVELY DAY EVENT est une agence de wedding planning et de wedding design fondée en 2014 à Bordeaux par Alexandra Ambert, Wedding Designer certifiée (Wedding Academy). Organisation, design et coordination de mariages sur mesure, haut de gamme et authentiques, en Gironde, sur le Bassin d'Arcachon, en Dordogne, au Pays basque et partout en France. Site bilingue français / anglais. Lovely Day Event is a Bordeaux-based wedding planner and designer serving international couples in English.
+
+Note : 5,0/5 sur Google (58 avis) et 5,0/5 sur Mariages.net (41 avis).
+Contact : contact@lovelydayevent.fr · +33 6 89 96 67 31 · https://lovelydayevent.fr/contact/
+
+## Formules (tarifs « à partir de »)
+
+- [Formule Signature : organisation, design et jour J](https://lovelydayevent.fr/prestations/#design) : 6 900 €. Organisation complète, scénographie et décoration sur mesure (achats, confection, installation), coordination la veille et le jour J.
+- [Organisation + Jour J](https://lovelydayevent.fr/prestations/#organisation) : 5 000 €. Préparatifs complets, gestion des prestataires, budget, coordination la veille et le jour J. Décoration en option dès 2 000 €.
+- [Coordination Jour J](https://lovelydayevent.fr/prestations/#coordination) : 2 200 €. Rendez-vous 3 mois avant, contact des prestataires, rétroplanning, coordination du jour J.
+- Design & décoration seul : à partir de 2 000 €. Location de photobooth : 400 €.
+
+## Pages principales
+
+- [Accueil](https://lovelydayevent.fr/)
+- [L'agence et Alexandra Ambert](https://lovelydayevent.fr/agence-evenementielle/)
+- [Prestations et tarifs](https://lovelydayevent.fr/prestations/)
+- [Mariages réalisés (weddingbook)](https://lovelydayevent.fr/weddingbook-exemples-de-mariages/)
+- [Inspirations : conseils mariage](https://lovelydayevent.fr/les-idees-de-lovely-day-inspirations/)
+- [Contact](https://lovelydayevent.fr/contact/)
+
+## English
+
+- [Home](https://lovelydayevent.fr/en/)
+- [About Alexandra](https://lovelydayevent.fr/en/agence-evenementielle/)
+- [Services and prices](https://lovelydayevent.fr/en/prestations/)
+- [Real weddings](https://lovelydayevent.fr/en/weddingbook-exemples-de-mariages/)
+- [Inspiration journal](https://lovelydayevent.fr/en/les-idees-de-lovely-day-inspirations/)
+
+## Optional
+
+- [Plan du site complet](https://lovelydayevent.fr/sitemap.xml)
