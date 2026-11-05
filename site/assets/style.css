@@ -642,11 +642,12 @@ html.lb-lock, html.lb-lock body { overflow: hidden; }
 .roles h3.role-t { font-family: var(--body); font-weight: 400; font-size: 11px; letter-spacing: .3em; text-transform: uppercase; margin: 0 0 16px; font-style: normal; line-height: 1.6; }
 .article .as-h3, .article .as-h4, .article .as-h5 { font-family: var(--display); font-style: italic; font-weight: 400; font-size: clamp(21px, 2vw, 25px); line-height: 1.3; margin-top: .8em; text-transform: none; letter-spacing: 0; }
 .video-agence .video { width: 100%; margin: 0; }
-/* Suites de photos en parallaxe */
-.plx-stack { --w: min(1040px, calc(100vw - 2 * var(--gutter))); width: var(--w); margin: 2em calc((100% - var(--w)) / 2); display: grid; gap: clamp(8px, 1.2vw, 16px); }
-.plx-row { display: flex; gap: clamp(8px, 1.2vw, 16px); }
-.plx-solo { justify-content: center; }
-.article .plx-stack figure.plx[style] { display: block; position: relative; margin: 0; overflow: hidden; aspect-ratio: var(--ar); background: var(--stone); min-width: 0; }
-.article .plx-solo figure.plx[style] { flex: 0 0 auto; width: min(100%, calc(88vh * var(--ar))); }
-.article .plx-stack figure.plx[style] img { position: absolute; left: 0; top: -9%; width: 100%; height: 118%; max-width: none; object-fit: cover; will-change: transform; }
-@media (max-width: 700px) { .plx-row { flex-direction: column; } .article .plx-row figure.plx[style] { width: 100%; flex: none; } }
+/* Suites de photos : défilement horizontal piloté par le scroll */
+.hscroll { position: relative; width: 100vw; margin: 2.5em calc(50% - 50vw); }
+.hs-sticky { position: sticky; top: 0; height: 100vh; height: 100svh; display: flex; align-items: center; overflow: hidden; }
+.hs-track { --h: min(68vh, 680px); display: flex; gap: clamp(10px, 1.4vw, 20px); padding: 60px max(var(--gutter), calc((100vw - 1040px) / 2)) 0; will-change: transform; }
+.article .hscroll figure.hs-fig[style] { display: block; flex: 0 0 auto; margin: 0; height: var(--h); width: calc(var(--h) * var(--ar)); max-width: none; background: var(--stone); }
+.article .hscroll figure.hs-fig[style] img { width: 100%; height: 100%; max-width: none; object-fit: cover; }
+.hscroll.hs-static .hs-sticky { position: static; height: auto; overflow-x: auto; scrollbar-width: none; }
+.hscroll.hs-static .hs-track { padding-top: 0; }
+@media (max-width: 700px) { .hs-track { --h: min(56vh, 62vw); } }

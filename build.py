@@ -225,19 +225,10 @@ def gallery_rows(m):
         d = re.search(r'width="(\d+)" height="(\d+)"', f)
         return int(d.group(1)) / int(d.group(2)) if d else 1.5
     if "data-carousel" in m.group(1):
-        # longues suites de photos : défilement vertical en parallaxe (comme tristanperrier.fr),
-        # paysages en pleine largeur, portraits côte à côte par deux
-        rows, k = [], 0
-        while k < len(figs):
-            if ar(figs[k]) < 1 and k + 1 < len(figs) and ar(figs[k + 1]) < 1:
-                rows.append(figs[k:k + 2]); k += 2
-            else:
-                rows.append([figs[k]]); k += 1
-        out = []
-        for r in rows:
-            out.append(f'<div class="plx-row{" plx-solo" if len(r) == 1 and ar(r[0]) < 1 else ""}">' + "".join(
-                f.replace("<figure", f'<figure class="plx" style="--ar:{ar(f):.4f};flex:{ar(f):.4f} 1 0%"', 1) for f in r) + "</div>")
-        return f'<div class="plx-stack">{"".join(out)}</div>'
+        # longues suites de photos : la section reste épinglée et les photos défilent
+        # de droite à gauche au fil du scroll (comme sur tristanperrier.fr)
+        slides = "".join(f.replace("<figure", f'<figure class="hs-fig" style="--ar:{ar(f):.4f}"', 1) for f in figs)
+        return f'<div class="hscroll"><div class="hs-sticky"><div class="hs-track">{slides}</div></div></div>'
     rows, cur = [], []
     for f in figs:
         cur.append(f)
