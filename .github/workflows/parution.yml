@@ -1,0 +1,25 @@
+# Parution programmée des articles du journal de lovelydayevent.fr.
+# Chaque matin, si une branche parution-AAAA-MM-JJ est arrivée à échéance,
+# la branche production (servie par Sevalla) avance jusqu'à elle : Sevalla redéploie tout seul.
+name: parution
+on:
+  schedule:
+    - cron: "17 5 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  parution:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Avancer production
+        run: |
+          today=$(date -u +%F)
+          cible=$(git branch -r --list 'origin/parution-*' | sed 's#.*origin/parution-##' | awk -v t="$today" '$1<=t' | sort | tail -1)
+          if [ -z "$cible" ]; then echo "Rien à publier aujourd'hui"; exit 0; fi
+          if git merge-base --is-ancestor "origin/parution-$cible" origin/production; then echo "Déjà publié"; exit 0; fi
+          git push origin "origin/parution-$cible:refs/heads/production"
+          echo "Publié : parution-$cible"
