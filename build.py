@@ -1358,7 +1358,6 @@ def journal_card(c, p):
     p = loc(c, p)
     return f'''<a class="jcard reveal" href="{c.href("post:" + p["slug"])}">
   {fitted_img(c, [("j", p["cover"])] + [("j", u) for b in p["blocks"] for u in ([b["v"]] if b["t"] == "img" else b["v"] if b["t"] == "gallery" else [])], p["title"], "ratio-land")}
-  <span class="label">{fmt_date(c, p["date"])}</span>
   <h2>{H.escape(p["title"])}</h2>
 </a>'''
 
@@ -1374,7 +1373,7 @@ def p_post(c, slug):
     cover = c.jimg(p["cover"], p["title"], cls="post-cover", eager=True) if p["cover"] != first_img else ""
     body = f'''
 <section class="page-hero wrap">
-  <span class="label"><a href="{c.href("inspirations")}" style="text-decoration:none">{c.t("Inspirations", "Inspiration")}</a> · {fmt_date(c, p["date"])}</span>
+  <span class="label"><a href="{c.href("inspirations")}" style="text-decoration:none">{c.t("Inspirations", "Inspiration")}</a></span>
   <h1 class="h2" style="max-width:24ch">{H.escape(p["title"])}</h1>
 </section>
 <div class="wrap">{cover}</div>
