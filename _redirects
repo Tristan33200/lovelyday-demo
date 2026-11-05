@@ -226,5 +226,14 @@ https://www.lovelydayevent.fr/*        https://lovelydayevent.fr/:splat         
 /en/weddingdesignerdemariagebordeaux/  /en/wedding-designer/  301
 /en/yvonne-thomas-mariage-2025  /en/yvonne-thomas-wedding/  301
 /en/yvonne-thomas-mariage-2025/  /en/yvonne-thomas-wedding/  301
+# Restes de WordPress (étiquettes, catégories, flux, pagination)
+/tag/*                                  /les-idees-de-lovely-day-inspirations/    301
+/category/*                             /les-idees-de-lovely-day-inspirations/    301
+/page/*                                 /les-idees-de-lovely-day-inspirations/    301
+/author/*                               /agence-evenementielle/                   301
+/en/tag/*                               /en/journal/                              301
+/en/category/*                          /en/journal/                              301
+/:slug/feed/                            /:slug/                                   301
+/:slug/feed                             /:slug/                                   301
 # Page introuvable
 /*                                      /index.html                               404
