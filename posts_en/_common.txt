@@ -64,3 +64,6 @@
 
 [FR] Le costume
 [EN] The suit
+
+[FR] <p>Créative et passionnée, je suis certifiée Wedding Designer et je conçois une ambiance scénographique qui correspond au thème de votre mariage. La décoration est comprise dans la formule Signature, ou proposée en option avec la coordination du jour J.</p>
+[EN] <p>Creative and passionate, I am a certified Wedding Designer and I create a scenographic atmosphere that matches the theme of your wedding. Styling is included in the Signature package, or offered as an add-on to on-the-day coordination.</p>
