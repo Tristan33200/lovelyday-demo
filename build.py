@@ -402,6 +402,8 @@ def org_ld(c):
         "foundingDate": "2014", "priceRange": "€€€",
         "founder": {"@type": "Person", "name": "Alexandra Ambert", "jobTitle": t("Wedding planner et Wedding Designer certifiée", "Wedding planner and certified Wedding Designer")},
         "address": {"@type": "PostalAddress", "addressLocality": "Bordeaux", "addressRegion": "Nouvelle-Aquitaine", "addressCountry": "FR"},
+        "geo": {"@type": "GeoCoordinates", "latitude": 44.8378, "longitude": -0.5792},
+        "knowsAbout": [t("Organisation de mariage", "Wedding planning"), t("Décoration de mariage", "Wedding design"), t("Coordination jour J", "Wedding day coordination")],
         "areaServed": ["Bordeaux", "Gironde", t("Bassin d'Arcachon", "Arcachon Bay"), "Dordogne", t("Pays basque", "Basque Country"), "France"],
         "knowsLanguage": ["fr", "en"], "sameAs": SAME_AS,
     }
@@ -580,7 +582,7 @@ def p_index(c):
   <span class="credit">© Tristan Perrier</span>
   <div class="hero-text wrap">
     <span class="label">Bordeaux · Dordogne · {t("Bassin d'Arcachon", "Arcachon Bay")}</span>
-    <h1 class="h1">Wedding Planner<br>&amp; Designer {t("en France", "in France")}</h1>
+    <h1 class="h1">Wedding Planner<br>&amp; Designer {t("à Bordeaux", "in Bordeaux, France")}</h1>
     <p class="it">{t("Organisation et design de mariages sur mesure, pour des célébrations élégantes, fluides et profondément personnelles.", "Bespoke wedding planning and design, for elegant, seamless and deeply personal celebrations.")}</p>
     <a class="btn btn--light" href="{c.href("contact")}">{t("Parlez-moi de votre projet", "Tell me about your wedding")}</a>
   </div>
@@ -588,11 +590,11 @@ def p_index(c):
 
 <section class="section">
   <div class="wrap statement reveal">
-    <span class="label">{t("Agence d'organisation de mariage sur mesure", "Bespoke wedding planning in France")}</span>
+    <span class="label">{t("Organisation de mariage à Bordeaux et partout en France", "Wedding planning in Bordeaux and throughout France")}</span>
     <h2 class="h2">{t("Chaque détail,<br>imaginé pour vous ressembler", "Every detail,<br>designed around you")}</h2>
     <hr class="rule">
     <div class="prose">
-      <p>{t("Basée à Bordeaux, j'accompagne en tant que wedding planner des couples français et internationaux dans la création de mariages élégants et parfaitement orchestrés.", "Based in Bordeaux, I work as a wedding planner with French and international couples to create elegant, flawlessly orchestrated weddings.")}</p>
+      <p>{t("Wedding planner à Bordeaux depuis 2014, j'accompagne des couples français et internationaux dans l'organisation de mariages élégants et parfaitement orchestrés, en Gironde comme partout en France.", "A wedding planner in Bordeaux since 2014, I work with French and international couples to plan elegant, flawlessly orchestrated weddings, in Gironde and throughout France.")}</p>
       <p>{t("Chaque projet est pensé comme une expérience unique, où chaque détail est soigneusement imaginé pour vous ressembler. De la sélection du lieu à la coordination du jour J, je vous guide avec exigence, sens du détail et sérénité.", "Each project is conceived as a unique experience, where every detail is carefully imagined to reflect who you are. From choosing the venue to coordinating the day itself, I guide you with high standards, an eye for detail and a sense of calm.")}</p>
     </div>
   </div>
@@ -688,11 +690,11 @@ def p_index(c):
     <div class="s-img reveal">{c.img("MariageChateauGrattequina_TristanPerrier_NA-474", t("Château Grattequina, Gironde", "Château Grattequina, Gironde"), "ratio-tall")}</div>
     <div class="s-txt stack">
       <span class="label">{t("Sud-Ouest &amp; France", "South-West France &amp; beyond")}</span>
-      <h2 class="h2">{t("Se marier dans la région bordelaise", "Marrying in the Bordeaux region")}</h2>
+      <h2 class="h2">{t("Votre wedding planner à Bordeaux et en Gironde", "Your wedding planner in Bordeaux and Gironde")}</h2>
       <div class="prose">
         <p>{t("La Nouvelle-Aquitaine regorge de paysages magnifiques et de délicieuses spécialités culinaires. Avec ses vignobles à perte de vue, la région bordelaise bénéficie des meilleurs vins du pays pour accompagner votre dîner de mariage. Ses décors naturels et sauvages ajouteront une touche sublime à vos photos.", "Nouvelle-Aquitaine is full of breathtaking landscapes and wonderful regional cuisine. With vineyards as far as the eye can see, the Bordeaux region offers some of the finest wines in the country for your wedding dinner, and its natural, untamed scenery adds something sublime to your photographs.")}</p>
         <p>{t("Que vous rêviez d'un château pour un mariage chic, d'une villa privée en bord de plage, du cœur des vignobles bordelais ou d'un grand hôtel pour un mariage raffiné, la région a assurément le lieu idéal pour votre jour inoubliable.", "Whether you dream of a château for a chic celebration, a private beachfront villa, the heart of the Bordeaux vineyards or a grand hotel for a refined affair, the region has the perfect venue for your unforgettable day.")}</p>
-        <p class="small">{t("Mes couples en Gironde, Dordogne, Pays Basque, ainsi que dans d'autres destinations en France, font appel à moi pour être leur wedding planner.", "Couples in Gironde, Dordogne, the Basque Country and other destinations across France choose me as their wedding planner.")}</p>
+        <p class="small">{t("Châteaux du Médoc et de Saint-Émilion, domaines de l'Entre-deux-Mers, Bassin d'Arcachon : je connais les lieux et les prestataires bordelais. Mes couples en Gironde, Dordogne, Pays Basque et dans d'autres régions de France font appel à moi pour être leur wedding planner.", "Médoc and Saint-Émilion châteaux, Entre-deux-Mers estates, the Arcachon Bay: I know the Bordeaux venues and suppliers. Couples in Gironde, Dordogne, the Basque Country and other regions of France choose me as their wedding planner.")}</p>
       </div>
     </div>
   </div>
