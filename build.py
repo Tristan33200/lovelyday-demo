@@ -1356,7 +1356,7 @@ def render_blocks(c, blocks, title):
         elif b["t"] == "quote":
             who = f'<cite class="label">{H.escape(b.get("who", ""))}</cite>' if b.get("who") else ""
             out.append(f'<blockquote><p>{H.escape(b["v"])}</p>{who}</blockquote>')
-    out = [x.replace('<div class="gallery">', '<div class="gallery" data-carousel>', 1) if x.startswith('<div class="gallery">') and x.count("<figure") >= (3 if c.page == "post:tristan-perrier-le-photographe-mariage" else 4) else x for x in out]
+    out = [x.replace('<div class="gallery">', '<div class="gallery" data-carousel>', 1) if x.startswith('<div class="gallery">') and x.count("<figure") >= 3 else x for x in out]
     return "\n".join(x for x in out if x)
 
 
