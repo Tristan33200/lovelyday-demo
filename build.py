@@ -474,6 +474,8 @@ def page(c, body, title=None, desc=None, image=None):
         alt += f'\n<link rel="alternate" hreflang="en" href="{en_url}">\n<link rel="alternate" hreflang="x-default" href="{fr_url}">'
     canonical = en_url if c.lang == "en" else fr_url
     body = fix_headings(body)
+    # pas de mention « © Tristan Perrier » sur les photos (demande de Tristan, 2026-11-05) : crédit en pied de page, mentions légales et récits
+    body = re.sub(r"\s*<span class=\"credit\">[^<]*</span>", "", body)
     is_post = c.page.startswith("post:")
     image = image or (abs_img(c, body) if is_post else None) or SITE_URL + "img/MariageChateauGrattequina_TristanPerrier_NA-274.webp"
     loc, loc_alt = ("fr_FR", "en_GB") if c.lang == "fr" else ("en_GB", "fr_FR")
