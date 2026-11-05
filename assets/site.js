@@ -392,6 +392,15 @@ document.querySelectorAll('[data-carousel]').forEach(function (car) {
       var span = b.offsetHeight - window.innerHeight;
       var p = span > 0 ? Math.max(0, Math.min(1, -r.top / span)) : 0;
       b.querySelector(".hs-track").style.transform = "translate3d(" + (-p * b._dist).toFixed(1) + "px,0,0)";
+      // chaque photo monte du bas vers le haut en entrant par la droite
+      var vw = window.innerWidth;
+      Array.prototype.forEach.call(b.querySelectorAll(".hs-fig"), function (f) {
+        var x = f.getBoundingClientRect().left;
+        var k = Math.max(0, Math.min(1, (vw - x) / (vw * 0.45)));
+        var e = 1 - Math.pow(1 - k, 3);
+        f.style.transform = "translate3d(0," + ((1 - e) * 90).toFixed(1) + "px,0)";
+        f.style.opacity = (0.25 + 0.75 * e).toFixed(3);
+      });
     });
   }
   window.addEventListener("scroll", function () { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
