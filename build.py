@@ -580,7 +580,7 @@ def p_index(c):
   <span class="credit">© Tristan Perrier</span>
   <div class="hero-text wrap">
     <span class="label">Bordeaux · Dordogne · {t("Bassin d'Arcachon", "Arcachon Bay")}</span>
-    <h1 class="h1">Wedding Planner<br>&amp; Designer {t("à Bordeaux", "in Bordeaux, France")}</h1>
+    <h1 class="h1">Wedding Planner<br>&amp; Designer {t("en France", "in France")}</h1>
     <p class="it">{t("Organisation et design de mariages sur mesure, pour des célébrations élégantes, fluides et profondément personnelles.", "Bespoke wedding planning and design, for elegant, seamless and deeply personal celebrations.")}</p>
     <a class="btn btn--light" href="{c.href("contact")}">{t("Parlez-moi de votre projet", "Tell me about your wedding")}</a>
   </div>
