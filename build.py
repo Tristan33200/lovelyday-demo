@@ -878,7 +878,7 @@ def ratings(c):
 
 def pkg(c, star, label, title, intro, items, price, href, cta, photo=None):
     t = c.t
-    badge = f'<span class="badge">{t("La plus choisie", "Most popular")}</span>' if star else ""
+    badge = ""  # « La plus choisie » retiré à la demande d'Alexandra (2026-11-05) ; la carte reste mise en avant
     pic = f'<a class="pkg-img" href="{href}" tabindex="-1" aria-hidden="true">{c.img(photo[0], photo[1], "ratio-land")}</a>' if photo else ""
     return f'''<article class="pkg{" pkg--star" if star else ""}">{badge}{pic}
         <span class="label">{label}</span>
