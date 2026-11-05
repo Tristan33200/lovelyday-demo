@@ -134,7 +134,43 @@ def jname(url):
     return n
 
 
-def route_of(key):
+ROUTES_EN = {
+    "index": "", "agence": "about/", "prestations": "services/", "mariages": "weddings/",
+    "inspirations": "journal/", "photobooth": "photo-booth-hire-bordeaux/", "contact": "contact/", "mentions": "legal-notice/",
+}
+_EN_SLUGS = {}
+_EN_STOP = set("a an the of and or for to in on at by with your you our my is are be how what why which who it its this that from as do does can should will we i us".split())
+
+
+def _slugify_en(text, n=8):
+    import unicodedata
+    t = unicodedata.normalize("NFKD", H.unescape(text)).encode("ascii", "ignore").decode().lower()
+    w = [x for x in re.split(r"[^a-z0-9]+", t) if x and x not in _EN_STOP]
+    return "-".join(w[:n])
+
+
+def en_slug(slug):
+    """Adresse anglaise d'un article ou d'un récit (tirée du titre anglais)."""
+    if not _EN_SLUGS:
+        used = set(ROUTES_EN.values())
+        for s in sorted(set(WEDDING_SLUGS) | set(POSTS_EN)):
+            if s in WED_EN:
+                base = _slugify_en(WED_NAMES.get(s, POST_BY_SLUG[s]["title"])) + "-wedding"
+            else:
+                base = _slugify_en(POSTS_EN[s].get("T", s)) or s
+            cand, i = base, 2
+            while cand + "/" in used:
+                cand, i = f"{base}-{i}", i + 1
+            used.add(cand + "/")
+            _EN_SLUGS[s] = cand
+    return _EN_SLUGS.get(slug, slug)
+
+
+def route_of(key, lang="fr"):
+    if lang == "en":
+        if key.startswith("post:"):
+            return "en/" + en_slug(key[5:]) + "/"
+        return "en/" + ROUTES_EN[key]
     if key.startswith("post:"):
         return key[5:] + "/"
     return ROUTES[key]
@@ -244,7 +280,7 @@ def fitted_img(c, cands, alt, ratio):
 class Ctx:
     def __init__(self, lang, page):
         self.lang, self.page = lang, page
-        path = ("en/" if lang == "en" else "") + route_of(page)
+        path = route_of(page, lang)
         self.depth = path.count("/")
         self.root = "../" * self.depth
 
@@ -255,7 +291,7 @@ class Ctx:
         lang = lang or self.lang
         if lang == "en" and not has_en(page):
             page = "mariages" if page.startswith("post:") else "index"
-        r = ("en/" if lang == "en" else "") + route_of(page)
+        r = route_of(page, lang)
         if PREVIEW:
             r += "index.html"
         return (self.root + r) or "./"
@@ -411,7 +447,7 @@ def page(c, body, title=None, desc=None, image=None):
         title = TITLES[c.page][0 if c.lang == "fr" else 1]
     desc = desc or DESCS[c.lang]
     fr_url = SITE_URL + route_of(c.page)
-    en_url = SITE_URL + "en/" + route_of(c.page)
+    en_url = SITE_URL + route_of(c.page, "en")
     alt = f'<link rel="alternate" hreflang="fr" href="{fr_url}">'
     if has_en(c.page):
         alt += f'\n<link rel="alternate" hreflang="en" href="{en_url}">\n<link rel="alternate" hreflang="x-default" href="{fr_url}">'
@@ -1494,7 +1530,7 @@ def write(c, html):
                   lambda m: f'<figure class="{m.group(1)}" style="--fig-ar:{m.group(3)}"><img {m.group(2)}style="--ar:{m.group(3)}"', html)
     if not PREVIEW:
         html = re.sub(r'<img src="([^"]+?)\.webp"([^>]*)>', add_srcset, html)
-    path = os.path.join(OUT, ("en/" if c.lang == "en" else "") + route_of(c.page), "index.html")
+    path = os.path.join(OUT, route_of(c.page, c.lang), "index.html")
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
         f.write(html)
@@ -1523,10 +1559,10 @@ for p in BLOG:
 
 # Sitemap et redirections (version hébergée uniquement)
 if not PREVIEW:
-    urls = [SITE_URL + route_of(k) for k in BUILDERS] + [SITE_URL + "en/" + route_of(k) for k in BUILDERS if has_en(k)]
-    urls += [SITE_URL + s + "/" for s in WEDDING_SLUGS] + [SITE_URL + "en/" + s + "/" for s in WEDDING_SLUGS]
+    urls = [SITE_URL + route_of(k) for k in BUILDERS] + [SITE_URL + route_of(k, "en") for k in BUILDERS if has_en(k)]
+    urls += [SITE_URL + s + "/" for s in WEDDING_SLUGS] + [SITE_URL + route_of("post:" + s, "en") for s in WEDDING_SLUGS]
     urls += [SITE_URL + p["slug"] + "/" for p in BLOG]
-    urls += [SITE_URL + "en/" + p["slug"] + "/" for p in BLOG if p["slug"] in POSTS_EN]
+    urls += [SITE_URL + route_of("post:" + p["slug"], "en") for p in BLOG if p["slug"] in POSTS_EN]
     with open(os.path.join(OUT, "sitemap.xml"), "w") as f:
         f.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n')
         f.writelines(f"  <url><loc>{u}</loc></url>\n" for u in urls)
@@ -1570,3 +1606,18 @@ RedirectMatch 301 ^/wp-admin.*$ /
 
 json.dump(USED_J, open(os.path.join(HERE, "used_journal_imgs.json"), "w"))
 print("ok", OUT, len(written), "pages +", len(WEDDING_SLUGS) * 2, "récits +", len(BLOG), "articles")
+
+
+# Redirections des anciennes adresses anglaises (slugs français) vers les slugs anglais
+if not PREVIEW:
+    _r = []
+    for _k in BUILDERS:
+        if has_en(_k) and ROUTES[_k] and ROUTES[_k] != ROUTES_EN[_k]:
+            _r.append(("/en/" + ROUTES[_k], "/" + route_of(_k, "en")))
+    for _s in sorted(set(WEDDING_SLUGS) | set(POSTS_EN)):
+        if en_slug(_s) != _s:
+            _r.append((f"/en/{_s}/", "/" + route_of("post:" + _s, "en")))
+    with open(os.path.join(HERE, "en_redirects.txt"), "w", encoding="utf-8") as _f:
+        for a, b in _r:
+            _f.write(f"{a.rstrip('/')}  {b}  301\n{a}  {b}  301\n")
+    print(len(_r), "redirections EN")

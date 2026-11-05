@@ -20,17 +20,20 @@ https://www.lovelydayevent.fr/*        https://lovelydayevent.fr/:splat         
 /wp-admin                               /                                         301
 /wp-admin/*                             /                                         301
 /location-de-decoration-de-mariage      /prestations/                             301
-/en/location-de-decoration-de-mariage   /en/prestations/                          301
+/en/location-de-decoration-de-mariage   /en/services/                          301
 /delphine-ludovic                       /weddingbook-exemples-de-mariages/         301
-/en/delphine-ludovic                    /en/weddingbook-exemples-de-mariages/      301
+/en/delphine-ludovic                    /en/weddings/      301
 /emilie-aurelien                        /weddingbook-exemples-de-mariages/         301
-/en/emilie-aurelien                     /en/weddingbook-exemples-de-mariages/      301
+/en/emilie-aurelien                     /en/weddings/      301
 /melissa-sebastien-boheme-mariafe       /weddingbook-exemples-de-mariages/         301
-/en/melissa-sebastien-boheme-mariafe    /en/weddingbook-exemples-de-mariages/      301
+/en/melissa-sebastien-boheme-mariafe    /en/weddings/      301
 /mai-rufus                              /weddingbook-exemples-de-mariages/         301
-/en/mai-rufus                           /en/weddingbook-exemples-de-mariages/      301
+/en/mai-rufus                           /en/weddings/      301
 /marie-martin                           /weddingbook-exemples-de-mariages/         301
-/en/marie-martin                        /en/weddingbook-exemples-de-mariages/      301
+/en/marie-martin                        /en/weddings/      301
+R
+cat $S/en_redirects.txt >> $S/prod/_redirects
+cat >> $S/prod/_redirects <<'R'
 # Page introuvable
 /*                                      /index.html                               404
 R
