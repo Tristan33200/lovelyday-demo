@@ -1213,7 +1213,10 @@ def p_wedding(c, slug):
     t = c.t
     d = wedding_data(slug, c.lang)
     cover = c.img(SLUG2IMG[slug], d["name"], cls="post-cover", eager=True) if slug in SLUG2IMG else c.jimg(d["cover"], d["name"], cls="post-cover", eager=True)
-    gal = "".join(c.jimg(u, f'{d["name"]} · {t("mariage", "wedding")}') for u in d["gallery"])
+    wp = next((w["place"] for w in WEDDINGS if IMG2SLUG.get(w["img"]) == slug), "")
+    where = f' {t("à", "at")} {wp}' if wp else ""
+    n_g = len(d["gallery"])
+    gal = "".join(c.jimg(u, f'{d["name"]}, {t("mariage", "wedding")}{where} · photo {i + 1} {t("sur", "of")} {n_g}') for i, u in enumerate(d["gallery"]))
     idx = WEDDING_SLUGS.index(slug)
     others = [WEDDING_SLUGS[(idx + k) % len(WEDDING_SLUGS)] for k in (1, 2)]
     quote = ""
@@ -1270,15 +1273,21 @@ def render_blocks(c, blocks, title):
     bl = list(blocks)
     while bl and bl[-1]["t"] in ("h2", "h3"):
         bl.pop()
+    section = ""
+    def alt_for(a):
+        if a and not re.fullmatch(r"[A-Za-z0-9_\-]*\d{3,}[A-Za-z0-9_\-]*|[0-9a-f\-]{12,}", a.strip()) and a.strip() != title.strip():
+            return a
+        return f"{section} · {title.rstrip(' ?:!')}" if section else title
     for b in bl:
         if b["t"] in ("h2", "h3"):
             if b["v"].strip().lower() == title.strip().lower():
                 continue
+            section = b["v"].strip().rstrip(" :?").strip()
             out.append(f'<{b["t"]}>{H.escape(b["v"])}</{b["t"]}>')
         elif b["t"] == "html":
             out.append(rewrite_links(c, b["v"]))
         elif b["t"] == "img":
-            f = c.jimg(b["v"], b.get("alt") or title)
+            f = c.jimg(b["v"], alt_for(b.get("alt")))
             # photos qui se suivent : regroupées en galerie
             if f and out and out[-1].startswith('<div class="gallery">'):
                 out[-1] = out[-1][:-6] + f + "</div>"
@@ -1287,7 +1296,7 @@ def render_blocks(c, blocks, title):
             else:
                 out.append(f)
         elif b["t"] == "gallery":
-            g = "".join(c.jimg(u, title) for u in b["v"])
+            g = "".join(c.jimg(u, alt_for(None)) for u in b["v"])
             if g:
                 out.append(f'<div class="gallery">{g}</div>')
         elif b["t"] == "quote":
