@@ -752,13 +752,11 @@ def p_index(c):
 
 # ---------------------------------------------------------------- Agence
 def VIDEO_AGENCE(c):
-    """Vidéo de présentation (Château Belle Époque) : affichée seulement si le fichier est présent."""
+    """Vidéo de présentation d'Alexandra au Château Belle Époque (YouTube, sans cookies)."""
     t = c.t
-    if not os.path.exists(os.path.join(HERE, "site", "video", "agence.mp4")):
-        return ""
-    poster = f' poster="{c.root}video/agence.jpg"' if os.path.exists(os.path.join(HERE, "site", "video", "agence.jpg")) else ""
-    return f'''<figure class="video-agence reveal"><video controls playsinline preload="metadata"{poster}><source src="{c.root}video/agence.mp4" type="video/mp4"></video>
-      <figcaption class="label">{t("Alexandra au Château Belle Époque", "Alexandra at Château Belle Époque")}</figcaption></figure>'''
+    cap = t("Alexandra au Château Belle Époque", "Alexandra at Château Belle Époque")
+    return f'''<figure class="video-agence reveal"><div class="video"><iframe src="https://www.youtube-nocookie.com/embed/QngWOuPwvco?rel=0" title="{t("Vidéo", "Video")} : {cap}" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+      <figcaption class="label">{cap}</figcaption></figure>'''
 
 
 def p_agence(c):
