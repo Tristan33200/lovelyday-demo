@@ -919,12 +919,12 @@ def p_prestations(c):
          "5 000 €", "#organisation", t("Voir le détail", "See the details")),
         (False, t("Coordination", "Coordination"), t("Coordination Jour J", "On-the-day coordination"),
          t("Vous avez tout préparé : je m'occupe du jour J pour que vous en profitiez.", "You have planned it all: I take care of the day so you can enjoy it."),
-         [t("Rendez-vous 3 mois avant", "Meeting 3 months ahead"), t("Contact des prestataires pour les derniers détails", "Liaising with suppliers on final details"), t("Rétroplanning du jour J", "Wedding-day run sheet"), t("Coordination du timing et des imprévus", "Managing timing and the unexpected")],
+         [t("Rendez-vous 3 mois avant", "Meeting 3 months ahead"), t("Contact des prestataires pour les derniers détails", "Liaising with suppliers on final details"), t("Rétroplanning du jour J", "Wedding-day run sheet"), t("Coordination du timing et des imprévus", "Managing timing and the unexpected"), t("Décoration en option, dès 2 000 €", "Styling as an add-on, from €2,000")],
          "2 200 €", "#coordination", t("Voir le détail", "See the details")),
     ]
     faq = [
         (t("La décoration est-elle comprise ?", "Is styling included?"),
-         t("Elle est comprise dans la formule Signature. Avec les autres formules, elle s'ajoute à partir de 2 000 €. Le design est un vrai travail de création : book décoration, achats, confection, stockage, installation et désinstallation. Le séparer vous permet de comparer les formules d'égal à égal.", "It is included in the Signature package. With the other packages it can be added from €2,000. Design is real creative work: design book, sourcing, making, storage, installation and take-down. Keeping it separate lets you compare packages like for like.")),
+         t("Elle est comprise dans la formule Signature. Avec les formules Organisation ou Coordination Jour J, elle s'ajoute en option à partir de 2 000 € ; elle n'est pas proposée seule. Le design est un vrai travail de création : book décoration, achats, confection, stockage, installation et désinstallation. Le séparer vous permet de comparer les formules d'égal à égal.", "It is included in the Signature package. With the Planning or On-the-day coordination package it can be added from €2,000; it is not offered on its own. Design is real creative work: design book, sourcing, making, storage, installation and take-down. Keeping it separate lets you compare packages like for like.")),
         (t("À quel moment dois-je faire appel à une wedding planner ?", "When should we hire a wedding planner?"),
          t("Dès que vous entamez la planification de votre grand jour. Plus tôt vous faites appel à moi, plus nous avons le temps de prendre en charge l'essentiel et de vous accompagner à chaque étape clé. Je préconise un an de préparatifs pour lisser les rendez-vous avec les prestataires, mais un mariage peut se préparer en 2 à 12 mois.", "As soon as you start planning. The earlier you reach out, the more time we have to take care of the essentials and guide you at every key stage. I recommend a year of preparation so supplier meetings are spread out, but a wedding can be planned in 2 to 12 months.")),
         (t("Nous avons déjà notre lieu de réception, comment se déroule la suite ?", "We already have our venue. What happens next?"),
@@ -955,7 +955,7 @@ def p_prestations(c):
     <div class="packages">
       {"".join(pkg(c, *x) for x in pk)}
     </div>
-    <p class="small center" style="text-align:center">{t("Design &amp; décoration seul : à partir de 2 000 € · Photobooth : 400 €", "Design &amp; styling on its own: from €2,000 · Photo booth: €400")}</p>
+    <p class="small center" style="text-align:center">{t("Design &amp; décoration en option sur les formules Organisation et Coordination : à partir de 2 000 € · Photobooth : 400 €", "Design &amp; styling as an add-on to the Planning or Coordination package: from €2,000 · Photo booth: €400")}</p>
     {ratings(c)}
   </div>
 </section>
@@ -980,9 +980,9 @@ def p_prestations(c):
         <div class="prose">
           <p>{t("Un mariage, on s'en souvient pour l'ambiance et la beauté du moment. Vous avez sûrement mille et une idées en tête : mon métier de wedding designer, c'est créer de la magie, une expérience nouvelle, et faire de vos rêves une réalité.", "A wedding is remembered for its atmosphere and the beauty of the moment. You probably have a thousand ideas in mind; my role as a wedding designer is to create magic, a new experience, and turn your dreams into reality.")}</p>
           <p>{t("Je mène d'une main de fer dans un gant de velours tous les prestataires qui rendent cette journée époustouflante : décors éphémères, solutions esthétiques et techniques, sécurité des installations.", "I lead every supplier with an iron hand in a velvet glove to make the day breathtaking: temporary sets, aesthetic and technical solutions, and the safety of every installation.")}</p>
-          <p>{t("C'est ce qui distingue Lovely Day Event : un vrai travail de création, du premier moodboard à la désinstallation, que la plupart des wedding planners ne proposent pas. Il demande du temps, des achats, de la fabrication et du stockage. C'est pourquoi il est compris dans la formule Signature, ou proposé en complément.", "This is what sets Lovely Day Event apart: true creative work, from the first moodboard to the final take-down, which most wedding planners do not offer. It takes time, sourcing, making and storage, which is why it is included in the Signature package or offered as an add-on.")}</p>
+          <p>{t("C'est ce qui distingue Lovely Day Event : un vrai travail de création, du premier moodboard à la désinstallation, que la plupart des wedding planners ne proposent pas. Il demande du temps, des achats, de la fabrication et du stockage. C'est pourquoi il est compris dans la formule Signature, ou proposé en option avec l'organisation ou la coordination du jour J.", "This is what sets Lovely Day Event apart: true creative work, from the first moodboard to the final take-down, which most wedding planners do not offer. It takes time, sourcing, making and storage, which is why it is included in the Signature package or offered as an add-on to planning or on-the-day coordination.")}</p>
         </div>
-        <div class="price"><span class="label">{t("Seul, à partir de", "On its own, from")}</span><strong>2 000 €</strong><span class="small">{t("Inclus dans la formule Signature", "Included in the Signature package")}</span></div>
+        <div class="price"><span class="label">{t("En option, à partir de", "As an add-on, from")}</span><strong>2 000 €</strong><span class="small">{t("Inclus dans la formule Signature, en option avec Organisation ou Coordination Jour J", "Included in the Signature package, or as an add-on to Planning or On-the-day coordination")}</span></div>
       </div>
     </div>
     <div class="roles">
