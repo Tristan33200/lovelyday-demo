@@ -1,0 +1,15 @@
+[T] Planning a wedding at an unusual venue on the Arcachon Bay or Cap Ferret with a wedding planner
+[D] A wedding at an unusual venue on the Arcachon Bay? As a wedding planner, I'm here to help you organise your wedding.
+[1] <p>Dreaming of a wedding at an unusual venue on <strong>the Arcachon Bay</strong> or <strong>Cap Ferret</strong>, but not sure how to organise it? Don't panic! I'm here to handle everything with you…</p>
+[2] A wedding like no other
+[3] <p>A wedding like no other in the <strong>Bordeaux region</strong> feels right and is what suits you best, in an unusual setting such as a catamaran on the <strong>Arcachon Bay</strong>. How wonderful it would be to get married with your feet in the water at the Bartherotte cabin on Cap Ferret! An exclusive, bespoke and authentically Bordelais wedding!</p>
+[a4] Unusual
+[5] Decor, a major asset!
+[6] <p>And why not <strong>decor</strong> that truly reflects you, so your wedding will amaze your guests beside the oyster farmers' cabins? As a <strong>wedding planner</strong>, I can organise the most unusual wedding imaginable, adapting to your requests and tastes. Hold a symbolic ceremony on the beach or even in a private garden!</p>
+[a7] Unusual venue
+[8] An unusual theme and venue
+[9] <p>How about arriving on quad bikes, or a very different theme such as medieval, cartoons or eco-friendly? I'll happily make it happen so that this day is the best it can be. Tell me about yourselves and your wishes.</p>
+[10] I'm with you all the way!
+[11] <p><a href="https://lovelydayevent.fr/">I'll accompany you through your wedding right up to the big day</a>. I can find unusual suppliers in <strong>Bordeaux and the surrounding region</strong> who perfectly match your requests. Do you love springing improbable surprises on your guests? Why not a magician who makes the bride levitate?</p>
+[12] Get in touch!
+[13] <p>So to organise the unusual wedding YOU have been dreaming of, don't hesitate to contact me by email or phone so we can talk it over together.</p>

@@ -1,0 +1,22 @@
+[T] Se marier en hiver : les bonnes raisons
+[D] Pour un mariage unique, atypique et plein d'originalité en Gironde, plusieurs choix s'offrent à vous. Sautez le pas et célébrer votre mariage en hiver !
+[a0] hiver
+[1] <p>Vous avez pour habitude de voir les mariages se dérouler en été ! Pourquoi ne pas faire du vôtre un mariage unique et le célébrer lors des périodes d’<strong>hiver en Gironde</strong> ?</p>
+[a2] day-white-gift-tulip-celebration
+[3] Un mariage hivernal !
+[4] <p>Vous souhaitez un mariage singulier plein de partage et d’émotions sur la <strong>région bordelaise</strong>, optez pour une union pleine d’originalité et emplie de la magie de l’hiver. Quoi de plus romantique que cette période de l’année, propice à la convivialité et au rapprochement pour célébrer son amour !</p>
+[5] Les avantages de se marier en hiver
+[6] <p>Honorer son mariage en hiver peut donc être une option tout à fait charmante et pleine d’avantages. Voici 3 bonnes raisons de considérer un mariage en hiver :</p><p><br/><br/><br/></p>
+[a7] hiver
+[8] Une ambiance chaleureuse et unique
+[9] <p>L’hiver est synonyme de cocooning, de feux de cheminée mais également de chaleur réconfortante. Le mariage hivernal offre alors une ambiance intime et chaleureuse, propice aux souvenirs inoubliables et féeriques. Vous pourrez aussi utiliser l’ambiance des chalets, les tissus douillets, la pureté des vignes, etc, pour créer une atmosphère unique et réconfortante qui vous démarquera et étonnera vos invités ! </p>
+[a10] biii
+[11] Lieux disponibles et tarifs avantageux
+[12] <p>Étant donné que les mariages en hiver sont plus rares et moins demandés, vous aurez la possibilité d’un plus grand nombre de choix en ce qui concerne les lieux de réception. Plusieurs prestataires proposeront aussi des tarifs avantageux pour les mariages hors saison, ce qui vous permettra de faire de sacrées économies !</p>
+[a13] Hot chocolate station with variety of topppings.
+[14] Expériences culinaires
+[15] <p>L’hiver est réputé pour ses plats gourmands et réconfortants. Vos invités seront ravis de trouver des plats chauds et “classiques” tels que la raclette et la tartiflette, revisités spécialement pour l’occasion ! Vous pourrez également proposer des minis bars spécial hivernal avec l’authentique vin chaud ou le mythique chocolat chaud. </p>
+[17] <p>Mon rôle de <a href="https://lovelydayevent.fr/"><strong>wedding planner</strong></a> sera là pour vous aider et faire de votre mariage un évènement <strong>haut de gamme</strong>, chaleureux et plein d’amour. Quelle vision idyllique que de voir la belle mariée s’avançant dans sa belle robe blanche dans cet <strong>univers hivernal</strong>.</p><p>De la décoration de la salle, au planning et aux animations, je me chargerai de toute la <strong>coordination de votre mariage</strong> jusqu’au jour J. Grâce à mes prestations en tant qu’organisatrice de mariage, je serai faire de ce jour le plus important et le plus beau de votre vie !<br/>Alors pour un mariage unique comme celui-là, n’hésitez plus et contactez- moi par mail ou par téléphone et faisons ensemble un mariage en hiver plein de magie et de beauté pour une union pour l’éternité.<br/></p>
+[a18] Back view of young groom kisses a blonde bride under an umbrella in the park. Concept of wedding couple
+[19] Des souvenirs uniques
+[20] <p>Le mariage hivernal est ainsi une occasion idéale pour créer des souvenirs uniques et magiques tout en associant ambiance chaleureuse, décors qui font rêver et tarifs avantageux!</p><p>Alors, pourquoi ne pas choisir un mariage en hiver et faire de votre Jour J une célébration hivernale mémorable ? </p><p><br/><br/></p>

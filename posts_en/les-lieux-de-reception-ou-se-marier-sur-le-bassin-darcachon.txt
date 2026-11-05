@@ -1,0 +1,13 @@
+[T] Reception venues for your wedding on the Arcachon Bay
+[D] Getting married at a reception venue on the Arcachon Bay? Call on an agency specialising in waterside ceremonies
+[a0] DELPHINEETHAYTHEM-174
+[1] Would you like a wedding in a private villa, surrounded by the people who matter most to you? Many reception venues are waiting for you on the Arcachon Bay, for weddings large or small.
+[2] A venue to suit your wishes
+[3] <p>Choosing the venue is essential for your big day. Intimate and warm or rustic, your <strong>reception venue</strong> will match the atmosphere you have chosen for your <strong>wedding</strong>.</p><p>Toes in the sand, a sunset or the sea air: no need to choose when you can have them all. So don't worry, the <strong>Arcachon Bay</strong> can welcome you in this idyllic setting for your long-awaited day.</p><p>It is important to ask yourselves the right questions. But don't panic, the venues will charm you effortlessly.</p>
+[4] The Arcachon Bay, a little paradise!
+[5] <p>Opening onto the sea, the <strong>Arcachon Bay</strong> offers a whole variety of natural sites perfect for a wedding, especially if you'd like a <strong>beach theme</strong>. For example, you can say yes in a secluded little cove, beside a jetty or aboard a sailing boat for a <strong>romantic ceremony</strong> out on the water.</p><p>You can also opt for a more <strong>rustic</strong> theme, with a ceremony in the pine forests surrounding the town, for a natural atmosphere typical of south-west France.</p>
+[6] Simpler can be lovely too
+[7] <p>More classic venues can also open their doors to you, such as <strong>restaurants</strong>, <strong>inns</strong> or <strong>courtyards</strong>, where a smaller number of guests is no problem at all.</p><p>As you can see, the possibilities are many; all that's left is to choose what suits you best!</p>
+[a8] reception venues
+[9] I'm here to help!
+[10] <p>My <a href="https://lovelydayevent.fr/"><strong>wedding planning agency</strong></a> is based in <strong>Bordeaux</strong>, and I work throughout the <strong>Gironde</strong>, including the <strong>Arcachon Bay</strong>. One of the most important tasks in <strong>preparing a wedding</strong> is finding the ideal venue for the couple. It can turn out to be a complex mission.</p><p>So to avoid any stress, you can entrust me with your project for <strong>bespoke planning</strong>, managed from A to Z, and together we'll find your little corner of paradise. So don't hesitate to dream big for your wedding, and get in touch!</p>

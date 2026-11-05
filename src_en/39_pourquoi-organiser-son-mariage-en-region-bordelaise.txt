@@ -1,0 +1,51 @@
+[T] Pourquoi organiser son mariage en région bordelaise?
+[D] La région bordelaise est un lieu idéal pour organiser son mariage dans des châteaux d'exception dans une ambiance romantique.
+[1] <p>Alors si vous n’avez pas encore trouvé le lieu qui reflète parfaitement le <strong>mariage de vos rêves</strong>, vous êtes au bon endroit. La région<br/>bordelaise est connue pour ses <strong>prestigieux</strong> lieux de cérémonies qui<br/>déclinent le <strong>romantisme</strong> sous toutes ses formes et vous offriront le<br/>décor idéal pour <strong>se marier</strong> avec une ambiance qui colle à votre<br/>personnalité.</p><p>Se marier en <strong>région bordelaise</strong>, c’est choisir une célébration <strong>authentique</strong>, <strong>romantique et</strong> <strong>élégante</strong>. Laissez vous charmer par <strong>cette destination de rêve</strong> pour un moment <strong>inoubliable</strong>. Ce cadre naturel et cette <strong>richesse architecturale</strong> promet de rendre votre célébration <strong>mémorable</strong> et de sublimer vos photos. Découvrons ensemble ce qui fait de la région bordelaise <strong>un lieu d’exception</strong>.</p>
+[a2] Caro & Jacks
+[3] Vous laisseriez vous tenter par les paysages authentiques des châteaux viticoles bordelais ?
+[a4] région bordelaise
+[5] <p>Parlons tout d’abord de nos <strong>iconiques châteaux viticoles</strong> avec leurs cadres <strong>naturels et idylliques </strong>qui vous permettront d’avoir des photos de mariage <strong>unique</strong> grâce à l’étendu de leurs vignobles qui vous offriront des <strong>panoramas </strong>à couper le souffle.</p>
+[7] <p>Vous pourrez profiter des différentes <strong>couleurs saisonnières</strong> des forêts et des parcs dans une ambiance <strong>champêtre et proche de la nature</strong>.</p>
+[9] <p>Les châteaux du patrimoine historique donneront du <strong>romantisme</strong> et une touche de <strong>souveraineté</strong> à vos photos.</p>
+[10] Top 11 des plus beaux châteaux et domaines de la région bordelaise.
+[12] <p>Cette salle de réception <strong>somptueuse</strong> faîte de <strong>pierre et de bois</strong> vous attend au Château de Gassies à Latresne.</p>
+[14] <p>Dans un domaine au air d’Italie, la galerie Cedrus vous accueillera à Saint Pey-de-Castets dans une ambiance de sérénité et romantique.</p>
+[16] <p>Emerveillez vos convives dans cette magnifique salle de réception <strong>chaleureuse</strong> avec un parquet en chêne massif, ses pierres et <strong>poutres apparentes</strong> au château de la Garde à Martillac.</p>
+[18] <p>Pour une ambiance <strong>champêtre chic</strong> faite de pierres et de bois arrêtez vous au Domaine de Le Herre à Aillas.</p>
+[20] <p>Pour un mariage <strong>grandiose</strong> dans une bâtisse hors normes au <strong>caractère authentique</strong> au cœur de Grignols.</p>
+[a21] Vautrait
+[22] <p>Pour une <strong>ambiance champêtre</strong> la domaine de Vautrait vous accueille au cœur d’une <strong>nature préservé</strong> à Cabanac-et-Villagrain.</p>
+[24] <p>Le <strong>calme et la sérénité</strong> au sein de ce domaine conviendra pour un <strong>mariage romantique</strong> dans la commune de Saint Pey-de-Castets. </p>
+[26] <p>Pour un mariage <strong>hors du temps</strong> dans une chartreuse du XVIIIe mélangeant <strong>modernité et authenticité</strong> direction le village de Saint-Maixant.</p>
+[28] <p>Grâce aux différents sites <strong>des châteaux</strong> vous pourrez déambuler avec vos invités sur les divers lieux de la propriété tout au long de <strong>la cérémonie</strong>.</p><p>Pour profiter de la <strong>variété de ces décors</strong>, les parcs et jardins sont à privilégier pendant la cérémonie laïque pour vous exposer à une cérémonie au <strong>plus proche de la nature</strong> tout en profitant d’une belle journée ensoleillée.</p><p>Levez votre verre dans la cour face au château pour profiter de son architecture, <strong>savourez la gastronomie</strong> locale que peut vous révéler la région bordelaise dans une belle salle de réception que nous aurons affiné à votre image. </p><p>Et pour finir, même si on aurait tendance à l’oublier, <strong>le must du must</strong> serait de terminer la soirée dans des chambres d’hôte en totale <strong>immersion</strong> avec vue panoramique sur la propriété.</p>
+[29] La beauté intérieur.
+[30] <p>Sous ses airs de plage touristique, se marier sur la côte Atlantique vous offrira une<strong> sensation d’évasion</strong> au rythme <strong>poétique</strong> des vagues accompagnées de ses <strong>panoramas océaniques</strong> et de ses ports de plaisances</p>
+[32] <p>Pour un <strong>mariage inoubliable</strong> dans un château d’époque au cœur de la <strong>forêt Landaise</strong> dans la ville de Linxe.</p>
+[34] <p>Pour une <strong>ambiance authentique</strong> où le domaine met en valeur la beauté de l’union de<strong> la pierre et du bois</strong> dans la commune de Martillac.</p>
+[36] <p>Pour un large choix <strong>de cadre</strong> ce domaine vous offrira assurément le lieu idéale de <strong>votre cérémonie</strong> à La Roche-Chalais.</p>
+[37] Laissez-vous porter par le charme romantique des littoraux de la région bordelaise?
+[39] <p>Ce domaine aux espaces variés chargés d’histoire sera le décor idéale pour un mariage <strong>simple et raffiné</strong> aux ambiances <strong>champêtre ou gourmande</strong>.</p>
+[41] <p>Cet <strong>havre de paix</strong> vous invite a vous ressourcer dans une <strong>atmosphère naturelle</strong> composé d’eau, de lumière et de pins sur le Bassin d’Arcachon . </p>
+[43] <p><strong>L’architecture Landaise</strong> de la ferme à Biscarosse vous offre un cadre calme et <strong>reposant</strong> dans un magnifique <strong>parc paysagé</strong>.</p>
+[45] <p>Il est aussi possible de se marier avec une atmosphère plus <strong>festive et énergique</strong> comme à La cabane Bartherotte accompagné du bruit des vagues de la mer.</p>
+[46] Vous cherchez un lieu qui change des réceptions de mariages auxquels vous avez déjà assisté ? Alors vous êtes au bon endroit, sachez qu’il existe des endroits auxquels vous n’aurez jamais pensé réserver pour votre mariage. Pour cela laissez moi vous guider à travers les rues pavées et l’architecture du XVIIIe siècle jusqu’au lieu atypique de votre réception.
+[48] <p>Pour les amoureux <strong>des voyages</strong> vous pourrez opter pour le style marin avec une touche <strong>d’aventure. </strong>en voguant sur le Bateau Marco Polo. Vous pourrez profiter de ses <strong>magnifiques vues</strong> sur les berges qui évolueront au fil de la croisière pour vous transporter dans un <strong>univers à votre image.</strong></p>
+[a49] hippodrome la teste de buch
+[50] <p>Pour une réception <strong>atypique et dépaysante</strong> le salle de réception vous donnera une vue panoramique sur <strong>le champ de course</strong> et sur le paysage<strong> naturel et fleurie</strong> de La Teste de Buch.</p>
+[52] <p>En ce qui concerne ceux qui sont à la recherche d’une réception plus <strong>classique</strong> mais tout de même <strong>chic et romantique</strong>, je vous conseille cet hôtel de luxe et les lofts urbains qui vous accueilleront avec beaucoup <strong>d’élégance</strong> pour une cérémonie à la hauteur de vos attentes.</p>
+[53] Une équipe toujours à vos côtés.
+[55] <p>Se marier peut ne pas toujours être une partie de plaisir après une longue période de stress pour organiser <strong>le plus beau jour de votre vie</strong> et de devoir tout coordonner le jour J. Mais pas de panique il y a de nombreux prestataires de mariage <strong>dévoués, innovants et locaux pour vous aider</strong>.</p><p>Je suis aussi à votre disposition pour vous guider et pour vous mettre en contact avec des professionnels de qualité, <strong>à</strong> <strong>l’écoute de vos souhaits</strong>, prêts à vous aider dans la création d’une cérémonie des plus romantiques. Je resterais à vos côtés pour personnaliser votre mariage à votre image, en <strong>harmonie avec vos préférences</strong> et votre thème.</p>
+[56] Quelques prestataires de la région bordelaise.
+[57] Aurélie Cousseau
+[58] <p>Officiante</p>
+[59] Marine Monteils
+[60] <p>Photographe</p>
+[61] Velvet Signature
+[62] <p>Fleuriste</p>
+[63] Du cake au design
+[64] <p>Traiteur</p>
+[65] Alegria production
+[66] <p>DJ</p>
+[67] Supadupamama
+[68] <p>Pâtissier</p>
+[70] <p>Vous voulez vous marier dans un <strong>cadre idyllique</strong>, avoir des photos sublimes et une <strong>ambiance romantique</strong> à votre image, la région bordelaise est celle qui vous faut pour le plus beau jour de votre vie. Elle vous séduira par ses <strong>paysages authentiques</strong> et aussi enchanteurs que variés, des saveurs locales inoubliables et des lieux de <strong>réception envoûtants</strong>. Le tout sera accompagné de prestataires de mariage professionnels et passionnés, prêts à vous accompagner dans l’organisation de votre grand jour.<br/>Mon rôle de wedding planner est de vous guider dans les larges choix qui s’offriront à vous pour que votre mariage <strong>soit unique et à votre image.</strong> Je suis là aussi pour que l’organisation de ce jour exceptionnel se fasse sans stress, planifiant tous les détails de <strong>votre réception</strong> même ceux auxquels vous n’aurez pas pensés et gérer tous les petits ou grands imprévus qui pourraient affecter le bon déroulement de <strong>votre cérémonie.</strong><br/>N’hésitez pas à me contacter pour vous conseiller dans l’organisation de mariage.</p>

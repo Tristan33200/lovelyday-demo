@@ -1,0 +1,8 @@
+[T] Mariage sur le thème champêtre en région bordelaise
+[D] Se marier sur le thème champêtre est très en vogue pour tous les amoureux de la nature et la simplicité en région bordelaise !
+[0] Décoration sobre et élégant
+[1] <p>Se marier sur le thème champêtre est très en vogue pour tous les amoureux de la nature et la simplicité<strong> en région bordelaise </strong>et je peux vous trouver les meilleurs lieux grâce à mon métier d’<strong><a href="https://lovelydayevent.fr/">organisatrice de mariage</a> !</strong></p>
+[a2] champêtre
+[3] <p>Ce sont des matières naturelles avant tout comme le lin, le raphia, le coton ou la toile de jute qui vont bien pour le <strong>thème champêtre</strong>, on retrouvera également de la dentelle qui apportera une touche chic.</p><p>Avec un <strong>lieu atypique</strong> dans le département de la <strong>Gironde </strong>comme un<strong> château </strong>par exemple, avec les briques apparentes et les poutres anciennes qui favorisent la mise en lumière des objets chinés et les fleurs naturelles.</p>
+[a4] champêtre
+[5] <p>Vous le savez sûrement mais mon métier de <strong>wedding planner</strong> et <strong>designer</strong> me permet d’accompagner les mariés sur tous les préparatifs en passant des prestataires de mariage, aux animations, aux conseils de tradition et de nouvelles tendances, à la décoration avec une scénographie personnalisée et à l’aide dans la gestion des invités. C’est ainsi que les mariés ont pu réellement <strong>profiter de leur mariage</strong> et surtout de leurs convives.</p><p>Le petit plus a été le jardin transformé dans une ambiance cosy. Quel bonheur que de trinquer lors du vin d’honneur au cœur du vignoble <strong>bordelais</strong> !</p>

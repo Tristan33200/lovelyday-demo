@@ -1,0 +1,68 @@
+[T] What suit should a man wear as a wedding guest?
+[D] Just like women, male guests may wonder which suit is best suited to a wedding!
+[0] <p>It's true: just like women, men sometimes find it tricky to know how to dress for <strong>a wedding</strong>. Between the different themes, colours, seasons and more, it can be hard to find your way. So today, let's look together at the <strong>dress code</strong> to follow and <strong>a few tips</strong> on how a <strong>MAN</strong> should <strong>dress</strong> for a wedding.</p>
+[a1] wedding suit
+[2] Read the invitation
+[3] <p>First, it is essential to read the wedding <strong>invitation</strong> carefully, because this is where you'll find <strong>the key clues</strong> that will help you fit the theme perfectly.</p><p>As we'll see, depending on the <strong>type of wedding</strong>, there are several kinds of suit, from the most <strong>sophisticated</strong> to the most <strong>relaxed.</strong></p>
+[4] The men's tuxedo (or black tie)
+[5] <p>At the very top of sophistication is the tuxedo, also known as "<strong>black tie</strong>".</p><p>If the wedding you're invited to is the height of <strong>elegance</strong> and <strong>chic</strong>, this is surely the kind of suit to turn to.</p><p>To choose your <strong>tuxedo</strong> well, pay attention to a few details that seem minor at first but are in fact the <strong>key elements</strong> that will make you the best-dressed guest of the evening!</p>
+[6] Suit colours
+[7] <p><strong>Black</strong> or <strong>navy blue</strong> are preferred. <strong>White</strong> is also an option, but it must be specified clearly on the invitation.</p><p>Every now and then, however, you may come across the elusive <strong>"creative black tie"</strong> dress code.</p><p>With it, you can relax the traditional rules while keeping the black tie look: think of a <strong>light grey</strong> tuxedo jacket standing out among a sea of traditional black tuxedos.</p>
+[a8] 52e018b79ec9c4780ba70dae08478016 2
+[a9] d98417956298ccd35456ea0df6fd29b9 2
+[a10] b68b8cf2a64ec66ed1a450b86a2063d5 2
+[a11] bfe9da4e74193483f71cd353ca88bcdc 2
+[12] The lapels
+[13] <p>I did say details mattered!</p><p>They're easy to forget, but lapels are important too: by tradition, notch or shawl (rounded) lapels are preferred.</p><p>As for the material, we recommend satin or a slightly more textured fabric that keeps a subtle sheen.</p><p>Note: for this kind of suit, avoid a vent in your jacket.</p>
+[14] The trousers
+[15] <p>Now for the trousers: they should be <strong>simple</strong>, but ideally they should also have a <strong>satin stripe</strong> as a <strong>matching detail</strong>, running along the <strong>outside seam</strong>.</p><p>(<strong>PS</strong>: in case you were wondering, avoid a flashy belt with your trousers; I'd advise sticking to something understated and elegant.)</p>
+[a16] 9f27709cbe59ca657bd30513a26b09a1
+[a17] 609d2db42f055518c42e3e2d38bcd551
+[a18] f23a6c10761d9f00b05a455029d74e33
+[a19] 293537d114e2ccd57d9dd70c08496437
+[21] <p>For the shirt, you have several options.</p><p>The most <strong>classic</strong>: choose a <strong>white shirt</strong> with a <strong>fly front</strong>; that way there's no risk of a <strong>fashion faux pas</strong>.</p><p><strong>Distinctive</strong> and <strong>traditional</strong>: choose a <strong>pleated-front shirt</strong>, an option perfectly suited to <strong>distinguished</strong> occasions such as weddings.</p>
+[23] <p>For the black tie style, the perfect choice remains classic <strong>black patent shoes</strong> with <strong>leather laces</strong> in the same colour. But if you'd like a slightly more contemporary option, <strong>black velvet</strong> <strong>loafers</strong> will add texture and originality without compromising your <strong>elegance</strong>.</p>
+[a24] bc9e0c9af72083b1f3b607a9e53a3bde
+[a25] Blacktie-D-16
+[a26] cf811880be8604160e239997eac29d4e
+[a27] e143c4e0b2c5d740db60a98d92e58956
+[29] <p>How could we not mention the one and only… <strong>bow tie</strong>!</p><p>Once again, make sure it's in the same material as your lapels.</p><p>And for a finishing touch that will make you even more sophisticated, don't hesitate to bring out the <strong>cufflinks</strong>!</p>
+[30] The "semi-formal" outfit
+[31] <p>This is often the <strong>most requested</strong> outfit and the one that <strong>works everywhere</strong>! It is less formal than a tuxedo but still more polished than a casual style.</p>
+[33] <p>Suits and blazers are essential to a semi-formal outfit. I generally advise going for <strong>dark colours</strong>: navy blue, charcoal grey and black are the most suitable. Look for <strong>well-fitted</strong>, tailored suits in simple single- or double-breasted styles. If your suit ticks all these boxes, you can be sure of making <strong>no mistakes</strong>.</p>
+[36] <p>For the shirt, no risks: once again, stick to the <strong>classics</strong>. Go for a <strong>simple</strong>, <strong>plain</strong> shirt in white, blue or grey as you like, but it still needs to go with the rest, so avoid overly bright colours. As for <strong>details</strong>, I'd recommend a <strong>cutaway or wing collar</strong> and <strong>rounded or French cuffs.</strong></p>
+[a37] 86c1f07d23f525031da2b1ac0a6558d7
+[a38] f234ade6cab93e114627aa1f8b7b4af8
+[40] <p>For shoes, stick to a <strong>dressy</strong>, <strong>sophisticated</strong> style, though unlike the tuxedo look you have <strong>a little more freedom</strong>.</p><p>In fact, I'd advise avoiding patent shoes; that style is really reserved for the tuxedo.</p><p>The best options are therefore: <strong>Oxfords</strong>, a classic but safe choice. <strong>Monk straps</strong> are also a good fit and bring a more original, daring touch (personally, they're my favourites).</p>
+[a41] d8029fb0f8f2ad261e61d76ef32305d7
+[a42] b283f93d2bd531f776c51e424eab0c75 2
+[44] <p>Accessories can add a <strong>personal touch</strong> to your semi-formal outfit. <strong>A tie</strong> is a very good choice: classic, admittedly, but very <strong>effective</strong>. You can also add a <strong>pocket square</strong> for extra <strong>sophistication</strong>. Belts, braces and cufflinks can also complete your look.</p><p>Do be careful with colours, though: they should stay understated and classic.</p>
+[a45] b5f900e057b9cae9f707f71f88761ebf
+[a46] a6d4d45162cada37a13bff09c96a020f
+[47] The cocktail outfit
+[48] <p>Now it's time for the cocktail style, often the <strong>most popular</strong> and requested today. This style is more <strong>relaxed</strong> but no less classy; it is simply less formal than the two we've seen above.</p>
+[49] How to choose your cocktail outfit?
+[50] <p>For a cocktail outfit, I'd advise choosing according to <strong>the season</strong>, <strong>the time of year</strong> and <strong>the style of the invitation.</strong></p><p>For example, if the wedding takes place in <strong>winter</strong>, I'd recommend a suit in heavier, warmer materials such as wool or velvet. Whereas if the wedding is in <strong>summer</strong>, lighter materials are more appropriate: wool blends, linen and cotton are pleasant and, above all, very handsome to wear at a spring or summer wedding.</p><p><strong>Colours</strong> also matter in the cocktail style: if the wedding takes place in autumn or winter, or in the evening, the most suitable colours are dark ones such as navy blue, forest green, grey or brown. For a spring or summer daytime wedding, pastel, nude and light colours are the way to go. Lately, beige, cream and pastel blue are often seen.</p><p><strong>The invitations</strong> can also guide you on colours: they usually match the wedding's theme. But if <strong>you're still unsure</strong>, you can always ask the <a href="https://lovelydayevent.fr/"><strong>wedding planner</strong></a> in charge of the wedding; she'll know exactly how to <strong>guide</strong> you. My agency, <strong>Lovely Day Event</strong>, can also take care of the <a href="https://lovelydayevent.fr/decoration-de-mariage/"><strong>wedding decor</strong></a>, so I'm <strong>ideally placed</strong> to help with your questions.</p>
+[52] <p>Even though this outfit leaves more freedom, the style of suit to <strong>favour</strong> is one with a <strong>slim cut</strong>. As mentioned above, <strong>colours</strong> are also freer, so you can make <strong>bolder</strong> choices, including <strong>patterns</strong> if you feel like it (without going overboard) or <strong>stronger colours</strong> such as ochre.</p>
+[a53] 734b1cc7ba761a6e7a00d19ba59511df
+[a54] 72843006aefae98510fbd09d3a4a6d00
+[a55] 7219eacbfff69d04e59f6345a2b6373c
+[a56] 7b994fd51695ddcce75f2d6a4254fabf
+[58] <p>For the shirt, you're also much <strong>freer</strong>: you can go for <strong>patterns</strong> and more adventurous <strong>colours</strong> than white or black, but if you choose a pattern, the suit should be plain. And vice versa: if your suit is patterned, avoid a patterned shirt at all costs; it would be too much going on in your outfit.</p>
+[60] <p>For your shoes, <strong>Oxfords</strong> and <strong>monk straps</strong> work well, but <strong>loafers</strong> and <strong>sneakers</strong> can also be interesting options, as long as they remain <strong>smart</strong>, of course.</p>
+[a61] 4263a0210b01bf87f465d00a450f099a 2
+[a62] 7b0b5e8001c1a1705c04841eb3116eb6
+[a63] 7f697002a8023278d2ed51675cd85c74
+[a64] e103cedf0a74463c5f0a5126a42afae7
+[66] <p>Accessories are also <strong>freer</strong> and more relaxed. A tie is an option, but compared with the semi-formal style you can play with <strong>colours</strong> and <strong>patterns</strong>. For a look that is very much in vogue right now, don't hesitate to choose a <strong>pocket square</strong>: it lets you skip the tie and suits the cocktail outfit perfectly.</p>
+[67] The invitation's graphic style
+[68] <p>The <strong>graphic style</strong> of the invitation will tell you what the couple are hoping for.</p><p>Here are a few examples:</p>
+[a69] 5286953a997752f3fc32cea901f94525
+[70] <p>This style of invitation suggests a <strong>"black tie"</strong> dress code in black and white tones.</p>
+[72] <p>More pared-back invitations leave more freedom but give no clear indication; a <strong>semi-formal</strong> look will make sure you don't get it wrong. They do, however, clearly point you towards the expected colours.</p>
+[a73] e131d901dc40f70fd8b11f8c1809cc5d
+[74] <p>Given the colours, the invitation style and the lettering, the appropriate outfit here would be a <strong>cocktail</strong> one.</p>
+[75] The venue
+[76] <p>The venue can also give you clues: if the wedding is at a <strong>château</strong>, a more <strong>formal</strong> style will probably be expected, whereas if it takes place in an old <strong>farmhouse</strong>, a more <strong>relaxed</strong> outfit may be more suitable. So don't hesitate to ask the couple or the wedding planner, and let yourself be guided by the style of the wedding!</p>
+[77] In conclusion...
+[78] <p>You now hold <strong>all the cards</strong> to find your <strong>perfect outfit</strong> for a wedding. And, not least, don't forget to bring a <strong>change of clothes</strong>, because weddings, however beautiful and classy, are often colourful events with plenty to drink!</p>

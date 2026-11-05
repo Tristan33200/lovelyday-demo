@@ -1,0 +1,11 @@
+[T] Une décoration pour un mariage romantique et chic à Bordeaux
+[D] Wedding planner et designer sur la région Bordelaise, je peux répondre à toutes vos attentes décoration pour un mariage qui vous ressemble... votre mariage !
+[0] Champêtre chic
+[1] Mariage simple et authentique
+[2] <p>Avec la mariée, j’ai travaillé sur les indispensables d’un <strong>design</strong> romantique sur mesure et chic : du rouge, du blanc, des bougies, des plumes et des fleurs… Tout l’esprit qu’elle voulait faire transmettre.</p><p>En plus de tous ces éléments, celui de l’éclairage en est un particulièrement important dans une <em><strong>scénographie romantique</strong></em>. Il s’agit en effet de donner une impression intime, personnelle. Pour cela, j’ai favorisé les <em><strong>bougies</strong></em> et les lumières douces en général.</p><p>Les voilages aussi sont des éléments qui doivent se caractériser par leur souplesse et leur légèreté qui offre aussi un aspect poétique à votre <em><strong>salle de réception</strong></em>.</p>
+[a4] coordination
+[5] Scénographie
+[6] <p> En tant que wedding planner haut de gamme mais surtout wedding designer sur la région Bordelaise, je peux répondre à vos attentes en vous proposant un univers de mariage qui ne ressemblera à aucun autre... le vôtre ! Si vous sentez avoir besoin d'aide, envoyez-moi un mail !</p>
+[7] Romantisme
+[8] <p> N'hésitez pas à jouer avec les transparences qui donneront, en plus, une touche de luxe et d'originalité !</p>
+[a9] décoration

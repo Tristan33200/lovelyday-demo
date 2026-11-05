@@ -1,0 +1,68 @@
+[T] Quel costume porter quand on est invité à un mariage en tant qu'homme ?
+[D] Tout comme les femmes, les hommes invités eux aussi peuvent se demander quelle est la tenue la plus adaptée pour un mariage avec un costume !
+[0] <p>Et oui, il est vrai que tout comme les femmes, il est des fois compliqué pour les hommes de savoir comment s’habiller pour <strong>un mariage</strong>. Entre les différents thèmes, couleurs, saison et j’en passe, c’est parfois dur de s’y retrouver. C’est pourquoi aujourd’hui, nous allons voir ensemble le <strong>dress-code</strong> à suivre et <strong>quelques astuces</strong> pour savoir comment <strong>s’habiller</strong> pour un mariage quand on est un <strong>HOMME</strong>. </p>
+[a1] costume mariage
+[2] Lire l'Invitation
+[3] <p>Dans un premier temps, il est indispensable de bien lire <strong>l’invitation</strong> de mariage, car oui, c’est ici que vous pourrez trouver <strong>les indices clé</strong> qui vous aideront à parfaitement rentrer dans le thème.</p><p>Nous allons voir ensemble qu’en fonction des <strong>types de mariages</strong>, il existe plusieurs sortes de costumes allant du plus <strong>sophistiqué</strong> au plus <strong>décontracté. </strong></p>
+[4] Tenue Smoking homme (ou Black Tie)
+[5] <p>Au top du top du sophistiqué, nous retrouvons le smoking aussi appelé «<strong> Black tie</strong> ». </p><p>Si le mariage auquel vous êtes convié se voit être au summum de l’<strong>élégance</strong> et du <strong>chic</strong>, c’est sûrement vers ce type de costume qu’il faudra vous tourner. </p><p>Pour bien choisir votre <strong>smoking</strong>, vous devrez veiller à quelques détails qui semblent peu importants au premier abord, mais qui sont en fait les<strong> éléments clés</strong> qui feront de vous l’invité le mieux habillé de la soirée ! </p>
+[6] Les teintes de costume​
+[7] <p><strong>Noir</strong> ou <strong>bleu marine</strong> seront à privilégier, <strong>l</strong><strong>e blanc</strong> est aussi une option, mais celle-ci se doit d’être précisé et bien écrit sur l’invitation.</p><p>Cependant il est des fois possible de rencontrer de temps en temps l’insaisissable dress code <strong>« Black Tie créatif ».</strong> </p><p>Avec lui, vous pouvez assouplir les règles traditionnelles tout en conservant l’allure Black Tie. Dans la vague de smokings noirs traditionnels, une veste de smoking<strong> gris clair.</strong></p>
+[a8] 52e018b79ec9c4780ba70dae08478016 2
+[a9] d98417956298ccd35456ea0df6fd29b9 2
+[a10] b68b8cf2a64ec66ed1a450b86a2063d5 2
+[a11] bfe9da4e74193483f71cd353ca88bcdc 2
+[12] Les revers
+[13] <p>Quand je vous parlais de détails ! </p><p>Et oui, on pourrait avoir tendance à les oublier, mais les revers sont, eux aussi, importants : selon la tradition, il sera préférable qu’ils soient de forme crantée ou châle (arrondi).</p><p>Quant à la matière qui les compose, nous vous conseillons du satin ou bien un tissu un peu plus texturé, mais qui garde un aspect légèrement brillant. </p><p>Attention : pour ce type de costume, évitez la fente sur votre veste. </p>
+[14] Le pantalon
+[15] <p>Maintenant, passons au pantalon, il se devra d’être <strong>simple</strong>, cependant, il est préférable qu’il possède lui aussi une <strong>bande de satin</strong> afin de faire un<strong> rappel</strong> et celle-ci se devra d’être le long de la <strong>couture extérieure</strong>. </p><p>(<strong>Ps</strong> : au cas où, si vous vous posiez la question avec le pantalon, évitez de mettre une ceinture bling-bling, je vous conseille de rester sur du sobre et élégant.) </p>
+[a16] 9f27709cbe59ca657bd30513a26b09a1
+[a17] 609d2db42f055518c42e3e2d38bcd551
+[a18] f23a6c10761d9f00b05a455029d74e33
+[a19] 293537d114e2ccd57d9dd70c08496437
+[21] <p>Pour la chemise plusieurs options s’ouvre à vous.</p><p>Le plus<strong> classique</strong> : optez pour une <strong>chemise blanche</strong> avec <strong>rabat</strong>, avec ça aucune chance de faire un <strong>fashion faux pas</strong>.</p><p><strong>Distinctif</strong> et <strong>traditionnel</strong> : optez pour la chemise à <strong>plastron plissé,</strong> elle constitue une option qui convient parfaitement aux occasions <strong>distinguées</strong> tel que les mariages.</p>
+[23] <p>Pour le style Black Tie, le choix parfait reste les classiques chaussures <strong>noires vernies</strong> avec des <strong>lacets en cuir</strong> de la même couleur. Cependant, si vous voulez opter pour une option un peu plus contemporaine, <strong>les mocassins</strong> en <strong>velours noir</strong> sauront apporter de la texture et de l’originalité sans altérer votre <strong>élégance</strong>. </p>
+[a24] bc9e0c9af72083b1f3b607a9e53a3bde
+[a25] Blacktie-D-16
+[a26] cf811880be8604160e239997eac29d4e
+[a27] e143c4e0b2c5d740db60a98d92e58956
+[29] <p>Comment ne pas nommer le seul et l’unique…<strong> Nœud papillon</strong> ! </p><p>Pour celui-ci, pensez à ce qu’il soit de la même matière encore et toujours que celle de vos revers.</p><p>Et pour une petite touche finale qui vous rendra encore plus sophistiqué, n’hésitez pas à sortir les <strong>boutons de manchettes</strong> ! </p>
+[30] La tenue dite « semi-formel »
+[31] <p>C’est la tenue qui est souvent la <strong>plus demandée</strong> et qui <strong>passe-partout</strong> ! Elle est moins formelle que le smoking, mais quand même plus élaborée que le style décontracté.</p>
+[33] <p>Les costumes et les blazers sont des éléments essentiels de la tenue semi-formelle. Je vous conseille en général de partir sur des<strong> couleurs sombres</strong>, vous pouvez opter pour le bleu marine, le gris anthracite et le noir, ce sont les couleurs les plus adaptées. Envisagez des <strong>costumes bien ajustés</strong> et adaptés dans des styles simples ou à double boutonnage. Si votre costume coche toutes ces cases vous pourrez être sûr de ne faire <strong>aucune erreur</strong>.</p>
+[36] <p>Pour la chemise, aucun risque, on reste cette fois encore sur du <strong>classique</strong>. Partez sur une chemise <strong>simple</strong> et<strong> unie</strong>, elle peut être blanche, bleue, grise à votre guise, mais elle doit quand même savoir se marier avec le reste, donc évitez les couleurs trop flashes. En ce qui concerne <strong>les détails</strong> je vous conseille d’optez pour un <strong>col italien ou cassé</strong> et <strong>un poignet arrondi ou mousquetaire. </strong></p>
+[a37] 86c1f07d23f525031da2b1ac0a6558d7
+[a38] f234ade6cab93e114627aa1f8b7b4af8
+[40] <p>Pour les chaussures, rester sur un style <strong>habillé</strong> et <strong>sophistiqué,</strong> mais à l’inverse du look smoking, on a tout de même un peu <strong>plus de liberté</strong>. </p><p>D’ailleurs, je vous conseille d’éviter les chaussures vernies, ce style est vraiment réservé pour la tenue smoking. </p><p>Les meilleures options seront donc : <strong>les Richelieus</strong>, c’est un choix classique, mais sûr. <strong>Les « Monks »</strong> elles aussi peuvent être de rigueur, elles pourront apporter une touche plus originale et audacieuse,(personnellement, ce sont mes préférés). </p>
+[a41] d8029fb0f8f2ad261e61d76ef32305d7
+[a42] b283f93d2bd531f776c51e424eab0c75 2
+[44] <p>Les accessoires peuvent ajouter une<strong> touche personnelle</strong> à votre tenue semi-formelle. <strong>La cravate</strong> est un très bon choix, certes classique, mais très<strong> efficace</strong>. Vous pouvez aussi inclure un <strong>carré de poche</strong> pour plus de <strong>sophistication</strong>. Ceintures, bretelles et boutons de manchette peuvent également compléter votre look.</p><p>Faites tout de même attention aux couleurs, elles doivent rester sobres et classiques. </p>
+[a45] b5f900e057b9cae9f707f71f88761ebf
+[a46] a6d4d45162cada37a13bff09c96a020f
+[47] La tenue Cocktail
+[48] <p>Il est maintenant temps de passer au style cocktail, souvent le <strong>plus apprécié</strong> et demandé de nos jours. Ce style se veut plus <strong>décontracté</strong>, mais pas pour autant moins classe, il est simplement, moins formel que les deux autres que nous avons pu voir au-dessus.</p>
+[49] Comment choisir sa tenue cocktail ?
+[50] <p>En ce qui concerne la tenue cocktail, je vous conseille de la choisir en fonction de<strong> la saison</strong>, de <strong>la période de l’année</strong> et du <strong>style de faire part.</strong></p><p>Par exemple, si le mariage se déroule pendant la <strong>saison hivernale</strong>, je vous conseillerai un costume avec des matières, disons, plus lourdes et chaudes, telles que la laine ou encore le velours. Tandis que si le mariage a lieu lors de la<strong> saison estivale</strong>, des matières plus légères seront plus appropriées, le mélange de laine, le lin, le coton sont des matières qui seront agréables et surtout très belles à porter pour un mariage en plein printemps – été. </p><p><strong>Les couleurs</strong> ont, elles aussi, leurs importances dans le style cocktail : si le mariage se déroule pendant la période automne-hiver ou en soirée, les couleurs les plus adaptées seront des couleurs sombres telles que du bleu marine, du vert sapin, du gris ou encore du marron. Et pour un mariage d’été ou de printemps qui se passe en journée, les couleurs plus pastel, nude et claires seront à favoriser. Dernièrement, le beige, le crème et le bleu pastel sont souvent aperçus. </p><p><strong>Les faire-part</strong> eux aussi pourront vous guider sur les couleurs à adopter ; les couleurs de celui-ci correspondent pour la plupart du temps au thème du mariage. Mais si <strong>le doute persiste</strong>, vous pouvez toujours demander à la <a href="https://lovelydayevent.fr/"><strong>Wedding planner</strong></a> qui s’occupe du mariage, elle saura parfaitement vous<strong> guider</strong> sur la marche à suivre. Mon agence<strong> Lovely Day Event</strong> peut notamment se charger de la partie<a href="https://lovelydayevent.fr/decoration-de-mariage/"><strong> décoration</strong></a><strong> du mariage</strong>, je saurai donc la <strong>mieux placée</strong> pour vous accompagner dans votre questionnement.</p>
+[52] <p>Même si cette tenue laisse plus de liberté, le style de costume à <strong>privilégier</strong> serait un costume avec une <strong>coupe cintrée</strong>. Les<strong> couleurs</strong> comme dit ci-dessus sont aussi plus libres, vous pouvez donc partir sur des choix plus <strong>audacieux</strong>, notamment des <strong>motifs</strong> si l’envie vous prend (pas trop d’exubérance non plus) ou des <strong>couleurs plus tranchées</strong> comme de l’ocre. </p>
+[a53] 734b1cc7ba761a6e7a00d19ba59511df
+[a54] 72843006aefae98510fbd09d3a4a6d00
+[a55] 7219eacbfff69d04e59f6345a2b6373c
+[a56] 7b994fd51695ddcce75f2d6a4254fabf
+[58] <p>Pour la chemise, vous êtes aussi bien plus<strong> libre</strong>, vous pouvez opter pour des<strong> motifs</strong> et des <strong>couleurs</strong> plus aventureuses que le blanc ou le noir, mais si vous faites le choix du motif, le costume se devra d’être uni. Et inversement, si votre costume a des motifs, évitez à tout prix la chemise à motif, ce serait un surplus d’information sur votre tenue. </p>
+[60] <p>Pour vos chaussures, le style des <strong>Richelieus</strong> et des <strong>Monks</strong> est aussi adapté, mais les <strong>mocassins</strong> et les <strong>sneackers</strong> peuvent aussi être des options intéressantes, bien sûr, elles se doivent d’être tout de même <strong>classe</strong>. </p>
+[a61] 4263a0210b01bf87f465d00a450f099a 2
+[a62] 7b0b5e8001c1a1705c04841eb3116eb6
+[a63] 7f697002a8023278d2ed51675cd85c74
+[a64] e103cedf0a74463c5f0a5126a42afae7
+[66] <p>Les accessoires, eux aussi, sont <strong>plus libres</strong> et décontractés. La cravate est une option, mais comparée au style semi-formel, vous pouvez jouer avec les <strong>couleurs</strong> et les <strong>motifs</strong>. Pour un style plus en vogue en ce moment, n’hésitez pas à opter pour une <strong>pochette de costume</strong>, elle vous permet de ne pas mettre de cravate et correspond complètement à la tenue cocktail. </p>
+[67] Le style graphique de l'invitation
+[68] <p>Le <strong>style graphique</strong> de l’invitation saura vous guider sur la demande des mariés.</p><p>Voici quelques exemples :</p>
+[a69] 5286953a997752f3fc32cea901f94525
+[70] <p>Ce style de faire-part laisse à penser à un style <strong>« Black Tie »</strong> dans les tons blanc et noir.</p>
+[72] <p>Les faire-parts plus épurés laissent plus de liberté mais ne donne pas d’indication claire, le look <strong>semi-formel</strong> vous permettrais d’être sûr de ne pas faire d’erreurs. Mais il vous orientent clairement sur les couleurs attendues.</p>
+[a73] e131d901dc40f70fd8b11f8c1809cc5d
+[74] <p>De part les couleurs, le style de faire-part et l’écriture, la tenue qui pourrait être approprié est la tenue<strong> Cocktail</strong>.</p>
+[75] Le lieu
+[76] <p>Le lieu lui aussi saura vous donner des pistes : si le mariage est dans un <strong>château</strong>, un style plus <strong>guindé</strong> sera sûrement de rigueur, tandis que le mariage a lieu dans un ancien <strong>corps de ferme</strong>, une tenue plus <strong>décontractée</strong> pourrait être plus adaptée. Alors, n’hésitez pas à poser des questions aux mariés ou à la Wedding planner et à vous laisser guider par le style du mariage !</p>
+[77] En conclusion...
+[78] <p>Vous avez maintenant <strong>toutes les cartes</strong> pour trouver votre <strong>tenue parfaite</strong> pour un mariage. D’ailleurs, point non négligeable, n’oubliez pas de prévoir une<strong> tenue de rechange</strong>, car les mariages aussi beaux et classes qu’ils soient sont souvent des événements haut en couleur et en boisson ! </p>

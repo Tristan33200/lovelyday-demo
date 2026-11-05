@@ -1,0 +1,11 @@
+[T] Decor for a romantic, chic wedding in Bordeaux
+[D] As a wedding planner and designer in the Bordeaux region, I can meet all your decor expectations for a wedding that reflects you... your wedding!
+[0] Country chic
+[1] A simple, authentic wedding
+[2] <p>With the bride, I worked on the essentials of a bespoke, chic romantic <strong>design</strong>: red, white, candles, feathers and flowers… all the spirit she wanted to convey.</p><p>Alongside all these elements, lighting is particularly important in a <em><strong>romantic set design</strong></em>. The idea is to create an intimate, personal feel. To achieve this, I favoured <em><strong>candles</strong></em> and soft lighting in general.</p><p>Drapes are also key elements: their suppleness and lightness give your <em><strong>reception room</strong></em> a poetic feel.</p>
+[a4] coordination
+[5] Set design
+[6] <p> As a high-end wedding planner and above all a wedding designer in the Bordeaux region, I can meet your expectations by creating a wedding world unlike any other... yours! If you feel you need help, send me an email!</p>
+[7] Romance
+[8] <p> Don't hesitate to play with sheer fabrics, which also add a touch of luxury and originality!</p>
+[a9] decor

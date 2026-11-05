@@ -1,0 +1,8 @@
+[T] A country-themed wedding in the Bordeaux region
+[D] A country-themed wedding is very much in vogue for lovers of nature and simplicity in the Bordeaux region!
+[0] Understated, elegant decor
+[1] <p>A country-themed wedding is very much in vogue for lovers of nature and simplicity <strong>in the Bordeaux region</strong>, and as a <strong><a href="https://lovelydayevent.fr/">wedding planner</a></strong>, I can find you the best venues!</p>
+[a2] country wedding
+[3] <p>Natural materials come first in a <strong>country theme</strong>: linen, raffia, cotton and hessian, with a touch of lace for a chic note.</p><p>Pair them with an <strong>unusual venue</strong> in the <strong>Gironde</strong>, a <strong>château</strong> for example, where exposed brick and old beams beautifully set off vintage finds and natural flowers.</p>
+[a4] country wedding
+[5] <p>As you probably know, my work as a <strong>wedding planner</strong> and <strong>designer</strong> lets me support couples through every preparation: suppliers, entertainment, advice on traditions and new trends, decor with a personalised set design and help managing guests. That's how this couple could truly <strong>enjoy their wedding</strong> and, above all, their guests.</p><p>The finishing touch was the garden, transformed into a cosy space. What a joy to raise a glass at the drinks reception in the heart of the <strong>Bordeaux</strong> vineyards!</p>

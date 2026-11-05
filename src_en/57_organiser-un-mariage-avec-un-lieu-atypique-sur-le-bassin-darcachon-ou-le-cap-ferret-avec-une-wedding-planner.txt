@@ -1,0 +1,15 @@
+[T] Organiser un mariage avec un lieu atypique sur le Bassin d'Arcachon ou le Cap Ferret avec une wedding planner
+[D] Un mariage dans un lieu atypique sur le bassin d'Arcachon ? En tant que wedding planner, je suis là pour vous aider à organiser votre mariage.
+[1] <p>Un mariage avec un lieu atypique sur<strong> le bassin d’Arcachon</strong> ou le <strong>cap ferret</strong> vous attire, mais vous ne savez pas comment l’organiser ? Pas de panique ! Je suis là pour tout gérer avec vous…</p>
+[2] Un mariage pas comme les autres
+[3] <p>Faire un mariage pas comme les autres dans la <strong>région bordelaise</strong>, vous semble le mieux et c’est ce qui vous correspond le plus, dans un endroit insolite comme un catamaran sur le <strong>bassin d’Arcachon</strong>. Quel bonheur si vous pouviez vous marier les pieds dans l’eau à la cabane Bartherotte au Cap Ferret ! Un mariage exclusif, sur mesure et authentiquement Bordelais !</p>
+[a4] Insolite
+[5] La décoration, un atout majeur !
+[6] <p>Et pourquoi pas une <strong>décoration</strong> propre à votre image ainsi votre mariage épatera vos invités près des cabanes d’ostréiculteur. En tant que <strong>wedding planner</strong> je peux vous organiser le mariage le plus insolite qu’il soit, en m’adaptant à vos demandes et à vos goûts. Faites une cérémonie laïque sur la plage ou même dans un jardin privé ! </p>
+[a7] Lieu atypique
+[8] Un thème et un lieu atypique
+[9] <p>Que pensez-vous d’ une arrivée en quads ou même un thème bien différent comme médiéval, les dessins-animés ou éco-responsable. Je le ferai avec plaisir pour que ce jour soit le meilleur. Parlez-moi de vous et de vos envies.</p>
+[10] Je vous accompagne !
+[11] <p><a href="https://lovelydayevent.fr/">Je vais vous accompagner dans votre mariage jusqu’au jour J</a>. Je peux vous trouver des prestataires atypiques sur <strong>Bordeaux et sa région</strong> qui correspondent parfaitement à vos demandes. Vous aimez faire des surprises improbables à vos invités pour les surprendre encore plus ? Et pourquoi pas un magicien qui fait voler la future mariée ?</p>
+[12] Contacter moi !
+[13] <p>Alors pour organiser VOTRE mariage insolite dont vous rêvez tant, n’hésitez plus à me contacter par mail ou par téléphone pour que nous puissions en discuter ensemble.</p>
