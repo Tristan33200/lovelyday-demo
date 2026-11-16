@@ -657,3 +657,12 @@ html.lb-lock, html.lb-lock body { overflow: hidden; }
 .pkg-opt { margin: 0; padding: 12px 14px; border: 1px dashed var(--line); font-size: 14px; line-height: 1.5; display: grid; gap: 4px; }
 .pkg-opt .label { font-size: 10px; }
 .pkg-opt a { color: inherit; }
+/* Bouton menu mobile : trois traits qui se croisent à l'ouverture */
+.menu-btn { width: 44px; height: 44px; padding: 0; position: relative; }
+.menu-btn span { position: absolute; left: 11px; right: 11px; height: 1px; background: currentColor; transition: transform .35s ease, opacity .25s ease; }
+.menu-btn span:nth-child(1) { top: 15px; }
+.menu-btn span:nth-child(2) { top: 21.5px; }
+.menu-btn span:nth-child(3) { top: 28px; }
+.menu-btn[aria-expanded="true"] span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.menu-btn[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.menu-btn[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }

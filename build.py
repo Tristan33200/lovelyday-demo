@@ -347,9 +347,9 @@ def header(c):
     return f'''<header class="site-header">
   <div class="wrap bar">
     <nav class="nav" aria-label="{c.t("Navigation principale", "Main navigation")}">{links}</nav>
-    <a class="brand" href="{c.href("index")}">Lovely Day Event<small>Wedding Planner</small></a>
+    <a class="brand" href="{c.href("index")}">Lovely Day Event<small>Wedding Planner &amp; Designer</small></a>
     <div class="nav-r">{links_r}<a href="{c.href("contact")}"{" aria-current=\"page\"" if c.page=="contact" else ""}>{c.t("Contact", "Enquire")}</a>{lang}</div>
-    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mnav" data-open="Menu" data-close="{c.t("Fermer", "Close")}">Menu</button>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mnav" aria-label="{c.t("Ouvrir le menu", "Open menu")}" data-open="{c.t("Ouvrir le menu", "Open menu")}" data-close="{c.t("Fermer le menu", "Close menu")}"><span></span><span></span><span></span></button>
   </div>
   <div class="wrap"><nav class="mobile-nav" id="mnav" data-open="false">{mob}{lang}</nav></div>
 </header>'''
@@ -363,7 +363,7 @@ def footer(c):
   <div class="wrap">
     <div class="footer-top">
       <div>
-        <a class="brand" href="{c.href("index")}" style="text-align:left">Lovely Day Event<small>Wedding Planner</small></a>
+        <a class="brand" href="{c.href("index")}" style="text-align:left">Lovely Day Event<small>Wedding Planner &amp; Designer</small></a>
         <p class="small" style="max-width:34ch;margin-top:18px">{c.t("Organisation et design de mariages sur mesure. Bordeaux, Dordogne, Bassin d'Arcachon, Pays Basque et partout en France.", "Bespoke wedding planning and design. Bordeaux, Dordogne, Arcachon Bay, the Basque Country and throughout France.")}</p>
       </div>
       <div><span class="label">{c.t("Pages", "Pages")}</span>{nav}{more}</div>

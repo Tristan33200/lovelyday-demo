@@ -23,7 +23,7 @@ document.documentElement.classList.add("js");
     var open = nav.getAttribute("data-open") === "true";
     nav.setAttribute("data-open", open ? "false" : "true");
     btn.setAttribute("aria-expanded", open ? "false" : "true");
-    btn.textContent = open ? btn.dataset.open : btn.dataset.close;
+    btn.setAttribute("aria-label", open ? btn.dataset.open : btn.dataset.close);
   });
 })();
 
