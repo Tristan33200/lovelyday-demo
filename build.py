@@ -73,6 +73,22 @@ apply_tristan_post(POSTS, IMG_MAP)
 REMOVED_WED = {"delphine-ludovic", "emilie-aurelien", "melissa-sebastien-boheme-mariafe", "mai-rufus", "marie-martin"}
 WEDDING_SLUGS = [s for s in WED_EN if s not in REMOVED_WED]
 BLOG = sorted([p for p in POSTS if p["slug"] not in WED_EN], key=lambda p: p["date"], reverse=True)
+# Inspirations : articles mis en avant en tête (demande du 16/11), puis ordre chronologique
+PINNED = ["bouquetfleursmariage", "creerdessouvenirsdemariage", "lerythmedunmariage"]
+# « Une journée dans la vie » placée loin des « Coulisses » pour éviter l'effet doublon
+ORDER_DATE = {"journee-wedding-planner-backstages-jourj": "2025-11-15"}
+BLOG.sort(key=lambda p: ORDER_DATE.get(p["slug"], p["date"]), reverse=True)
+BLOG.sort(key=lambda p: PINNED.index(p["slug"]) if p["slug"] in PINNED else len(PINNED))
+# Articles gardés en ligne (référencement, plan du site) mais retirés de la liste Inspirations et des suggestions
+HIDDEN = {
+    "mariagesansstress",
+    "les-lieux-de-reception-ou-se-marier-sur-le-bassin-darcachon",
+    "details-comment-se-passe-la-coordination-du-jour-de-votre-mariage-avec-une-organisatrice-d-evenementiel-dans-la-region-bordelaise-194-html",
+    "ceremonie-laique-bord-de-leau-arcachon",
+    "faire-mariage-100-eco-responsable-sur-bordeaux",
+    "mariage-champetre-sobre-elegant-bordeaux",
+}
+BLOG_LIST = [p for p in BLOG if p["slug"] not in HIDDEN]
 
 # Traductions anglaises des articles : posts_en/<slug>.txt (repères [T] titre, [D] description,
 # [n] bloc n, [a n] texte alternatif de l'image n) + posts_en/_common.txt (blocs répétés, repère [FR]/[EN])
@@ -1404,11 +1420,13 @@ def p_post(c, slug):
     p = POST_BY_SLUG[slug]
     i = BLOG.index(p)
     p = loc(c, p)
-    pool = [b for b in BLOG if c.lang == "fr" or b["slug"] in POSTS_EN]
-    j = pool.index(POST_BY_SLUG[slug])
-    related = [pool[(j + k) % len(pool)] for k in (1, 2, 3)]
+    pool = [b for b in BLOG_LIST if c.lang == "fr" or b["slug"] in POSTS_EN]
+    me = POST_BY_SLUG[slug]
+    j = pool.index(me) if me in pool else next((k for k, b in enumerate(pool) if b["date"] <= me["date"]), 0)
+    related = [b for b in (pool[(j + k) % len(pool)] for k in (0, 1, 2, 3)) if b is not me][:3]
     first_img = next((b["v"] for b in p["blocks"] if b["t"] == "img"), None)
-    cover = c.jimg(p["cover"], p["title"], cls="post-cover", eager=True) if p["cover"] != first_img else ""
+    _k = lambda u: re.sub(r"(-scaled)?(-[a-z0-9]{20,})?(-\d+x\d+)?(\.(jpe?g|png|webp))+$", "", (u or "").rsplit("/", 1)[-1].lower())
+    cover = c.jimg(p["cover"], p["title"], cls="post-cover", eager=True) if _k(p["cover"]) != _k(first_img) else ""
     body = f'''
 <section class="page-hero wrap">
   <span class="label"><a href="{c.href("inspirations")}" style="text-decoration:none">{c.t("Inspirations", "Inspiration")}</a></span>
@@ -1438,7 +1456,7 @@ def p_inspirations(c):
   <p class="it">{c.t("Conseils, tendances et coulisses d'une wedding planner bordelaise, pour préparer votre mariage avec sérénité.", "Advice, trends and behind-the-scenes stories from a Bordeaux wedding planner, to help you plan your wedding with peace of mind.")}</p>
 </section>
 <section class="section" style="padding-top:0">
-  <div class="wrap journal">{"".join(journal_card(c, p) for p in BLOG if c.lang == "fr" or p["slug"] in POSTS_EN)}</div>
+  <div class="wrap journal">{"".join(journal_card(c, p) for p in BLOG_LIST if c.lang == "fr" or p["slug"] in POSTS_EN)}</div>
 </section>
 {cta(c)}'''
 
