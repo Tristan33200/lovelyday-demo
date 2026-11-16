@@ -674,7 +674,7 @@ html.lb-lock, html.lb-lock body { overflow: hidden; }
 .footer-top a.social { display: inline-flex; width: 22px; height: 22px; }
 /* Pastille Wedding Academy */
 .wa-badge { margin: 12px 0 0; display: grid; justify-items: center; gap: 14px; justify-self: center; }
-.wa-badge img { width: 120px; height: 120px; border-radius: 50%; box-shadow: 0 0 0 6px var(--paper), 0 0 0 7px var(--champagne); }
+.wa-badge img { width: 120px; height: 120px; border-radius: 50%; box-shadow: 0 0 0 1px var(--champagne), 0 0 0 6px var(--stone), 0 0 0 7px var(--champagne); }
 .video-agence figcaption a { color: inherit; border-bottom: 1px solid currentColor; text-decoration: none; }
 /* Design : une seule liste « Mon rôle » sur deux colonnes */
 .roles--cols { grid-template-columns: minmax(0, 1fr); }
