@@ -953,7 +953,7 @@ def p_prestations(c):
 <nav class="subnav wrap" aria-label="{t("Accompagnements", "Services")}">
   <a href="#signature">{t("Signature", "Signature")}</a>
   <a href="#organisation">{t("Collection", "Collection")}</a>
-  <a href="#coordination">{t("Coordination Jour J", "On-the-day coordination")}</a>
+  <a href="#coordination">{t("Sérénité", "Sérénité")}</a>
   <a href="#design">{t("Design &amp; décoration", "Design &amp; styling")}</a>
   <a href="#location">Photobooth</a>
   <a href="#faq">{t("Questions", "FAQ")}</a>
