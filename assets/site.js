@@ -380,9 +380,14 @@ document.querySelectorAll('[data-carousel]').forEach(function (car) {
   function layout() {
     boxes.forEach(function (b) {
       var track = b.querySelector(".hs-track");
+      var sticky = b.querySelector(".hs-sticky");
       var dist = Math.max(0, track.scrollWidth - window.innerWidth);
+      var h = track.offsetHeight, vh = window.innerHeight;
       b._dist = dist;
-      b.style.height = (window.innerHeight + dist) + "px";
+      b._top = Math.max(0, (vh - h) / 2); // épinglée au milieu de l'écran, sans vide autour
+      sticky.style.height = h + "px";
+      sticky.style.top = b._top + "px";
+      b.style.height = (h + dist) + "px";
     });
     update();
   }
@@ -390,8 +395,7 @@ document.querySelectorAll('[data-carousel]').forEach(function (car) {
     ticking = false;
     boxes.forEach(function (b) {
       var r = b.getBoundingClientRect();
-      var span = b.offsetHeight - window.innerHeight;
-      var p = span > 0 ? Math.max(0, Math.min(1, -r.top / span)) : 0;
+      var p = b._dist > 0 ? Math.max(0, Math.min(1, (b._top - r.top) / b._dist)) : 0;
       b.querySelector(".hs-track").style.transform = "translate3d(" + (-p * b._dist).toFixed(1) + "px,0,0)";
     });
   }
