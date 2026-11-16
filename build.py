@@ -173,6 +173,16 @@ ROUTES_EN = {
     "inspirations": "journal/", "photobooth": "photo-booth-hire-bordeaux/", "contact": "contact/", "mentions": "legal-notice/",
 }
 _EN_SLUGS = {}
+# Adresses anglaises figées : le titre a changé (années passées à 2027 le 16/11/2026) mais l'URL reste la même pour le référencement
+EN_SLUG_FIXED = {
+    "recherche-wedding-planner-ideal-et-de-confiance": "choose-ideal-trustworthy-wedding-planner-2025",
+    "reinventer-amour-mariage-audace-modernite": "if-dared-reinvent-love-unforgettable-wedding-2025",
+    "mariagesintimes": "intimate-weddings-new-trend-small-weddings-2025",
+    "les-couleurs-tendances-pour-un-mariage-dharmonie": "trending-colours-harmonious-wedding-2025",
+    "ultra-personnalisation-mariage": "ultra-personalisation-no-longer-luxury-wedding-philosophy-2026",
+    "tendances-mariage-2024-les-nouveautes-incontournables": "wedding-trends-2024-discover-must-have-new-ideas",
+    "celebration-experience-immersive-et-inoubliable": "weddings-2026-turn-celebration-into-immersive-unforgettable-experience",
+}
 _EN_STOP = set("a an the of and or for to in on at by with your you our my is are be how what why which who it its this that from as do does can should will we i us".split())
 
 
@@ -191,7 +201,7 @@ def en_slug(slug):
             if s in WED_EN:
                 base = _slugify_en(WED_NAMES.get(s, POST_BY_SLUG[s]["title"])) + "-wedding"
             else:
-                base = _slugify_en(POSTS_EN[s].get("T", s)) or s
+                base = EN_SLUG_FIXED.get(s) or _slugify_en(POSTS_EN[s].get("T", s)) or s
             cand, i = base, 2
             while cand + "/" in used:
                 cand, i = f"{base}-{i}", i + 1
@@ -1695,6 +1705,14 @@ if not PREVIEW:
     for _s in sorted(set(WEDDING_SLUGS) | set(POSTS_EN)):
         if en_slug(_s) != _s:
             _r.append((f"/en/{_s}/", "/" + route_of("post:" + _s, "en")))
+    # adresses -2027 en ligne une demi-heure le 16/11/2026, avant que les adresses ne soient figées
+    _r += [("/en/choose-ideal-trustworthy-wedding-planner-2027/", "/en/choose-ideal-trustworthy-wedding-planner-2025/"),
+           ("/en/if-dared-reinvent-love-unforgettable-wedding-2027/", "/en/if-dared-reinvent-love-unforgettable-wedding-2025/"),
+           ("/en/intimate-weddings-new-trend-small-weddings-2027/", "/en/intimate-weddings-new-trend-small-weddings-2025/"),
+           ("/en/trending-colours-harmonious-wedding-2027/", "/en/trending-colours-harmonious-wedding-2025/"),
+           ("/en/ultra-personalisation-no-longer-luxury-wedding-philosophy-2027/", "/en/ultra-personalisation-no-longer-luxury-wedding-philosophy-2026/"),
+           ("/en/wedding-trends-2027-discover-must-have-new-ideas/", "/en/wedding-trends-2024-discover-must-have-new-ideas/"),
+           ("/en/weddings-2027-turn-celebration-into-immersive-unforgettable-experience/", "/en/weddings-2026-turn-celebration-into-immersive-unforgettable-experience/")]
     with open(os.path.join(HERE, "en_redirects.txt"), "w", encoding="utf-8") as _f:
         for a, b in _r:
             _f.write(f"{a.rstrip('/')}  {b}  301\n{a}  {b}  301\n")

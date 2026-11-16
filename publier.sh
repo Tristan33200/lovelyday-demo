@@ -1,14 +1,20 @@
 #!/bin/bash
-# Production : site/ + _redirects + _headers -> branche "production" du dépôt -> Sevalla (lovelydayevent.fr)
+# Publication de lovelydayevent.fr
+#   ./publier.sh "message"     -> construit le site du jour, le pousse sur la branche "production"
+#                                 (Sevalla redéploie tout seul), et prépare les branches parution-AAAA-MM-JJ
+#                                 des articles programmés (SCHEDULE dans build.py).
+#   NO_PUSH=1 ./publier.sh "x" -> construit tout sans rien envoyer (pour vérifier).
+# À lancer depuis la branche "source" du dépôt. Nécessite python3 + Pillow (pip install pillow).
 set -e
-S=/tmp/claude-0/-home-user/20887b6f-fabe-5ce1-a4a5-fdc0d980e6c3/scratchpad
-P=$S/prodrepo
-MSG="$1"
+S=$(cd "$(dirname "$0")" && pwd)
+P=$S/.prod
+MSG="${1:-Mise à jour du site}"
 TODAY=$(date -u +%F)
 # Dates de parution programmées (SCHEDULE dans build.py) encore à venir
-DATES=$(python3 - <<'PY'
+DATES=$(S=$S python3 - <<'PY'
 import re,datetime
-s=open("/tmp/claude-0/-home-user/20887b6f-fabe-5ce1-a4a5-fdc0d980e6c3/scratchpad/build.py").read()
+import os
+s=open(os.path.join(os.environ["S"],"build.py")).read()
 blk=s[s.index("SCHEDULE = {"):s.index("}",s.index("SCHEDULE = {"))]
 t=datetime.date.today().isoformat()
 print(" ".join(sorted({d for d in re.findall(r'"(\d{4}-\d\d-\d\d)"',blk) if d>t})))
@@ -16,10 +22,10 @@ PY
 )
 prep() {
 cd $S && PUBLISH_DATE=$1 python3 build.py site > /dev/null
-rm -rf $S/prod && cp -r $S/site $S/prod && rm -f $S/prod/.htaccess
-python3 -I $S/rename_imgs.py $S/prod
-printf 'google-site-verification: googlefcf2685566146d48.html' > $S/prod/googlefcf2685566146d48.html
-cat > $S/prod/_redirects <<'R'
+rm -rf $S/.build && cp -r $S/site $S/.build && rm -f $S/.build/.htaccess
+python3 -I $S/rename_imgs.py $S/.build
+printf 'google-site-verification: googlefcf2685566146d48.html' > $S/.build/googlefcf2685566146d48.html
+cat > $S/.build/_redirects <<'R'
 # www -> domaine principal
 https://www.lovelydayevent.fr/*        https://lovelydayevent.fr/:splat          301!
 # Anciennes adresses du site WordPress
@@ -45,8 +51,8 @@ https://www.lovelydayevent.fr/*        https://lovelydayevent.fr/:splat         
 /marie-martin                           /weddingbook-exemples-de-mariages/         301
 /en/marie-martin                        /en/weddings/      301
 R
-cat $S/en_redirects.txt >> $S/prod/_redirects
-cat >> $S/prod/_redirects <<'R'
+cat $S/en_redirects.txt >> $S/.build/_redirects
+cat >> $S/.build/_redirects <<'R'
 # Restes de WordPress (étiquettes, catégories, flux, pagination)
 /tag/*                                  /les-idees-de-lovely-day-inspirations/    301
 /category/*                             /les-idees-de-lovely-day-inspirations/    301
@@ -59,8 +65,8 @@ cat >> $S/prod/_redirects <<'R'
 # Page introuvable
 /*                                      /index.html                               404
 R
-cp $S/llms.txt $S/prod/llms.txt
-cat > $S/prod/_headers <<'H'
+cp $S/llms.txt $S/.build/llms.txt
+cat > $S/.build/_headers <<'H'
 /*
   Strict-Transport-Security: max-age=31536000
   X-Content-Type-Options: nosniff
@@ -77,14 +83,11 @@ cat > $S/prod/_headers <<'H'
 H
 }
 commit() {
-cd $P && find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} + && cp -r $S/prod/. ./
-git add -A && git commit -qm "$1
-
-Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
-Claude-Session: https://claude.ai/code/session_013Na2xn24ndN6rfzWREi6KN" || true
+cd $P && find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} + && cp -r $S/.build/. ./
+git add -A && git commit -qm "$1" || true
 }
-if [ ! -d $P/.git ]; then git clone -q --no-checkout /home/user/lovelyday-demo $P; cd $P; git remote set-url origin "$(git -C /home/user/lovelyday-demo remote get-url origin)"; git checkout -q --orphan production; fi
-cd $P && git checkout -q production
+if [ ! -d $P/.git ]; then git clone -q --no-checkout "$(git -C $S remote get-url origin)" $P; fi
+cd $P && git fetch -q origin production && (git checkout -q production 2>/dev/null || git checkout -q -b production origin/production)
 # 1) version du jour -> branche production (mise en ligne)
 prep $TODAY && commit "$MSG"
 # 2) versions futures -> branches parution-AAAA-MM-JJ, chacune construite sur la précédente.
@@ -96,6 +99,7 @@ for D in $DATES; do
   git -C $P branch -f parution-$D prochaine
 done
 cd $P && git checkout -q production
+if [ -n "$NO_PUSH" ]; then echo "NO_PUSH : rien n'a été envoyé ($P)"; cd $S && python3 build.py site > /dev/null; exit 0; fi
 git push -u origin production 2>&1 | tail -1
 for D in $DATES; do git push -fq origin parution-$D; done
 # branches de parution déjà passées : supprimées du dépôt
