@@ -951,7 +951,6 @@ def p_prestations(c):
   <p class="it">{t("De l'organisation complète à la coordination du jour J, avec un vrai travail de design pour un mariage qui vous ressemble.", "From full planning to on-the-day coordination, with true design work for a wedding that feels like you.")}</p>
 </section>
 <nav class="subnav wrap" aria-label="{t("Accompagnements", "Services")}">
-  <a href="#formules">{t("Accompagnements", "Services")}</a>
   <a href="#signature">{t("Signature", "Signature")}</a>
   <a href="#organisation">{t("Collection", "Collection")}</a>
   <a href="#coordination">{t("Coordination Jour J", "On-the-day coordination")}</a>
