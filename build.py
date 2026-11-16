@@ -8,6 +8,7 @@ actuel (/prestations/, /contact/, /<slug-article>/…) pour garder le référenc
     python3 build.py <dossier> --preview   # aperçu hors serveur (liens « dossier/index.html »)
 """
 import os, sys, re, json, html as H
+import autolinks
 
 OUT = sys.argv[1] if len(sys.argv) > 1 else "site"
 PREVIEW = "--preview" in sys.argv
@@ -415,7 +416,7 @@ def footer(c):
 TITLES = {
     "index": ("Wedding Planner Bordeaux & organisation de mariage · Lovely Day Event", "Wedding Planner in Bordeaux, France · Lovely Day Event"),
     "agence": ("L'agence · Lovely Day Event", "About · Lovely Day Event"),
-    "prestations": ("Prestations · Lovely Day Event", "Services · Lovely Day Event"),
+    "prestations": ("Accompagnements & tarifs · Wedding planner Bordeaux · Lovely Day Event", "Services & pricing · Wedding planner Bordeaux · Lovely Day Event"),
     "mariages": ("Mariages · Lovely Day Event", "Weddings · Lovely Day Event"),
     "inspirations": ("Inspirations · Lovely Day Event", "Inspiration · Lovely Day Event"),
     "photobooth": ("Location photobooth à Bordeaux · Lovely Day Event", "Photo booth rental in Bordeaux · Lovely Day Event"),
@@ -1381,9 +1382,15 @@ def cta(c):
 </section>'''
 
 
-def render_blocks(c, blocks, title):
+def render_blocks(c, blocks, title, slug=None):
     out = []
     bl = list(blocks)
+    if slug:
+        hi = [i for i, b in enumerate(bl) if b["t"] == "html"]
+        avail = {p["slug"] for p in BLOG if c.lang == "fr" or p["slug"] in POSTS_EN}
+        new = autolinks.autolink(c, slug, [rewrite_links(c, bl[i]["v"]) for i in hi], avail)
+        for i, h in zip(hi, new):
+            bl[i] = dict(bl[i], v=h, linked=True)
     while bl and bl[-1]["t"] in ("h2", "h3"):
         bl.pop()
     section = ""
@@ -1398,7 +1405,7 @@ def render_blocks(c, blocks, title):
             section = b["v"].strip().rstrip(" :?").strip()
             out.append(f'<{b["t"]}>{H.escape(b["v"])}</{b["t"]}>')
         elif b["t"] == "html":
-            out.append(rewrite_links(c, b["v"]))
+            out.append(b["v"] if b.get("linked") else rewrite_links(c, b["v"]))
         elif b["t"] == "img":
             f = c.jimg(b["v"], alt_for(b.get("alt")))
             # photos qui se suivent : regroupées en galerie
@@ -1435,6 +1442,10 @@ def p_post(c, slug):
     me = POST_BY_SLUG[slug]
     j = pool.index(me) if me in pool else next((k for k, b in enumerate(pool) if b["date"] <= me["date"]), 0)
     related = [b for b in (pool[(j + k) % len(pool)] for k in (0, 1, 2, 3)) if b is not me][:3]
+    # articles masqués de la liste : proposés en « À lire aussi » pour que Google les trouve
+    hid = [POST_BY_SLUG[h] for h in sorted(HIDDEN) if h in POST_BY_SLUG and (c.lang == "fr" or h in POSTS_EN) and h != slug]
+    if hid:
+        related = related[:2] + [hid[i % len(hid)]]
     first_img = next((b["v"] for b in p["blocks"] if b["t"] == "img"), None)
     _k = lambda u: re.sub(r"(-scaled)?(-[a-z0-9]{20,})?(-\d+x\d+)?(\.(jpe?g|png|webp))+$", "", (u or "").rsplit("/", 1)[-1].lower())
     cover = c.jimg(p["cover"], p["title"], cls="post-cover", eager=True) if _k(p["cover"]) != _k(first_img) else ""
@@ -1446,7 +1457,7 @@ def p_post(c, slug):
 <div class="wrap">{cover}</div>
 <section class="section" style="padding-top:clamp(48px,6vw,88px)">
   <article class="wrap article">
-{render_blocks(c, p["blocks"], p["title"])}
+{render_blocks(c, p["blocks"], p["title"], slug)}
   </article>
 </section>
 <section class="section section--stone">
@@ -1713,9 +1724,27 @@ if not PREVIEW:
            ("/en/ultra-personalisation-no-longer-luxury-wedding-philosophy-2027/", "/en/ultra-personalisation-no-longer-luxury-wedding-philosophy-2026/"),
            ("/en/wedding-trends-2027-discover-must-have-new-ideas/", "/en/wedding-trends-2024-discover-must-have-new-ideas/"),
            ("/en/weddings-2027-turn-celebration-into-immersive-unforgettable-experience/", "/en/weddings-2026-turn-celebration-into-immersive-unforgettable-experience/")]
+    # fautes de frappe relevées dans la Search Console (anciens liens externes)
+    _r += [("/le-rituel-du-vœu-du-sable-en-mariage-laique-symbolisme-et-signification/", "/le-rituel-du-sable-en-mariage-laique-symbolisme-et-signification/"),
+           ("/le-rituel-du-sale-en-mariage-laique-symbolisme-et-signification/", "/le-rituel-du-sable-en-mariage-laique-symbolisme-et-signification/"),
+           ("/le-rituel-du-sable-en-laique-symbolisme-et-signification/", "/le-rituel-du-sable-en-mariage-laique-symbolisme-et-signification/"),
+           ("/le-rituel-des-rubans-en-laique/", "/le-rituel-des-rubans-en-mariage-laique/"),
+           ("/ceremonie-laique-bord-de-le-arcachon/", "/ceremonie-laique-bord-de-leau-arcachon/")]
+    # articles programmés pas encore parus : renvoi temporaire (302) vers la liste des articles
+    _tmp = []
+    for _s in sorted(UNPUBLISHED):
+        _tmp.append((f"/{_s}/", "/" + ROUTES["inspirations"]))
+        _ef = os.path.join(EN_DIR, _s + ".txt")
+        _et = parse_segs(open(_ef, encoding="utf-8").read()).get("T") if os.path.exists(_ef) else None
+        for _e in {_s, en_slug(_s), _slugify_en(_et) if _et else _s}:
+            _tmp.append((f"/en/{_e}/", "/en/" + ROUTES_EN["inspirations"]))
+    _tmp_from = {a for a, _ in _tmp}
+    _r = [x for x in _r if x[0] not in _tmp_from]
     with open(os.path.join(HERE, "en_redirects.txt"), "w", encoding="utf-8") as _f:
         for a, b in _r:
             _f.write(f"{a.rstrip('/')}  {b}  301\n{a}  {b}  301\n")
+        for a, b in _tmp:
+            _f.write(f"{a.rstrip('/')}  {b}  302\n{a}  {b}  302\n")
     print(len(_r), "redirections EN")
 
 # Articles pas encore parus : on retire leurs pages d'une génération précédente
