@@ -394,7 +394,7 @@ def footer(c):
     </div>
     <div class="footer-bottom">
       <span>© 2026 Lovely Day Event · Alexandra Ambert</span>
-      <span class="fb-credits"><span>{c.t("Site conçu par", "Website designed by")} Tristan Perrier</span><span>{c.t("Photographies :", "Photography:")} <a href="https://www.tristanperrier.fr/{c.t("", "en/")}" target="_blank" rel="noopener">Tristan Perrier</a> {c.t("et photographes partenaires", "and partner photographers")}</span></span>
+      <span class="fb-credits"><span>{c.t("Site conçu par", "Website designed by")} <a href="https://www.tristanperrier.fr/{c.t("", "en/")}" target="_blank" rel="noopener">Tristan Perrier</a></span></span>
       <a href="{c.href("mentions")}">{c.t("Mentions légales", "Legal notice")}</a>
     </div>
   </div>
@@ -1575,13 +1575,18 @@ def p_mentions(c):
     <h2>{t("Propriétaire du site, responsable de la publication", "Site owner and publisher")}</h2>
     <p>Madame Alexandra Ambert, {t("entrepreneur individuel", "sole trader")}<br>{t("Siège social", "Registered office")} : 8 rue des Primevères, 33140 Villenave-d'Ornon, France<br>SIRET : 80305420400018<br>Contact : contact@lovelydayevent.fr</p>
     <h2>{t("Hébergement", "Hosting")}</h2>
-    <p>Hostinger International Ltd, 61 Lordou Vironos Street, 6023 Larnaca, {t("Chypre", "Cyprus")}<br><a href="https://www.hostinger.fr/contact" target="_blank" rel="noopener">hostinger.fr/contact</a></p>
+    <p>Sevalla (Kinsta Inc.), 8605 Santa Monica Blvd #92581, West Hollywood, CA 90069, {t("États-Unis", "United States")}<br><a href="https://sevalla.com/" target="_blank" rel="noopener">sevalla.com</a></p>
     <h2>{t("Propriété intellectuelle", "Intellectual property")}</h2>
     <p>{t("La présentation et chacun des éléments apparaissant sur le site www.lovelydayevent.fr sont protégés par les lois en vigueur sur la propriété intellectuelle, et appartiennent à l'auteur ou font l'objet d'une autorisation d'utilisation.", "The presentation and every element of www.lovelydayevent.fr are protected by intellectual property law and belong to the author or are used with permission.")}</p>
     <p>{t("Aucun élément composant le site ne peut être copié, reproduit, modifié, réédité, dénaturé, transmis ou distribué, de façon partielle ou intégrale, sans l'autorisation écrite et préalable de l'auteur.", "No element of the site may be copied, reproduced, modified, republished, altered, transmitted or distributed, in part or in full, without the author's prior written permission.")}</p>
     <p>{t("Les logos, images et marques des entreprises citées sont la propriété de leurs auteurs. Toute représentation totale ou partielle d'éléments graphiques ou photographiques sans l'autorisation expresse de l'auteur est interdite et constituerait une contrefaçon sanctionnée par les articles L.335-2 et suivants du Code de la propriété intellectuelle.", "Logos, images and trademarks of the companies mentioned belong to their owners. Any reproduction of graphic or photographic elements without the author's express permission is prohibited and constitutes infringement under articles L.335-2 et seq. of the French Intellectual Property Code.")}</p>
     <h2>{t("Crédits photographiques", "Photo credits")}</h2>
-    <p>Tristan Perrier, <a href="https://www.tristanperrier.fr/{t("", "en/")}" target="_blank" rel="noopener">tristanperrier.fr</a>, {t("ainsi que les photographes partenaires crédités sur chaque récit de mariage.", "and the partner photographers credited on each wedding story.")}</p>
+    <p>{t("Les photographies du site sont l'œuvre des photographes suivants, que nous remercions. Elles ne peuvent être reproduites sans leur accord.", "The photographs on this site are the work of the following photographers, whom we thank. They may not be reproduced without their permission.")}</p>
+    <ul>
+      <li><strong>Tristan Perrier</strong>, {t("photographe de mariage à Bordeaux", "wedding photographer in Bordeaux")} : <a href="https://www.tristanperrier.fr/{t("", "en/")}" target="_blank" rel="noopener">tristanperrier.fr</a></li>
+      <li>Anaïs L : <a href="http://anaislphotographie.com/" target="_blank" rel="noopener">anaislphotographie.com</a></li><li>ClapStudio : <a href="https://www.clapstudio.fr/" target="_blank" rel="noopener">clapstudio.fr</a></li><li>Ghania Iratni : <a href="https://ghaniairatni.com/" target="_blank" rel="noopener">ghaniairatni.com</a></li><li>HDAS Records : <a href="https://www.hdasrecords.com/" target="_blank" rel="noopener">hdasrecords.com</a></li><li>Los Caballeros : <a href="https://loscaballerosweddings.com/" target="_blank" rel="noopener">loscaballerosweddings.com</a></li><li>Marine Monteils : <a href="https://www.mariages.net/photo-mariage/marine-monteils-photographe--e120855" target="_blank" rel="noopener">mariages.net</a></li><li>Pauline Maroussia : <a href="https://www.instagram.com/paulinemaroussiap/" target="_blank" rel="noopener">Instagram</a></li><li>Pixaile Photography : <a href="https://www.pixaile-photography.com/" target="_blank" rel="noopener">pixaile-photography.com</a></li><li>Thomas Dalfarra : <a href="https://www.thomasdalfarra.com/" target="_blank" rel="noopener">thomasdalfarra.com</a></li><li>Wedstory : <a href="https://wedstory.fr/" target="_blank" rel="noopener">wedstory.fr</a></li>
+    </ul>
+    <p>{t("Chaque récit de mariage précise le nom du photographe concerné.", "Each wedding story names the photographer concerned.")}</p>
   </div>
 </section>'''
 
