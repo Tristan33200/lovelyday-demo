@@ -676,3 +676,8 @@ html.lb-lock, html.lb-lock body { overflow: hidden; }
 .wa-badge { margin: 12px 0 0; display: grid; justify-items: center; gap: 14px; justify-self: center; }
 .wa-badge img { width: 120px; height: 120px; border-radius: 50%; box-shadow: 0 0 0 6px var(--paper), 0 0 0 7px var(--champagne); }
 .video-agence figcaption a { color: inherit; border-bottom: 1px solid currentColor; text-decoration: none; }
+/* Design : une seule liste « Mon rôle » sur deux colonnes */
+.roles--cols { grid-template-columns: minmax(0, 1fr); }
+.roles--cols ul { columns: 2; column-gap: clamp(24px, 4vw, 64px); }
+.roles--cols li { break-inside: avoid; }
+@media (max-width: 760px) { .roles--cols ul { columns: 1; } }
