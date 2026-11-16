@@ -1188,7 +1188,7 @@ def p_contact(c):
   <div class="wrap figures">
     <div><strong>2014</strong><span class="label">{t("Agence créée dans la région bordelaise", "Agency founded near Bordeaux")}</span></div>
     <div><strong>3</strong><span class="label">{t("Accompagnements : organisation, design, Jour&nbsp;J", "Services: planning, design, the day")}</span></div>
-    <div><strong>62</strong><span class="label">{t("Mariages orchestrés", "Weddings orchestrated")}</span></div>
+    <div><strong>+100</strong><span class="label">{t("Plus d'une centaine de mariages orchestrés", "More than a hundred weddings orchestrated")}</span></div>
   </div>
 </section>
 
