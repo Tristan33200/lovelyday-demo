@@ -681,3 +681,12 @@ html.lb-lock, html.lb-lock body { overflow: hidden; }
 .roles--cols ul { columns: 2; column-gap: clamp(24px, 4vw, 64px); }
 .roles--cols li { break-inside: avoid; }
 @media (max-width: 760px) { .roles--cols ul { columns: 1; } }
+/* Bouton WhatsApp flottant */
+.wa-chat { position: fixed; right: clamp(14px, 2.4vw, 28px); bottom: clamp(14px, 2.4vw, 28px); z-index: 60; display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--champagne); }
+.wa-chat-ico { width: 54px; height: 54px; border-radius: 50%; display: grid; place-items: center; background: var(--paper); box-shadow: 0 0 0 1px var(--champagne), 0 6px 22px rgba(42, 40, 37, .12); transition: background .3s, color .3s; }
+.wa-chat-ico svg { width: 26px; height: 26px; }
+.wa-chat-txt { font-family: var(--body); font-size: 10.5px; letter-spacing: .22em; text-transform: uppercase; color: var(--ink); background: var(--paper); padding: 10px 14px; box-shadow: 0 0 0 1px var(--line); opacity: 0; transform: translateX(8px); transition: opacity .3s, transform .3s; pointer-events: none; white-space: nowrap; }
+.wa-chat:hover .wa-chat-ico, .wa-chat:focus-visible .wa-chat-ico { background: var(--champagne); color: var(--paper); }
+.wa-chat:hover .wa-chat-txt, .wa-chat:focus-visible .wa-chat-txt { opacity: 1; transform: none; }
+@media (max-width: 700px) { .wa-chat-ico { width: 48px; height: 48px; } .wa-chat-txt { display: none; } }
+@media print { .wa-chat { display: none; } }
