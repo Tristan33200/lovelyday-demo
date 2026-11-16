@@ -404,3 +404,15 @@ document.querySelectorAll('[data-carousel]').forEach(function (car) {
   window.addEventListener("load", layout);
   layout();
 })();
+
+// Vidéo YouTube : chargée seulement au clic (aucun traceur avant consentement)
+document.querySelectorAll(".yt-facade").forEach(function (b) {
+  b.addEventListener("click", function () {
+    var f = document.createElement("iframe");
+    f.src = "https://www.youtube-nocookie.com/embed/" + b.dataset.yt + "?rel=0&autoplay=1";
+    f.title = b.dataset.title;
+    f.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
+    f.allowFullscreen = true;
+    b.replaceWith(f);
+  });
+});
