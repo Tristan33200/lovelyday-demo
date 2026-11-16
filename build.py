@@ -756,7 +756,7 @@ def VIDEO_AGENCE(c):
     t = c.t
     cap = t("Alexandra au Château Belle Époque", "Alexandra at Château Belle Époque")
     return f'''<figure class="video-agence reveal"><div class="video"><iframe src="https://www.youtube-nocookie.com/embed/QngWOuPwvco?rel=0" title="{t("Vidéo", "Video")} : {cap}" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
-      <figcaption class="label">{cap}</figcaption></figure>'''
+      <figcaption class="label">{t("Alexandra au", "Alexandra at")} <a href="https://www.mariages.net/chateau-mariage/chateau-belle-epoque--e197225" target="_blank" rel="noopener">Château Belle Époque</a></figcaption></figure>'''
 
 
 def p_agence(c):
@@ -788,6 +788,7 @@ def p_agence(c):
     <span class="label">{t("Votre histoire", "Your story")}</span>
     <h2 class="h2">{t("Quels sont les moments importants du mariage pour vous ?", "Which moments of the day matter most to you?")}</h2>
     <p class="it" style="max-width:44ch;color:var(--muted)">{t("Racontez-moi votre rencontre, vos envies, vos idées : je vous promets d'être force de proposition et toujours passionnée pour vous accompagner dans un si grand projet.", "Tell me how you met, your wishes, your ideas. I promise to bring ideas of my own and to accompany you with passion through such a meaningful project.")}</p>
+    <a class="btn" href="{c.href("contact")}">{t("Parlez-moi de votre projet", "Tell me about your project")}</a>
   </div>
 </section>
 
@@ -832,7 +833,25 @@ def p_agence(c):
         <p>{t("Formée aux méthodes de travail de la Wedding Academy, en véritable experte du mariage, je gère pour vous toutes les facettes de votre projet en gardant une belle cohérence et harmonie.", "Trained in the methods of the Wedding Academy, I manage every facet of your wedding for you, with consistency and harmony throughout.")}</p>
         <p>{t("Mon atout, c'est ma créativité. J'aime la décoration, les dernières tendances, les ambiances que créent les matières et les couleurs. Je vous propose de manière cadrée et structurée une scénographie complète, afin que vous puissiez vous projeter dans votre jour.", "My strength is creativity. I love decoration, the latest trends, the atmospheres created by textures and colours. I present a complete, clearly structured scenography so you can truly picture your day.")}</p>
       </div>
-      <img src="{c.root}img/wedding-academy.png" alt="Wedding Academy · Wedding Designer Certified" width="96" height="96" loading="lazy" style="width:96px;height:96px;border-radius:50%">
+      <figure class="wa-badge"><img src="{c.root}img/wedding-academy.png" alt="Wedding Academy · Wedding Designer Certified" width="120" height="120" loading="lazy"><figcaption class="label">{t("Certifiée Wedding Academy", "Wedding Academy certified")}</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="decoration">
+  <div class="wrap stack-lg">
+    <div class="stack center" style="text-align:center"><span class="label">{t("Décoration", "Styling")}</span><h2 class="h2">{t("Quelques décors signés Lovely Day Event", "A few Lovely Day Event designs")}</h2></div>
+    <div class="gallery" data-carousel>
+      {c.img("MariageChateauGrattequina_TristanPerrier_NA-325", t("Mur à champagne « Santé ! » fleuri", "Floral champagne wall"))}
+      {c.img("location-arche", t("Arche de cérémonie en bois et voilages", "Wooden ceremony arch with drapes"))}
+      {c.img("MariageChateauGrattequina_TristanPerrier_NA-430", t("Art de la table blanc et doré", "White and gold tableware"))}
+      {c.img("table-margot-loic", t("Table de réception dressée par Lovely Day Event", "Reception table styled by Lovely Day Event"))}
+      {c.img("MariageChateauGrattequina_TristanPerrier_NA-184", t("Bouquet de lisianthus noué sur une chaise de cérémonie", "Lisianthus posy tied to a ceremony chair"))}
+      {c.img("table-rouge", t("Table aux serviettes rouges", "Table with red napkins"))}
+      {c.img("MariageChateauGrattequina_TristanPerrier_NA-198", t("Panneau de bienvenue fleuri", "Floral welcome sign"))}
+      {c.img("jennifer-laurent-table", t("Table bohème aux tons crème", "Bohemian cream-toned table"))}
+      {c.img("MariageChateauGrattequina_TristanPerrier_NA-425", t("Fleurs pastel et bougies sur une table de réception", "Pastel flowers and candles on a reception table"))}
+      {c.img("TristanPerrier_TraiteurAuroreAmbert_AA-117", t("Bar à cocktails, verres ciselés", "Cocktail bar with cut-glass tumblers"))}
     </div>
   </div>
 </section>
