@@ -441,6 +441,15 @@ def org_ld(c):
     t = c.t
     return {
         "@type": ["LocalBusiness", "ProfessionalService"], "@id": ORG_ID,
+        "hasOfferCatalog": {"@type": "OfferCatalog", "name": t("Accompagnements", "Services"), "itemListElement": [
+            {"@type": "Offer", "name": n, "description": d, "url": SITE_URL + route_of(k, c.lang),
+             "priceSpecification": {"@type": "PriceSpecification", "minPrice": p, "priceCurrency": "EUR"}}
+            for n, d, p, k in (
+                ("Signature", t("Organisation, design et jour J", "Planning, design and wedding day"), 6900, "prestations"),
+                ("Collection", t("Organisation et jour J", "Planning and wedding day"), 5000, "prestations"),
+                ("Sérénité", t("Coordination jour J", "Wedding-day coordination"), 2200, "prestations"),
+                (t("Design & décoration (option avec Sérénité)", "Design & decoration (Sérénité add-on)"), t("Scénographie et décoration sur mesure", "Bespoke set design and decoration"), 2000, "prestations"),
+                (t("Location de photobooth", "Photo booth hire"), t("Borne photo pour votre mariage", "Photo booth for your wedding"), 400, "photobooth"))]},
         "name": "Lovely Day Event", "alternateName": "LOVELY DAY EVENT",
         "description": DESCS[c.lang], "url": SITE_URL,
         "image": SITE_URL + "img/MariageChateauGrattequina_TristanPerrier_NA-274.webp",
@@ -519,7 +528,12 @@ def page(c, body, title=None, desc=None, image=None):
                "publisher": {"@id": ORG_ID}}
         if pd.get("date"):
             art["datePublished"] = pd["date"]
+            art["dateModified"] = max(pd["date"], "2026-11-16")
         graph.append(art)
+        graph.append({"@type": "BreadcrumbList", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": c.t("Accueil", "Home"), "item": SITE_URL + route_of("index", c.lang)},
+            {"@type": "ListItem", "position": 2, "name": c.t("Inspirations", "Inspiration"), "item": SITE_URL + route_of("inspirations", c.lang)},
+            {"@type": "ListItem", "position": 3, "name": title.split(" · ")[0], "item": canonical}]})
     fq = faq_ld(body)
     if fq:
         graph.append(fq)
@@ -536,6 +550,7 @@ def page(c, body, title=None, desc=None, image=None):
 <meta property="og:title" content="{H.escape(title)}">
 <meta property="og:description" content="{H.escape(desc)}">
 <meta property="og:image" content="{image}">
+{(lambda wh: f'<meta property="og:image:width" content="{wh[0]}">\n<meta property="og:image:height" content="{wh[1]}">' if wh else "")(img_size(image[len(SITE_URL):]) if image.startswith(SITE_URL) else None)}
 <meta property="og:image:alt" content="{H.escape(title)}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{H.escape(title)}">
