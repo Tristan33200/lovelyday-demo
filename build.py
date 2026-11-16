@@ -1267,15 +1267,30 @@ def wedding_data(slug, lang):
                 who=name, credit=credit, gallery=gallery, cover=p["cover"])
 
 
+_MOIS = r"(?:janvier|f[ée]vrier|mars|avril|mai|juin|juillet|ao[uû]t|septembre|octobre|novembre|d[ée]cembre|january|february|march|april|may|june|july|august|september|october|november|december)"
+_DATE = r"(?:(?:le|on|the)\s+)?(?:\d{1,2}(?:er|st|nd|rd|th)?\s+)?(?:" + _MOIS + r"\s+)?\d{4}|\d{1,2}\.\d{1,2}\.\d{2,4}"
+
+
+def sans_date(head):
+    """Lieu seul, sans la date du mariage (demande d'Alexandra)."""
+    return re.sub(r"\s*(?:,|·|-|–)\s*(?:" + _DATE + r")\s*$", "", head, flags=re.I).strip()
+
+
+def sans_date_debut(txt):
+    """Retire « Le 4 octobre 2025, » / « En juin 2025, » en tête d'un résumé."""
+    out = re.sub(r"^\s*(?:le|en|on|in)\s+(?:" + _DATE + r")\s*,\s*", "", txt, flags=re.I)
+    return out[:1].upper() + out[1:] if out != txt else txt
+
+
 def wedding_post_card(c, slug):
     d = wedding_data(slug, c.lang)
     cands = ([("img", SLUG2IMG[slug])] if slug in SLUG2IMG else []) + [("j", d["cover"])] + [("j", u) for u in d["gallery"]]
     img = fitted_img(c, cands, d["name"], "ratio-tall")
     return f'''<a class="wedding reveal" href="{c.href("post:" + slug)}">
   {img}
-  <div class="meta"><span class="label">{H.escape(d["head"])}</span></div>
+  <div class="meta"><span class="label">{H.escape(sans_date(d["head"]))}</span></div>
   <h3 class="h3">{H.escape(d["name"])}</h3>
-  <p>{H.escape(excerpt(text_of(d["story"])))}</p>
+  <p>{H.escape(excerpt(sans_date_debut(text_of(d["story"]))))}</p>
   <span class="link" style="justify-self:start">{c.t("Lire leur histoire", "Read their story")}</span>
 </a>'''
 
@@ -1302,7 +1317,7 @@ def p_wedding(c, slug):
 </section>'''
     body = f'''
 <section class="page-hero wrap">
-  <span class="label">{t("Mariage", "Wedding")} · {H.escape(d["head"])}</span>
+  <span class="label">{t("Mariage", "Wedding")} · {H.escape(sans_date(d["head"]))}</span>
   <h1 class="h1">{H.escape(d["name"])}</h1>
 </section>
 <div class="wrap">{cover}</div>
