@@ -666,3 +666,6 @@ html.lb-lock, html.lb-lock body { overflow: hidden; }
 .menu-btn[aria-expanded="true"] span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
 .menu-btn[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
 .menu-btn[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+/* Lieux du hero : toujours sur une ligne, resserrés sur petit écran */
+.hero-places { white-space: nowrap; }
+@media (max-width: 480px) { .hero-places { font-size: 9.5px; letter-spacing: .16em; } }
