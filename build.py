@@ -460,7 +460,7 @@ def org_ld(c):
         "hasMap": "https://g.page/r/Ccty5Dtg7yumEAE",
         "address": {"@type": "PostalAddress", "postalCode": "33140", "addressLocality": "Villenave-d'Ornon", "addressRegion": "Nouvelle-Aquitaine", "addressCountry": "FR"},
         "knowsAbout": [t("Organisation de mariage", "Wedding planning"), t("Décoration de mariage", "Wedding design"), t("Coordination jour J", "Wedding day coordination")],
-        "areaServed": ["Bordeaux", "Gironde", t("Bassin d'Arcachon", "Arcachon Bay"), "Dordogne", t("Pays basque", "Basque Country"), "France"],
+        "areaServed": ["Bordeaux", "Gironde", t("Bassin d'Arcachon", "Arcachon Bay"), "Cap Ferret", "Saint-Émilion", "Dordogne", t("Pays basque", "Basque Country"), "France"],
         "knowsLanguage": ["fr", "en"], "sameAs": SAME_AS,
     }
 
