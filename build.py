@@ -373,7 +373,7 @@ def footer(c):
         <span class="small">Bordeaux, Gironde</span>
       </div>
       <div><span class="label">{c.t("Suivre", "Follow")}</span>
-        <a href="https://www.instagram.com/lovelydayevent/" target="_blank" rel="noopener">Instagram</a>
+        <a class="social" href="https://www.instagram.com/lovelydayevent/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r=".9" fill="currentColor" stroke="none"/></svg></a>
       </div>
     </div>
     <div class="footer-bottom">
@@ -724,10 +724,9 @@ def p_index(c):
   <div class="wrap stack-lg">
     <div class="stack center" style="text-align:center"><span class="label">{t("Ils nous ont fait confiance", "Kind words")}</span><h2 class="h2">{t("Mots de mariés", "From our couples")}</h2></div>
     {ratings(c)}
-    <div class="quotes">
+    <div class="quotes quotes--2">
       <figure class="quote"><blockquote>{t("« Avoir confié la coordination de notre mariage à Alexandra a été la clef de notre sérénité. Dès la première entrevue, nous avons su qu'elle serait la bonne personne. Elle a un très bon relationnel avec les prestataires, ce qui a permis de constituer une véritable équipe autour de notre mariage. »", "“Entrusting the coordination of our wedding to Alexandra was the key to our peace of mind. From our first meeting we knew she was the right person. Her excellent relationships with suppliers built a true team around our wedding.”")}</blockquote><figcaption class="label"><cite>Delphine &amp; Haythem</cite></figcaption></figure>
       <figure class="quote"><blockquote>{t("« Nous descendons à peine de notre petit nuage, le 18 juin dernier était magique ! On ne s'attendait pas à prendre autant de plaisir le jour J, tout le monde a adoré la décoration, les prestataires, l'organisation. Merci Alexandra pour avoir fait de ce jour notre mariage parfait ! »", "“We are only just coming down from cloud nine: 18 June was magical! We never expected to enjoy the day so much. Everyone loved the decor, the suppliers, the organisation. Thank you Alexandra for making it our perfect wedding!”")}</blockquote><figcaption class="label"><cite>Charlotte &amp; Arnaud</cite></figcaption></figure>
-      <figure class="quote"><blockquote>{t("« Dès notre première rencontre, nous avons eu la certitude d'avoir trouvé la perle rare. Un an de préparatifs encadré par ses soins, son écoute, ses conseils avisés, sa bienveillance, son humour… Et quand le jour arrive, elle est bien là, entourée des meilleurs. »", "“From our very first meeting we knew we had found a rare gem. A year of preparations guided by her care, her listening, her wise advice, her kindness and humour… And when the day comes, she is right there, surrounded by the very best.”")}</blockquote><figcaption class="label"><cite>Christelle &amp; Edouard</cite></figcaption></figure>
     </div>
   </div>
 </section>
@@ -872,7 +871,7 @@ def ratings(c):
     t = c.t
     def one(n, name, url):
         return f'''<div class="rating"><span class="stars" aria-hidden="true">★★★★★</span><strong>5,0 / 5</strong><span class="label">{n} {t("avis sur", "reviews on")} <a href="{url}" target="_blank" rel="noopener">{name}</a></span></div>'''
-    return f'''<div class="ratings" role="group" aria-label="{t("Avis clients", "Client reviews")}">{one(58, "Google", GOOGLE_URL)}{one(41, "Mariages.net", MNET_URL)}</div>'''
+    return f'''<div class="ratings" role="group" aria-label="{t("Avis clients", "Client reviews")}">{one(59, "Google", GOOGLE_URL)}{one(43, "Mariages.net", MNET_URL)}</div>'''
 
 
 def pkg(c, star, label, title, intro, items, price, href, cta, photo=None, option=None):
