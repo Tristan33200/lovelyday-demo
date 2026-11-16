@@ -176,6 +176,8 @@ ROUTES_EN = {
 _EN_SLUGS = {}
 # Adresses anglaises figées : le titre a changé (années passées à 2027 le 16/11/2026) mais l'URL reste la même pour le référencement
 EN_SLUG_FIXED = {
+    "wedding-planner-bordeaux": "wedding-planner-bordeaux",
+    "devenir-wedding-planner": "become-wedding-planner",
     "recherche-wedding-planner-ideal-et-de-confiance": "choose-ideal-trustworthy-wedding-planner-2025",
     "reinventer-amour-mariage-audace-modernite": "if-dared-reinvent-love-unforgettable-wedding-2025",
     "mariagesintimes": "intimate-weddings-new-trend-small-weddings-2025",
