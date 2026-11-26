@@ -714,3 +714,4 @@ html.lb-lock, html.lb-lock body { overflow: hidden; }
 .leaf-host { position: relative; }
 .leaf--methode { position: absolute; top: clamp(10px, 2vw, 40px); right: clamp(0px, 3vw, 60px); width: clamp(240px, 30vw, 420px); transform: rotate(-6deg); opacity: .9; z-index: 0; }
 @media (max-width: 1150px) { .leaf--methode { display: none; } }
+.leaf--methode.leaf--flip-r { transform: scaleX(-1) rotate(-6deg); }

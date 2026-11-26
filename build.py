@@ -1014,7 +1014,7 @@ def p_prestations(c):
 
 <section class="section" id="formules">
   <div class="wrap stack-lg">
-    <div class="stack center" style="text-align:center"><span class="label">{t("Accompagnements", "Services")}</span><h2 class="h2">{t("Choisir votre accompagnement", "Choose your level of support")}</h2></div>
+    <div class="stack center" style="text-align:center">{leaf(c, 2, "leaf--title")}<span class="label">{t("Accompagnements", "Services")}</span><h2 class="h2">{t("Choisir votre accompagnement", "Choose your level of support")}</h2></div>
     <div class="packages">
       {"".join(pkg(c, *x) for x in pk)}
     </div>
@@ -1025,7 +1025,8 @@ def p_prestations(c):
 </section>
 
 <section class="section section--stone" id="signature">
-  <div class="wrap stack-lg">
+  <div class="wrap stack-lg leaf-host">
+    {leaf(c, 7, "leaf--methode leaf--flip-r")}
     <div class="stack" style="max-width:760px">
       <span class="label">{t("Signature", "Signature")}</span>
       <h2 class="h2">{t("Organisation, design &amp; Jour J", "Planning, design &amp; the day")}</h2>
@@ -1114,7 +1115,7 @@ def p_prestations(c):
 
 <section class="section section--stone" id="location">
   <div class="wrap stack-lg">
-    <div class="stack center" style="text-align:center"><span class="label">{t("Location", "Rentals")}</span><h2 class="h2">{t("Mais Lovely Day Event, c'est aussi…", "Lovely Day Event also offers…")}</h2></div>
+    <div class="stack center" style="text-align:center">{leaf(c, 2, "leaf--title leaf--flip")}<span class="label">{t("Location", "Rentals")}</span><h2 class="h2">{t("Mais Lovely Day Event, c'est aussi…", "Lovely Day Event also offers…")}</h2></div>
     <div class="split">
       <div class="s-img reveal">{c.img("photobooth-margot", t("Borne photo en bois dans un parc", "Wooden photo booth in a park"), "ratio-tall")}</div>
       <div class="s-txt offer-head">
