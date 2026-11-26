@@ -896,6 +896,7 @@ def p_agence(c):
     <div class="stack center" style="text-align:center"><span class="label">{t("Décoration", "Styling")}</span><h2 class="h2">{t("Quelques décors signés Lovely Day Event", "A few Lovely Day Event designs")}</h2></div>
     <div class="gallery" data-carousel>
       {c.img("MariageChateauGrattequina_TristanPerrier_NA-325", t("Mur à champagne « Santé ! » fleuri", "Floral champagne wall"))}
+      {c.img("plan-de-table-alicia-alexandre", t("Plan de table en miroirs dorés et colonne de fleurs blanches", "Seating plan of gold mirrors with a column of white flowers"))}
       {c.img("location-arche", t("Arche de cérémonie en bois et voilages", "Wooden ceremony arch with drapes"))}
       {c.img("MariageChateauGrattequina_TristanPerrier_NA-430", t("Art de la table blanc et doré", "White and gold tableware"))}
       {c.img("table-margot-loic", t("Table de réception dressée par Lovely Day Event", "Reception table styled by Lovely Day Event"))}
