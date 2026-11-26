@@ -865,7 +865,7 @@ def p_agence(c):
 
 <section class="section">
   <div class="wrap split split--rev">
-    <div class="s-img reveal">{c.img("alexandra-mise-en-place", t("Alexandra dresse une table de réception", "Alexandra setting a reception table"), "ratio-tall")}</div>
+    <div class="s-img reveal">{c.img("MariageChateauGrattequina_TristanPerrier_NA-505", t("Alexandra Ambert, wedding planner, souriante lors d'un mariage", "Alexandra Ambert, wedding planner, smiling at a wedding"), "ratio-tall")}</div>
     <div class="s-txt stack">
       <span class="label">{t("Créatrice de mariages", "Wedding creator")}</span>
       <h2 class="h2">{t("Saviez-vous qu'on m'appelle « créatrice de mariages » ?", "They call me a “wedding creator”")}</h2>
