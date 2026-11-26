@@ -378,9 +378,10 @@ def header(c):
     <nav class="nav" aria-label="{c.t("Navigation principale", "Main navigation")}">{links}</nav>
     <a class="brand" href="{c.href("index")}">Lovely Day Event<small>Wedding Planner &amp; Designer</small></a>
     <div class="nav-r">{links_r}<a href="{c.href("contact")}"{" aria-current=\"page\"" if c.page=="contact" else ""}>{c.t("Contact", "Enquire")}</a>{lang}</div>
+    {lang.replace('class="lang"', 'class="lang lang--bar"', 1)}
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mnav" aria-label="{c.t("Ouvrir le menu", "Open menu")}" data-open="{c.t("Ouvrir le menu", "Open menu")}" data-close="{c.t("Fermer le menu", "Close menu")}"><span></span><span></span><span></span></button>
   </div>
-  <div class="wrap"><nav class="mobile-nav" id="mnav" data-open="false">{mob}{lang}</nav></div>
+  <div class="wrap"><nav class="mobile-nav" id="mnav" data-open="false">{mob}</nav></div>
 </header>'''
 
 
