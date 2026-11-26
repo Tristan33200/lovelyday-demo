@@ -637,6 +637,13 @@ def wedding_card(c, w):
 
 
 # ---------------------------------------------------------------- Accueil
+LEAF_SIZES = {1:(700,456),2:(700,361),3:(700,370),4:(700,363),5:(700,365),6:(700,377),7:(700,391),8:(700,609),9:(700,331),10:(700,372)}
+def leaf(c, n, cls=""):
+    """Feuillage dessiné par Alexandra (décoratif, ignoré des lecteurs d'écran)."""
+    w, h = LEAF_SIZES[n]
+    return f'<img class="leaf {cls}" src="{c.root}img/feuillage-{n}.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" width="{w}" height="{h}">'
+
+
 def p_index(c):
     t = c.t
     feat = [WEDDINGS[0], WEDDINGS[1], WEDDINGS[3], WEDDINGS[2]]
@@ -652,7 +659,9 @@ def p_index(c):
   </div>
 </section>
 
-<section class="section">
+<section class="section has-leaf">
+  {leaf(c, 7, "leaf--statement-r")}
+  {leaf(c, 3, "leaf--statement-l")}
   <div class="wrap statement reveal">
     <span class="label">{t("Organisation de mariage à Bordeaux et partout en France", "Wedding planning in Bordeaux and throughout France")}</span>
     <h2 class="h2">{t("Chaque détail,<br>imaginé pour vous ressembler", "Every detail,<br>designed around you")}</h2>
@@ -667,13 +676,14 @@ def p_index(c):
 <section class="section section--stone">
   <div class="wrap stack-lg">
     <div class="stack center" style="text-align:center">
+      {leaf(c, 2, "leaf--title")}
       <span class="label">{t("Prestations", "Services")}</span>
       <h2 class="h2">{t("Une approche sur mesure", "A bespoke approach")}</h2>
       <p class="it" style="color:var(--muted)">{t("Chaque mariage est conçu comme un projet unique, alliant exigence esthétique et organisation fluide.", "Every wedding is a unique project, combining aesthetic ambition with seamless organisation.")}</p>
     </div>
     <div class="services">
       <article class="service reveal">
-        {c.img("MariageChateauGrattequina_TristanPerrier_NA-016", t("Faire-part, alliances et détails de mariage", "Wedding stationery, rings and details"), "ratio-portrait")}
+        {c.img("mariage-voile-organisation", t("Mariés dans un parc, le voile de la mariée porté par le vent", "Bride and groom in a park, the bride’s veil lifted by the wind"), "ratio-portrait")}
         <h3 class="h3">{t("Organisation de mariage", "Full wedding planning")}</h3>
         <p>{t("J'interviens sur toutes les étapes de vos préparatifs et vous guide dans vos choix. Je suis force de proposition pour que votre mariage ne ressemble qu'à vous.", "I take care of every stage of your preparations and guide you through each decision, always bringing ideas so that your wedding is unmistakably yours.")}</p>
         <a class="link" href="{c.href("prestations")}#organisation">{t("Découvrir", "Discover")}</a>
@@ -766,7 +776,7 @@ def p_index(c):
 
 <section class="section section--stone">
   <div class="wrap stack-lg">
-    <div class="stack center" style="text-align:center"><span class="label">{t("Ils nous ont fait confiance", "Kind words")}</span><h2 class="h2">{t("Mots de mariés", "From our couples")}</h2></div>
+    <div class="stack center" style="text-align:center">{leaf(c, 2, "leaf--title leaf--flip")}<span class="label">{t("Ils nous ont fait confiance", "Kind words")}</span><h2 class="h2">{t("Mots de mariés", "From our couples")}</h2></div>
     {ratings(c)}
     <div class="quotes quotes--2">
       <figure class="quote"><blockquote>{t("« Avoir confié la coordination de notre mariage à Alexandra a été la clef de notre sérénité. Dès la première entrevue, nous avons su qu'elle serait la bonne personne. Elle a un très bon relationnel avec les prestataires, ce qui a permis de constituer une véritable équipe autour de notre mariage. »", "“Entrusting the coordination of our wedding to Alexandra was the key to our peace of mind. From our first meeting we knew she was the right person. Her excellent relationships with suppliers built a true team around our wedding.”")}</blockquote><figcaption class="label"><cite>Delphine &amp; Haythem</cite></figcaption></figure>
@@ -799,7 +809,7 @@ def VIDEO_AGENCE(c):
     """Vidéo de présentation d'Alexandra au Château Belle Époque (YouTube, sans cookies)."""
     t = c.t
     cap = t("Alexandra au Château Belle Époque", "Alexandra at Château Belle Époque")
-    return f'''<figure class="video-agence reveal"><div class="video"><button type="button" class="yt-facade" data-yt="QngWOuPwvco" data-title="{t("Vidéo", "Video")} : {cap}" aria-label="{t("Lire la vidéo", "Play the video")} : {cap}"><img src="{c.root}img/yvonne-thomas.webp" alt="" loading="lazy" decoding="async"><span class="yt-play" aria-hidden="true"></span><span class="yt-note">{t("La lecture charge la vidéo depuis YouTube", "Playing loads the video from YouTube")}</span></button></div>
+    return f'''<figure class="video-agence reveal"><div class="video"><button type="button" class="yt-facade" data-yt="QngWOuPwvco" data-title="{t("Vidéo", "Video")} : {cap}" aria-label="{t("Lire la vidéo", "Play the video")} : {cap}"><img src="{c.root}img/yvonne-thomas-video.webp" alt="" loading="lazy" decoding="async"><span class="yt-play" aria-hidden="true"></span><span class="yt-note">{t("La lecture charge la vidéo depuis YouTube", "Playing loads the video from YouTube")}</span></button></div>
       <figcaption class="label">{t("Alexandra au", "Alexandra at")} <a href="https://www.chateau-belle-epoque.com" target="_blank" rel="noopener">Château Belle Époque</a></figcaption></figure>'''
 
 
