@@ -878,7 +878,7 @@ def p_agence(c):
 
 <section class="section section--stone">
   <div class="wrap split">
-    <div class="s-img-sm reveal" style="display:grid;gap:20px">{c.img("MariageChateauGrattequina_TristanPerrier_NA-425", t("Fleurs pastel et bougies sur une table de réception", "Pastel flowers and candles on a reception table"), "ratio-portrait")}</div>
+    <div class="s-img-sm reveal" style="display:grid;gap:20px">{c.img("MariageChateauGrattequina_TristanPerrier_NA-481", t("Tables de réception dressées sous une guirlande lumineuse", "Reception tables set beneath a curtain of fairy lights"), "ratio-portrait")}</div>
     <div class="s-txt stack">
       <span class="label">{t("Formation &amp; expérience", "Training &amp; experience")}</span>
       <h2 class="h2">{t("Wedding Designer certifiée", "Certified Wedding Designer")}</h2>
