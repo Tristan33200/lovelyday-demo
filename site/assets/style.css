@@ -711,9 +711,6 @@ html.lb-lock, html.lb-lock body { overflow: hidden; }
 .has-leaf > .wrap { position: relative; z-index: 1; }
 .leaf--flip { transform: scaleX(-1); }
 .leaf--title { width: clamp(110px, 11vw, 150px); margin: 0 auto -8px; opacity: .9; }
-.leaf--statement-r { width: clamp(200px, 22vw, 340px); right: max(-80px, -5vw); top: clamp(48px, 6vw, 96px); transform: rotate(-8deg); opacity: .85; }
-.leaf--statement-l { width: clamp(130px, 14vw, 210px); left: max(-30px, -2vw); bottom: clamp(20px, 3vw, 48px); transform: scaleX(-1) rotate(-10deg); opacity: .9; }
-@media (max-width: 900px) {
-  .leaf--statement-r { width: 120px; top: 0; right: -30px; opacity: .55; }
-  .leaf--statement-l { display: none; }
-  }
+.leaf-host { position: relative; }
+.leaf--methode { position: absolute; top: clamp(10px, 2vw, 40px); right: clamp(0px, 3vw, 60px); width: clamp(240px, 30vw, 420px); transform: rotate(-6deg); opacity: .9; z-index: 0; }
+@media (max-width: 1150px) { .leaf--methode { display: none; } }

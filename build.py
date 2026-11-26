@@ -659,9 +659,7 @@ def p_index(c):
   </div>
 </section>
 
-<section class="section has-leaf">
-  {leaf(c, 7, "leaf--statement-r")}
-  {leaf(c, 3, "leaf--statement-l")}
+<section class="section">
   <div class="wrap statement reveal">
     <span class="label">{t("Organisation de mariage à Bordeaux et partout en France", "Wedding planning in Bordeaux and throughout France")}</span>
     <h2 class="h2">{t("Chaque détail,<br>imaginé pour vous ressembler", "Every detail,<br>designed around you")}</h2>
@@ -744,7 +742,8 @@ def p_index(c):
 </section>
 
 <section class="section section--stone">
-  <div class="wrap stack-lg">
+  <div class="wrap stack-lg leaf-host">
+    {leaf(c, 7, "leaf--methode")}
     <div class="stack" style="max-width:780px">
       <span class="label">{t("Méthode", "How I work")}</span>
       <h2 class="h2">{t("Une organisation pensée pour votre sérénité", "Planning designed for your peace of mind")}</h2>
