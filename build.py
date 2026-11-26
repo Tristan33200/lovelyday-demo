@@ -1027,7 +1027,15 @@ def p_prestations(c):
 
 <section class="section" id="formules">
   <div class="wrap stack-lg">
-    <div class="stack center" style="text-align:center">{leaf(c, 2, "leaf--title")}<span class="label">{t("Accompagnements", "Services")}</span><h2 class="h2">{t("Choisir votre accompagnement", "Choose your level of support")}</h2></div>
+    <div class="split formules-head">
+      <div class="s-img-sm reveal">{c.img("alexandra-porte-yoshi-power-shot", t("Alexandra Ambert, sourire aux lèvres, passe la tête par une porte", "Alexandra Ambert peeking round a door with a smile"), "ratio-tall")}</div>
+      <div class="s-txt stack">
+        {leaf(c, 2, "leaf--title leaf--start")}
+        <span class="label">{t("Accompagnements", "Services")}</span>
+        <h2 class="h2">{t("Choisir votre accompagnement", "Choose your level of support")}</h2>
+        <p class="it" style="color:var(--muted)">{t("De l'expérience complète à la coordination du jour J : trois façons de travailler ensemble, selon ce que vous avez déjà préparé et ce que vous souhaitez me confier.", "From the complete experience to on-the-day coordination: three ways of working together, depending on what you have already planned and what you would like to entrust to me.")}</p>
+      </div>
+    </div>
     <div class="packages">
       {"".join(pkg(c, *x) for x in pk)}
     </div>
