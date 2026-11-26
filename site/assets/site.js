@@ -416,3 +416,20 @@ document.querySelectorAll(".yt-facade").forEach(function (b) {
     b.replaceWith(f);
   });
 });
+
+/* Vidéos en boucle (anciens GIF) : chargées à l'approche, en pause hors écran, image fixe si animations réduites */
+(function () {
+  var vids = document.querySelectorAll("video[data-src]");
+  if (!vids.length) return;
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  function load(v) { if (!v.src) { v.src = v.getAttribute("data-src"); v.load(); } }
+  if (!("IntersectionObserver" in window)) { vids.forEach(function (v) { load(v); v.play().catch(function () {}); }); return; }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      var v = e.target;
+      if (e.isIntersecting) { load(v); var p = v.play(); if (p) p.catch(function () {}); }
+      else if (v.src) v.pause();
+    });
+  }, { rootMargin: "300px 0px" });
+  vids.forEach(function (v) { io.observe(v); });
+})();

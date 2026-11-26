@@ -644,6 +644,12 @@ def leaf(c, n, cls=""):
     return f'<img class="leaf {cls}" src="{c.root}img/feuillage-{n}.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" width="{w}" height="{h}">'
 
 
+def vid(c, name, alt, ratio="ratio-tall"):
+    """Petite vidéo muette en boucle (ancien GIF) : chargée à l'approche, image fixe si animations désactivées."""
+    return (f'<figure class="{ratio} vloop"><video class="cover" muted loop playsinline preload="none" '
+            f'poster="{c.root}video/{name}.webp" data-src="{c.root}video/{name}.mp4" aria-label="{H.escape(alt)}"></video></figure>')
+
+
 def p_index(c):
     t = c.t
     feat = [WEDDINGS[0], WEDDINGS[1], WEDDINGS[3], WEDDINGS[2]]
@@ -786,9 +792,9 @@ def p_index(c):
 
 <section class="section section--tight">
   <div class="wrap mosaic">
-    <div class="m-a reveal">{c.img("MariageChateauGrattequina_TristanPerrier_NA-450", t("Mariés au coucher du soleil", "Couple at golden hour"), "ratio-tall")}</div>
-    <div class="m-b reveal">{c.img("MariageChateauGrattequina_TristanPerrier_NA-198", t("Panneau de bienvenue fleuri", "Floral welcome sign"), "ratio-tall")}</div>
-    <div class="m-c reveal">{c.img("MariageChateauGrattequina_TristanPerrier_NA-184", t("Chaise de cérémonie ornée de fleurs blanches", "Ceremony chair with white flowers"), "ratio-tall")}</div>
+    <div class="m-a reveal">{vid(c, "ceremonie-chaises-rubans", t("Allée de cérémonie, rubans blancs dans le vent", "Ceremony aisle, white ribbons in the breeze"))}</div>
+    <div class="m-b reveal">{vid(c, "mariee-eventail", t("La mariée à l'éventail, ses témoins arrangent la traîne", "The bride with a fan as her bridesmaids arrange the train"))}</div>
+    <div class="m-c reveal">{vid(c, "bougies-table", t("Bougies et fleurs blanches sur la table de réception", "Candles and white flowers on the reception table"))}</div>
   </div>
 </section>
 
@@ -1072,7 +1078,7 @@ def p_prestations(c):
 
 <section class="section section--stone" id="coordination">
   <div class="wrap split">
-    <div class="s-img reveal">{c.img("MariageChateauGrattequina_TristanPerrier_NA-069", t("Le marié dans un salon de château", "The groom in a château salon"), "ratio-tall")}</div>
+    <div class="s-img reveal">{vid(c, "danse-chateau", t("Les mariés dansent sur la pelouse devant le château", "The couple dancing on the lawn in front of the château"))}</div>
     <div class="s-txt offer-head">
       <span class="label">{t("Sérénité", "Sérénité")}</span>
       <h2 class="h2">{t("Coordination Jour J", "On-the-day coordination")}</h2>
