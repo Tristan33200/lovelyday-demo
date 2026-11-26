@@ -646,7 +646,10 @@ def leaf(c, n, cls=""):
 
 def vid(c, name, alt, ratio="ratio-tall"):
     """Petite vidéo muette en boucle (ancien GIF) : chargée à l'approche, image fixe si animations désactivées."""
-    return (f'<figure class="{ratio} vloop"><video class="cover" muted loop playsinline preload="none" '
+    wh = img_size(f"video/{name}.webp")
+    dim = f' width="{wh[0]}" height="{wh[1]}"' if wh else ""
+    cls = f' class="{ratio}"' if ratio else ""
+    return (f'<figure{cls}><video class="cover" muted loop playsinline preload="none"{dim} '
             f'poster="{c.root}video/{name}.webp" data-src="{c.root}video/{name}.mp4" aria-label="{H.escape(alt)}"></video></figure>')
 
 
@@ -904,6 +907,7 @@ def p_agence(c):
       {c.img("MariageChateauGrattequina_TristanPerrier_NA-325", t("Mur à champagne « Santé ! » fleuri", "Floral champagne wall"))}
       {c.img("table-roses-blanches-yvonne-thomas", t("Table de réception aux roses blanches, verres à liseré doré", "Reception table with white roses and gold-rimmed glasses"))}
       {c.img("salle-glycine-yvonne-thomas", t("Salle de réception sous lustres et cascade de glycine blanche", "Reception hall with chandeliers and a cascade of white wisteria"))}
+      {vid(c, "bougies-table", t("Bougies et fleurs blanches sur la table de réception", "Candles and white flowers on the reception table"), "")}
       {c.img("plan-de-table-alicia-alexandre", t("Plan de table en miroirs dorés et colonne de fleurs blanches", "Seating plan of gold mirrors with a column of white flowers"))}
       {c.img("location-arche", t("Arche de cérémonie en bois et voilages", "Wooden ceremony arch with drapes"))}
       {c.img("MariageChateauGrattequina_TristanPerrier_NA-430", t("Art de la table blanc et doré", "White and gold tableware"))}
@@ -1078,7 +1082,7 @@ def p_prestations(c):
 
 <section class="section section--stone" id="coordination">
   <div class="wrap split">
-    <div class="s-img reveal">{vid(c, "danse-chateau", t("Les mariés dansent sur la pelouse devant le château", "The couple dancing on the lawn in front of the château"))}</div>
+    <div class="s-img reveal">{c.img("MariageChateauGrattequina_TristanPerrier_NA-069", t("Le marié dans un salon de château", "The groom in a château salon"), "ratio-tall")}</div>
     <div class="s-txt offer-head">
       <span class="label">{t("Sérénité", "Sérénité")}</span>
       <h2 class="h2">{t("Coordination Jour J", "On-the-day coordination")}</h2>
