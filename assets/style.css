@@ -279,6 +279,7 @@ body::before {
   font: 400 11px/1 var(--body); letter-spacing: .28em; text-transform: uppercase;
 }
 .mobile-nav { display: none; }
+.lang--bar { display: none; }
 
 @media (max-width: 1180px) {
   .site-header .bar { grid-template-columns: auto 1fr auto; height: 72px; }
@@ -287,6 +288,8 @@ body::before {
   .brand small { letter-spacing: .34em; }
   .nav, .nav-r { display: none; }
   .menu-btn { display: block; }
+  .lang--bar { display: flex; grid-column: 2; grid-row: 1; justify-self: end; align-items: center; gap: 12px; margin-right: 22px; }
+  .lang--bar a { font-size: 11px; letter-spacing: .24em; text-decoration: none; padding-block: 6px; border-bottom: 1px solid transparent; }
   .mobile-nav[data-open="true"] {
     display: grid; gap: 22px; padding-block: 28px 40px;
     border-top: 1px solid var(--line);
@@ -721,3 +724,9 @@ html.lb-lock, html.lb-lock body { overflow: hidden; }
 .leaf--start { margin: 0 0 -8px; }
 @media (max-width: 900px) { .formules-head .s-img-sm, .formules-head .s-txt { grid-column: 1; } .formules-head .s-img-sm { max-width: 420px; } }
 .formules-head .h2 { font-size: clamp(30px, 3.4vw, 46px); }
+@media (max-width: 440px) {
+  .site-header .brand { font-size: 17px; letter-spacing: .16em; }
+  .site-header .brand small { font-size: 8px; letter-spacing: .26em; }
+  .lang--bar { gap: 9px; margin-right: 16px; }
+  .lang--bar a { font-size: 10px; letter-spacing: .18em; }
+}
